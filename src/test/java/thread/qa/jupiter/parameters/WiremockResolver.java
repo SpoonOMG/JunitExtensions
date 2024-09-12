@@ -1,6 +1,5 @@
-package thread.qa.parameters;
+package thread.qa.jupiter.parameters;
 
-import org.apache.http.impl.conn.Wire;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.ParameterContext;
 import org.junit.jupiter.api.extension.ParameterResolutionException;

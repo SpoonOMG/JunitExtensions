@@ -1,25 +1,21 @@
-package thread.qa;
+package thread.qa.test;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.WireMock;
-import com.github.tomakehurst.wiremock.junit5.WireMockTest;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
-import thread.qa.callbacks.RestExtension;
-import thread.qa.callbacks.TestSaver;
+import thread.qa.values.Values;
+import thread.qa.jupiter.callbacks.RestExtension;
+import thread.qa.jupiter.callbacks.TestSaver;
 import thread.qa.models.init.InitRoot;
 import thread.qa.models.init.ValuesItem;
-import thread.qa.parameters.Init;
-import thread.qa.parameters.InitResolver;
+import thread.qa.jupiter.parameters.Init;
+import thread.qa.jupiter.parameters.InitResolver;
 //import thread.qa.parameters.RandomUserResolver;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.stream.Stream;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.wireMockConfig;
@@ -33,7 +29,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 //@WireMockTest(httpPort = 8080)
 
 
-public class ExtensionTestWiremockInMemory extends BaseTest{
+public class ExtensionTestWiremockInMemory extends BaseTest {
 
 
     private static WireMockServer wireMockServer = new WireMockServer(

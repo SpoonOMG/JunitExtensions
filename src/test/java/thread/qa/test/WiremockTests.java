@@ -1,11 +1,11 @@
-package thread.qa;
+package thread.qa.test;
 
 import io.restassured.response.Response;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import thread.qa.models.init.InitRoot;
-import thread.qa.parameters.Init;
-import thread.qa.parameters.Mock;
+import thread.qa.jupiter.parameters.Init;
+import thread.qa.jupiter.parameters.Mock;
 import thread.qa.utils.Wiremock;
 
 import java.util.UUID;

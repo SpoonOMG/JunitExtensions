@@ -1,37 +1,13 @@
-package thread.qa;
+package thread.qa.test;
 
-import com.github.tomakehurst.wiremock.WireMockServer;
-import com.github.tomakehurst.wiremock.client.WireMock;
-import io.restassured.response.Response;
-import org.apache.http.impl.conn.Wire;
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
-import thread.qa.callbacks.RestExtension;
-import thread.qa.callbacks.TestSaver;
-import thread.qa.models.clientSearch.Base;
-import thread.qa.models.init.InitRoot;
-import thread.qa.models.init.ValuesItem;
-import thread.qa.parameters.Init;
-import thread.qa.parameters.InitResolver;
-import thread.qa.parameters.Mock;
-import thread.qa.parameters.WiremockResolver;
-import thread.qa.utils.FileContentReader;
-import thread.qa.utils.JsonAttChanger;
+import thread.qa.jupiter.parameters.Mock;
+import thread.qa.test.BaseTest;
 import thread.qa.utils.Wiremock;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.stream.Stream;
-
-import static com.github.tomakehurst.wiremock.client.WireMock.*;
-import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.wireMockConfig;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static thread.qa.utils.FileContentReader.jsonBody;
 
 
 //@WireMockTest(httpPort = 8080)

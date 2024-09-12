@@ -1,4 +1,4 @@
-package thread.qa.parameters;
+package thread.qa.jupiter.parameters;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

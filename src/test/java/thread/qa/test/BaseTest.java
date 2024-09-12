@@ -1,11 +1,12 @@
-package thread.qa;
+package thread.qa.test;
 
 import org.junit.jupiter.api.extension.ExtendWith;
-import thread.qa.callbacks.RestExtension;
-import thread.qa.callbacks.TestSaver;
+import thread.qa.values.Values;
+import thread.qa.jupiter.callbacks.RestExtension;
+import thread.qa.jupiter.callbacks.TestSaver;
 import thread.qa.models.init.ValuesItem;
-import thread.qa.parameters.InitResolver;
-import thread.qa.parameters.WiremockResolver;
+import thread.qa.jupiter.parameters.InitResolver;
+import thread.qa.jupiter.parameters.WiremockResolver;
 
 @ExtendWith({TestSaver.class, InitResolver.class, RestExtension.class, WiremockResolver.class})
 public class BaseTest {

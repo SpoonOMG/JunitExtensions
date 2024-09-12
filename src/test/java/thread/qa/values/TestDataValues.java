@@ -1,4 +1,4 @@
-package thread.qa;
+package thread.qa.values;
 
 public class TestDataValues {
 

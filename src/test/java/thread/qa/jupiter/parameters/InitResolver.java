@@ -1,11 +1,15 @@
-package thread.qa.parameters;
+package thread.qa.jupiter.parameters;
 
-import org.junit.jupiter.api.extension.*;
-import thread.qa.TestDataValues;
-import thread.qa.Values;
+import org.junit.jupiter.api.extension.ExtensionContext;
+import org.junit.jupiter.api.extension.ParameterContext;
+import org.junit.jupiter.api.extension.ParameterResolutionException;
+import org.junit.jupiter.api.extension.ParameterResolver;
+import thread.qa.values.TestDataValues;
+import thread.qa.values.Values;
 import thread.qa.models.init.*;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
 
 public class InitResolver implements ParameterResolver {
 

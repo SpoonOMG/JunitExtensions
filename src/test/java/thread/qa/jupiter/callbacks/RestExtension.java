@@ -1,4 +1,4 @@
-package thread.qa.callbacks;
+package thread.qa.jupiter.callbacks;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
