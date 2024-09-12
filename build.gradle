@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.projectlombok:lombok:1.18.30'
+    implementation 'org.projectlombok:lombok:1.18.30'
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.1")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.13.1")
+    testImplementation 'io.rest-assured:rest-assured:4.4.0'
+    testImplementation ('javax.json:javax.json-api:1.1.4')
+    implementation 'io.qameta.allure:allure-rest-assured:2.27.0'
+
+    //json
+    'com.jayway.jsonpath:json-path:2.9.0'
+
+    // Wiremock
+    testImplementation "com.github.tomakehurst:wiremock-jre8:3.0.1"
+    testImplementation "com.github.tomakehurst:wiremock-standalone:3.0.1"
+}
+
+test {
+    useJUnitPlatform()
+}
