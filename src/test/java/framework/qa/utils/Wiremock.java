@@ -9,10 +9,9 @@ public class Wiremock {
 
 
     public void wiremockSend(String mockPath, String att, String value, String enpointMapping, String gpbRequestIdMapping) {
-        FileContentReader fr = new FileContentReader();
         JsonAttChanger js = new JsonAttChanger();
-        fr.jsonFile(mockPath);
-        js.apply(FileContentReader.jsonBody, att, value);
+        String jsonBody = js.appli(mockPath,att,value);
+
         //здесь нужно продумать как сделать преобразование jsonBody в запрос на генерацию мока
         /*
  ___________________
@@ -37,8 +36,7 @@ public class Wiremock {
 _____________________
          */
         String wiremockRequest;
-        given().baseUri(CFG.wiremockUrl()).body(
-                        FileContentReader.jsonBody).post("/__admin/mappings")
+        given().baseUri(CFG.wiremockUrl()).body(jsonBody).post("/__admin/mappings")
                 .then().extract().response();
     }
 

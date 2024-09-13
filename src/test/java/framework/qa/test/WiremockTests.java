@@ -19,16 +19,24 @@ public class WiremockTests extends BaseTest {
 
     @DisplayName("Пробрасываем мок cs1")
     @Test
-    public void initTestWithWiremockExtension(@Init InitRoot initRootBody, @Mock Wiremock wiremock) {
+    public void initTestWithWiremockExtension(@Init InitRoot initRootBody,
+                                              @Mock Wiremock clientSearchMock,
+                                              @Mock Wiremock productCardsMock) {
         String gpbRequestId = UUID.randomUUID().toString();
         step("конфигурируем мок client-search", () -> {
-            wiremock.wiremockSend("/Users/andrey/IdeaProjects/stadalone/JunitExtensions/src/test/resources/wiremock/client-search/default.json",
-                    "$.base.residents.[?(@.type==\"base\")].state.terminalFlag",
+            clientSearchMock.wiremockSend("wiremock/client-search/default.json",
+                    "base.guid",
                     "false",
                     "client-search",
                     gpbRequestId);
         });
-
+        step("конфигурируем мок product-cards", () -> {
+            productCardsMock.wiremockSend("wiremock/product-cards/product-cards-ok.json",
+                    "actualTimestamp",
+                    "1234",
+                    "product-cards",
+                    gpbRequestId);
+        });
         step("отправляем запрос на init", () -> {
             initRootBody.getMeta().setChannel("mb");
             Response response = given().header("gpb-requestId", gpbRequestId).body(initRootBody).post("api/v1/metadata/init")
@@ -42,7 +50,7 @@ public class WiremockTests extends BaseTest {
     @DisplayName("Пробрасываем мок cs2")
     @Test
     public void initTestWithWiremockExtension2(@Mock Wiremock wiremock) {
-        wiremock.wiremockSend("/Users/andrey/IdeaProjects/stadalone/JunitExtensions/src/test/resources/wiremock/client-search/default.json",
+        wiremock.wiremockSend("wiremock/client-search/default.json",
                 "base.guid",
                 "1234",
                 "1234",

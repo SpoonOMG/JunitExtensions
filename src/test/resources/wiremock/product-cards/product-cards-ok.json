@@ -1,0 +1,2133 @@
+{
+  "status": "success",
+  "actualTimestamp": 1628141570820,
+  "data": {
+    "contracts": [
+      {
+        "base": {
+          "bank": {
+            "systemCode": "DRTL"
+          },
+          "systemInfo": {
+            "systemId": "DRTL",
+            "rawId": "10130759180"
+          },
+          "clientRequest": {
+            "systemId": "DRTL",
+            "rawId": "71000012928",
+            "fullName": "71000012928"
+          },
+          "owner": {
+            "categories": [
+              {
+                "type": "REGULAR"
+              }
+            ],
+            "systemId": "DRTL",
+            "rawId": "71000012928",
+            "fullName": "Вашакмакмадзе Бригитта Эльтайевна"
+          }
+        },
+        "cards": [
+          {
+            "base": {
+              "systemInfo": {
+                "systemId": "DRTL",
+                "rawId": "10074435954"
+              },
+              "virtualNum": "DRTL10074435954",
+              "maskNum": "487416******9004",
+              "pan": "4874164000229004",
+              "stateBankSystem": {
+                "code": "CS11",
+                "name": "На ожидании выдачи"
+              },
+              "issueState": {
+                "code": "nonpersonal",
+                "name": "не персонализирована (массовый выпуск)"
+              },
+              "blankState": {
+                "code": "CBS39",
+                "name": ""
+              },
+              "state": {
+                "code": "INACTIVE",
+                "name": "Действует"
+              },
+              "type": {
+                "code": "salary",
+                "name": "зарплатная"
+              },
+              "category": {
+                "code": "gold",
+                "name": "Visa_Gold"
+              },
+              "paySystem": {
+                "code": "VISA",
+                "name": "VISA"
+              },
+              "product": {
+                "code": "Зарп Visa Gold Кэшбэк Газпром",
+                "name": "Зарп Visa Gold Кэшбэк Газпром"
+              },
+              "issueTechnology": {
+                "code": "ПИН - конверт",
+                "name": "ПИН - конверт"
+              },
+              "cardName": "Зарп Visa Gold Кэшбэк Газпром",
+              "cardFullName": "Зарп Visa Gold Кэшбэк Газпром",
+              "mainAccount": {
+                "base": {
+                  "systemInfo": {
+                    "systemId": "DRTL",
+                    "rawId": "10069663534"
+                  },
+                  "number": "40817810300602456538",
+                  "bank": {
+                    "bic": "044525823"
+                  },
+                  "currency": {
+                    "numCode": "810",
+                    "charCode": "RUR"
+                  },
+                  "state": {
+                    "code": "Open",
+                    "name": "Открыт",
+                    "reason": "Открыт",
+                    "date": "2020-08-15"
+                  },
+                  "isArrest": false,
+                  "creationDate": "2023-08-15"
+                },
+                "detail": {
+                  "arrests": [
+                    {}
+                  ]
+                }
+              },
+              "holder": {
+                "systemId": "DRTL",
+                "rawId": "10069663534",
+                "fullName": "Казаков Иван Васильевич"
+              },
+              "balance": [
+                {
+                  "type": "mainAmount",
+                  "value": {
+                    "amount": "1000000.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "ownFunds",
+                  "value": {
+                    "amount": "1000000.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "creditAmount",
+                  "value": {
+                    "amount": "0.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "holdAmount",
+                  "value": {
+                    "amount": "0.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                }
+              ],
+              "originalState": {
+                "code": "0",
+                "name": "VALID CARD",
+                "reason": {
+                  "code": "",
+                  "name": ""
+                }
+              },
+              "private": {
+                "expDate": "05/23",
+                "holderName": "IVAN KAZAKOV",
+                "countFailPIN": 3,
+                "secretWord": "",
+                "cardNumberCode": "897090",
+                "isSecretWord": true
+              },
+              "isMain": true,
+              "isOverdraft": false,
+              "isTechnicalOverdraft": false,
+              "isPayPass": false,
+              "isMobilePay": false,
+              "isLoyalty": false
+            },
+            "detail": {
+              "startDate": "2020-08-15",
+              "issueDetail": {
+                "applicationBranch": {
+                  "bic": "044525823",
+                  "fullName": "\"Газпромбанк\" (Акционерное общество)"
+                },
+                "deliveryBranch": {
+                  "code": "000/0000",
+                  "systemCode": "DRTL",
+                  "bic": "044525823",
+                  "fullName": "\"Газпромбанк\" (Акционерное общество)/ДО 015/1042 Банка ГПБ (АО)"
+                }
+              },
+              "insuranceAmount": {
+                "amount": "0.00",
+                "currency": {
+                  "numCode": "810",
+                  "charCode": "RUR"
+                }
+              },
+              "workInfo": {
+                "organization": {
+                  "code": "1199",
+                  "name": "Общество с ограниченной ответственностью \"Газпромбанк-Инвест Девелопмент\""
+                }
+              },
+              "is3DSecure": false
+            }
+          },
+          {
+            "base": {
+              "systemInfo": {
+                "systemId": "DRTL",
+                "rawId": "10074435955"
+              },
+              "virtualNum": "DRTL10074435955",
+              "maskNum": "487416******9004",
+              "pan": "4874164000229004",
+              "issueState": {
+                "code": "nonpersonal",
+                "name": "массовый выпуск"
+              },
+              "blankState": {
+                "code": "CBS27",
+                "name": ""
+              },
+              "stateBankSystem": {
+                "code": "CS03",
+                "name": "Действует"
+              },
+              "state": {
+                "code": "ACTIVE",
+                "name": "Действует"
+              },
+              "type": {
+                "code": "salary",
+                "name": "зарплатная"
+              },
+              "category": {
+                "code": "gold",
+                "name": "Visa_Gold"
+              },
+              "paySystem": {
+                "code": "UnionPay",
+                "name": "UnionPay"
+              },
+              "product": {
+                "code": "UP Diamond Instant 810 Пакет Премиум",
+                "name": "UP Diamond Instant 810 Пакет Премиум"
+              },
+              "issueTechnology": {
+                "code": "ПИН по СМС",
+                "name": "ПИН по СМС"
+              },
+              "cardName": "UP Diamond Instant 810 Пакет Премиум",
+              "cardFullName": "UP Diamond Instant 810 Пакет Премиум",
+              "mainAccount": {
+                "base": {
+                  "systemInfo": {
+                    "systemId": "DRTL",
+                    "rawId": "10069663534"
+                  },
+                  "number": "40817810300602456539",
+                  "bank": {
+                    "bic": "044525823"
+                  },
+                  "currency": {
+                    "numCode": "810",
+                    "charCode": "RUR"
+                  },
+                  "state": {
+                    "code": "Open",
+                    "name": "Открыт",
+                    "reason": "Открыт",
+                    "date": "2020-08-15"
+                  },
+                  "isArrest": false,
+                  "creationDate": "2050-01-01"
+
+                },
+                "detail": {
+                  "arrests": [
+                    {}
+                  ]
+                }
+              },
+              "holder": {
+                "systemId": "DRTL",
+                "rawId": "10069663534",
+                "fullName": "Казаков Иван Васильевич"
+              },
+              "balance": [
+                {
+                  "type": "mainAmount",
+                  "value": {
+                    "amount": "3200.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "ownFunds",
+                  "value": {
+                    "amount": "3200.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "creditAmount",
+                  "value": {
+                    "amount": "0.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "holdAmount",
+                  "value": {
+                    "amount": "0.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                }
+              ],
+              "originalState": {
+                "code": "0",
+                "name": "VALID CARD",
+                "reason": {
+                  "code": "",
+                  "name": ""
+                }
+              },
+              "private": {
+                "expDate": "02/24",
+                "holderName": "IVAN KAZAKOV",
+                "countFailPIN": 3,
+                "secretWord": "",
+                "cardNumberCode": "897090",
+                "isSecretWord": true
+              },
+              "isMain": true,
+              "isOverdraft": false,
+              "isTechnicalOverdraft": false,
+              "isPayPass": false,
+              "isMobilePay": false,
+              "isLoyalty": false
+            },
+            "detail": {
+              "startDate": "2020-08-15",
+              "issueDetail": {
+                "applicationBranch": {
+                  "bic": "044525823",
+                  "fullName": "\"Газпромбанк\" (Акционерное общество)"
+                },
+                "deliveryBranch": {
+                  "code": "000/0000",
+                  "systemCode": "DRTL",
+                  "bic": "044525823",
+                  "fullName": "\"Газпромбанк\" (Акционерное общество)/ДО 015/1042 Банка ГПБ (АО)"
+                }
+              },
+              "insuranceAmount": {
+                "amount": "0.00",
+                "currency": {
+                  "numCode": "810",
+                  "charCode": "RUR"
+                }
+              },
+              "workInfo": {
+                "organization": {
+                  "code": "1199",
+                  "name": "Общество с ограниченной ответственностью \"Газпромбанк-Инвест Девелопмент\""
+                }
+              },
+              "is3DSecure": false
+            }
+          },
+          {
+            "base": {
+              "systemInfo": {
+                "systemId": "DRTL",
+                "rawId": "10074435956"
+              },
+              "virtualNum": "DRTL10074435956",
+              "maskNum": "487416******9004",
+              "pan": "4874164000229004",
+              "issueState": {
+                "code": "issued",
+                "name": "Выдана"
+              },
+              "stateBankSystem": {
+                "code": "CS03",
+                "name": "Действует"
+              },
+              "blankState": {
+                "code": "",
+                "name": ""
+              },
+              "state": {
+                "code": "ACTIVE",
+                "name": "Действует"
+              },
+              "type": {
+                "code": "salary",
+                "name": "зарплатная"
+              },
+              "category": {
+                "code": "gold",
+                "name": "Visa_Gold"
+              },
+              "paySystem": {
+                "code": "VISA",
+                "name": "VISA"
+              },
+              "product": {
+                "code": "Зарп Visa Gold Кэшбэк Газпром",
+                "name": "Зарп Visa Gold Кэшбэк Газпром"
+              },
+              "issueTechnology": {
+                "code": "",
+                "name": ""
+              },
+              "cardName": "Зарп Visa Gold Кэшбэк Газпром",
+              "cardFullName": "Зарп Visa Gold Кэшбэк Газпром",
+              "mainAccount": {
+                "base": {
+                  "systemInfo": {
+                    "systemId": "DRTL",
+                    "rawId": "10069663534"
+                  },
+                  "number": "40817810300602456539",
+                  "bank": {
+                    "bic": "044525823"
+                  },
+                  "currency": {
+                    "numCode": "810",
+                    "charCode": "RUR"
+                  },
+                  "state": {
+                    "code": "Open",
+                    "name": "Открыт",
+                    "reason": "Открыт",
+                    "date": "2020-08-15"
+                  },
+                  "isArrest": false
+                },
+                "detail": {
+                  "arrests": [
+                    {}
+                  ]
+                }
+              },
+              "holder": {
+                "systemId": "DRTL",
+                "rawId": "10069663534",
+                "fullName": "Казаков Иван Васильевич"
+              },
+              "balance": [
+                {
+                  "type": "mainAmount",
+                  "value": {
+                    "amount": "50000.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "ownFunds",
+                  "value": {
+                    "amount": "50000.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "creditAmount",
+                  "value": {
+                    "amount": "0.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "holdAmount",
+                  "value": {
+                    "amount": "0.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                }
+              ],
+              "originalState": {
+                "code": "0",
+                "name": "VALID CARD",
+                "reason": {
+                  "code": "",
+                  "name": ""
+                }
+              },
+              "private": {
+                "expDate": "02/24",
+                "holderName": "IVAN KAZAKOV",
+                "countFailPIN": 3,
+                "secretWord": "",
+                "cardNumberCode": "897090",
+                "isSecretWord": true
+              },
+              "isMain": false,
+              "isOverdraft": false,
+              "isTechnicalOverdraft": false,
+              "isPayPass": false,
+              "isMobilePay": false,
+              "isLoyalty": false
+            },
+            "detail": {
+              "startDate": "2020-08-15",
+              "issueDetail": {
+                "applicationBranch": {
+                  "bic": "044525823",
+                  "fullName": "\"Газпромбанк\" (Акционерное общество)"
+                },
+                "deliveryBranch": {
+                  "code": "000/0000",
+                  "systemCode": "DRTL",
+                  "bic": "044525823",
+                  "fullName": "\"Газпромбанк\" (Акционерное общество)/ДО 015/1042 Банка ГПБ (АО)"
+                }
+              },
+              "insuranceAmount": {
+                "amount": "0.00",
+                "currency": {
+                  "numCode": "810",
+                  "charCode": "RUR"
+                }
+              },
+              "workInfo": {
+                "organization": {
+                  "code": "1199",
+                  "name": "Общество с ограниченной ответственностью \"Газпромбанк-Инвест Девелопмент\""
+                }
+              },
+              "is3DSecure": false
+            }
+          },
+          {
+            "base": {
+              "systemInfo": {
+                "systemId": "DRTL",
+                "rawId": "10074435957"
+              },
+              "virtualNum": "DRTL10074435957",
+              "maskNum": "487416******9004",
+              "pan": "4874164000229004",
+              "stateBankSystem": {
+                "code": "CS03",
+                "name": "Действует"
+              },
+              "issueState": {
+                "code": "issued",
+                "name": "Выдана"
+              },
+              "blankState": {
+                "code": "CBS27",
+                "name": ""
+              },
+              "state": {
+                "code": "ACTIVE",
+                "name": "Действует"
+              },
+              "type": {
+                "code": "salary",
+                "name": "зарплатная"
+              },
+              "category": {
+                "code": "gold",
+                "name": "Visa_Gold"
+              },
+              "paySystem": {
+                "code": "VISA",
+                "name": "VISA"
+              },
+              "product": {
+                "code": "Зарп Visa Gold Кэшбэк Газпром",
+                "name": "Зарп Visa Gold Кэшбэк Газпром"
+              },
+              "issueTechnology": {
+                "code": "",
+                "name": ""
+              },
+              "cardName": "Зарп Visa Gold Кэшбэк Газпром",
+              "cardFullName": "Зарп Visa Gold Кэшбэк Газпром",
+              "mainAccount": {
+                "base": {
+                  "systemInfo": {
+                    "systemId": "DRTL",
+                    "rawId": "10069663534"
+                  },
+                  "number": "40817810300602456540",
+                  "bank": {
+                    "bic": "044525823"
+                  },
+                  "currency": {
+                    "numCode": "810",
+                    "charCode": "RUR"
+                  },
+                  "creationDate": "2023-03-22",
+                  "closeDateFact": "",
+                  "isArrest": false,
+                  "balance": [
+                    {
+                      "type": "mainAmount",
+                      "value": {
+                        "amount": "100000.00",
+                        "currency": {
+                          "numCode": "643",
+                          "charCode": "RUB"
+                        }
+                      }
+                    },
+                    {
+                      "type": "ownFunds",
+                      "value": {
+                        "amount": "100000.00",
+                        "currency": {
+                          "numCode": "643",
+                          "charCode": "RUB"
+                        }
+                      }
+                    },
+                    {
+                      "type": "creditAmount",
+                      "value": {
+                        "amount": "100000.00",
+                        "currency": {
+                          "numCode": "643",
+                          "charCode": "RUB"
+                        }
+                      }
+                    },
+                    {
+                      "type": "holdAmount",
+                      "value": {
+                        "amount": "100000.00",
+                        "currency": {
+                          "numCode": "643",
+                          "charCode": "RUB"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "detail": {
+                  "arrests": [
+                    {}
+                  ]
+                }
+              },
+              "holder": {
+                "systemId": "DRTL",
+                "rawId": "10069663534",
+                "fullName": "Казаков Иван Васильевич"
+              },
+              "balance": [
+                {
+                  "type": "mainAmount",
+                  "value": {
+                    "amount": "1000000.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "ownFunds",
+                  "value": {
+                    "amount": "1000000.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "creditAmount",
+                  "value": {
+                    "amount": "0.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "holdAmount",
+                  "value": {
+                    "amount": "0.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                }
+              ],
+              "originalState": {
+                "code": "0",
+                "name": "VALID CARD",
+                "reason": {
+                  "code": "",
+                  "name": ""
+                }
+              },
+              "private": {
+                "expDate": "05/23",
+                "holderName": "IVAN KAZAKOV",
+                "countFailPIN": 3,
+                "secretWord": "",
+                "cardNumberCode": "897090",
+                "isSecretWord": true
+              },
+              "isMain": true,
+              "isOverdraft": false,
+              "isTechnicalOverdraft": false,
+              "isPayPass": false,
+              "isMobilePay": false,
+              "isLoyalty": false
+            },
+            "detail": {
+              "startDate": "2020-08-15",
+              "issueDetail": {
+                "applicationBranch": {
+                  "bic": "044525823",
+                  "fullName": "\"Газпромбанк\" (Акционерное общество)"
+                },
+                "deliveryBranch": {
+                  "code": "000/0000",
+                  "systemCode": "DRTL",
+                  "bic": "044525823",
+                  "fullName": "\"Газпромбанк\" (Акционерное общество)/ДО 015/1042 Банка ГПБ (АО)"
+                }
+              },
+              "insuranceAmount": {
+                "amount": "0.00",
+                "currency": {
+                  "numCode": "810",
+                  "charCode": "RUR"
+                }
+              },
+              "workInfo": {
+                "organization": {
+                  "code": "1199",
+                  "name": "Общество с ограниченной ответственностью \"Газпромбанк-Инвест Девелопмент\""
+                }
+              },
+              "is3DSecure": false
+            }
+          },
+          {
+            "base": {
+              "systemInfo": {
+                "systemId": "DRTL",
+                "rawId": "10074435958"
+              },
+              "virtualNum": "DRTL10074435958",
+              "maskNum": "487416******9004",
+              "pan": "4874164000229004",
+              "issueState": {
+                "code": "issued",
+                "name": "Выдана"
+              },
+              "blankState": {
+                "code": "",
+                "name": ""
+              },
+              "state": {
+                "code": "ACTIVE",
+                "name": "Действует"
+              },
+              "type": {
+                "code": "salary",
+                "name": "зарплатная"
+              },
+              "category": {
+                "code": "gold",
+                "name": "Visa_Gold"
+              },
+              "paySystem": {
+                "code": "VISA",
+                "name": "VISA"
+              },
+              "product": {
+                "code": "Зарп Visa Gold Кэшбэк Газпром",
+                "name": "Зарп Visa Gold Кэшбэк Газпром"
+              },
+              "issueTechnology": {
+                "code": "",
+                "name": ""
+              },
+              "cardName": "Зарп Visa Gold Кэшбэк Газпром",
+              "cardFullName": "Зарп Visa Gold Кэшбэк Газпром",
+              "mainAccount": {
+                "base": {
+                  "systemInfo": {
+                    "systemId": "DRTL",
+                    "rawId": "10069663534"
+                  },
+                  "number": "40817810300602456540",
+                  "bank": {
+                    "bic": "044525823"
+                  },
+                  "currency": {
+                    "numCode": "810",
+                    "charCode": "RUR"
+                  },
+                  "state": {
+                    "code": "Open",
+                    "name": "Открыт",
+                    "reason": "Открыт",
+                    "date": "2020-08-15"
+                  },
+                  "isArrest": false
+                },
+                "detail": {
+                  "arrests": [
+                    {}
+                  ]
+                }
+              },
+              "holder": {
+                "systemId": "DRTL",
+                "rawId": "10069663534",
+                "fullName": "Казаков Иван Васильевич"
+              },
+              "balance": [
+                {
+                  "type": "mainAmount",
+                  "value": {
+                    "amount": "3200.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "ownFunds",
+                  "value": {
+                    "amount": "3200.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "creditAmount",
+                  "value": {
+                    "amount": "0.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "holdAmount",
+                  "value": {
+                    "amount": "0.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                }
+              ],
+              "originalState": {
+                "code": "0",
+                "name": "VALID CARD",
+                "reason": {
+                  "code": "",
+                  "name": ""
+                }
+              },
+              "private": {
+                "expDate": "02/24",
+                "holderName": "IVAN KAZAKOV",
+                "countFailPIN": 3,
+                "secretWord": "",
+                "cardNumberCode": "897090",
+                "isSecretWord": true
+              },
+              "isMain": true,
+              "isOverdraft": false,
+              "isTechnicalOverdraft": false,
+              "isPayPass": false,
+              "isMobilePay": false,
+              "isLoyalty": false
+            },
+            "detail": {
+              "startDate": "2020-08-15",
+              "issueDetail": {
+                "applicationBranch": {
+                  "bic": "044525823",
+                  "fullName": "\"Газпромбанк\" (Акционерное общество)"
+                },
+                "deliveryBranch": {
+                  "code": "000/0000",
+                  "systemCode": "DRTL",
+                  "bic": "044525823",
+                  "fullName": "\"Газпромбанк\" (Акционерное общество)/ДО 015/1042 Банка ГПБ (АО)"
+                }
+              },
+              "insuranceAmount": {
+                "amount": "0.00",
+                "currency": {
+                  "numCode": "810",
+                  "charCode": "RUR"
+                }
+              },
+              "workInfo": {
+                "organization": {
+                  "code": "1199",
+                  "name": "Общество с ограниченной ответственностью \"Газпромбанк-Инвест Девелопмент\""
+                }
+              },
+              "is3DSecure": false
+            }
+          },
+          {
+            "base": {
+              "systemInfo": {
+                "systemId": "DRTL",
+                "rawId": "10074435959"
+              },
+              "virtualNum": "DRTL10074435959",
+              "maskNum": "487416******9004",
+              "pan": "4874164000229004",
+              "issueState": {
+                "code": "issued",
+                "name": "Выдана"
+              },
+              "blankState": {
+                "code": "",
+                "name": ""
+              },
+              "state": {
+                "code": "ACTIVE",
+                "name": "Действует"
+              },
+              "type": {
+                "code": "salary",
+                "name": "зарплатная"
+              },
+              "category": {
+                "code": "gold",
+                "name": "Visa_Gold"
+              },
+              "paySystem": {
+                "code": "VISA",
+                "name": "VISA"
+              },
+              "product": {
+                "code": "Зарп Visa Gold Кэшбэк Газпром",
+                "name": "Зарп Visa Gold Кэшбэк Газпром"
+              },
+              "issueTechnology": {
+                "code": "",
+                "name": ""
+              },
+              "cardName": "Зарп Visa Gold Кэшбэк Газпром",
+              "cardFullName": "Зарп Visa Gold Кэшбэк Газпром",
+              "mainAccount": {
+                "base": {
+                  "systemInfo": {
+                    "systemId": "DRTL",
+                    "rawId": "10069663534"
+                  },
+                  "number": "40817810300602456511",
+                  "bank": {
+                    "bic": "044525823"
+                  },
+                  "currency": {
+                    "numCode": "810",
+                    "charCode": "RUR"
+                  },
+                  "state": {
+                    "code": "Open",
+                    "name": "Открыт",
+                    "reason": "Открыт",
+                    "date": "2020-08-15"
+                  },
+                  "isArrest": false,
+                  "creationDate": "2023-03-22",
+                  "closeDateFact": "",
+                  "balance": [
+                    {
+                      "type": "mainAmount",
+                      "value": {
+                        "amount": "100000.00",
+                        "currency": {
+                          "numCode": "643",
+                          "charCode": "RUB"
+                        }
+                      }
+                    },
+                    {
+                      "type": "ownFunds",
+                      "value": {
+                        "amount": "100000.00",
+                        "currency": {
+                          "numCode": "643",
+                          "charCode": "RUB"
+                        }
+                      }
+                    },
+                    {
+                      "type": "creditAmount",
+                      "value": {
+                        "amount": "100000.00",
+                        "currency": {
+                          "numCode": "643",
+                          "charCode": "RUB"
+                        }
+                      }
+                    },
+                    {
+                      "type": "holdAmount",
+                      "value": {
+                        "amount": "100000.00",
+                        "currency": {
+                          "numCode": "643",
+                          "charCode": "RUB"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "detail": {
+                  "arrests": [
+                    {}
+                  ]
+                }
+              },
+              "holder": {
+                "systemId": "DRTL",
+                "rawId": "10069663534",
+                "fullName": "Казаков Иван Васильевич"
+              },
+              "balance": [
+                {
+                  "type": "mainAmount",
+                  "value": {
+                    "amount": "100000000.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "ownFunds",
+                  "value": {
+                    "amount": "100000000.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "creditAmount",
+                  "value": {
+                    "amount": "0.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "holdAmount",
+                  "value": {
+                    "amount": "0.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                }
+              ],
+              "originalState": {
+                "code": "0",
+                "name": "VALID CARD",
+                "reason": {
+                  "code": "",
+                  "name": ""
+                }
+              },
+              "private": {
+                "expDate": "02/24",
+                "holderName": "IVAN KAZAKOV",
+                "countFailPIN": 3,
+                "secretWord": "",
+                "cardNumberCode": "897090",
+                "isSecretWord": true
+              },
+              "isMain": true,
+              "isOverdraft": false,
+              "isTechnicalOverdraft": false,
+              "isPayPass": false,
+              "isMobilePay": false,
+              "isLoyalty": false
+            },
+            "detail": {
+              "startDate": "2020-08-15",
+              "issueDetail": {
+                "applicationBranch": {
+                  "bic": "044525823",
+                  "fullName": "\"Газпромбанк\" (Акционерное общество)"
+                },
+                "deliveryBranch": {
+                  "bic": "044525823",
+                  "systemCode": "DRTL",
+                  "code": "000/0000",
+                  "fullName": "\"Газпромбанк\" (Акционерное общество)/ДО 015/1042 Банка ГПБ (АО)"
+                }
+              },
+              "insuranceAmount": {
+                "amount": "0.00",
+                "currency": {
+                  "numCode": "810",
+                  "charCode": "RUR"
+                }
+              },
+              "workInfo": {
+                "organization": {
+                  "code": "1199",
+                  "name": "Общество с ограниченной ответственностью \"Газпромбанк-Инвест Девелопмент\""
+                }
+              },
+              "is3DSecure": false
+            }
+          },
+
+          {
+            "base": {
+              "systemInfo": {
+                "systemId": "DRTL",
+                "rawId": "10074435959"
+              },
+              "virtualNum": "DRTL10074435960",
+              "maskNum": "487416******9004",
+              "pan": "4874164000229004",
+              "issueState": {
+                "code": "issued",
+                "name": "Выдана"
+              },
+              "blankState": {
+                "code": "",
+                "name": ""
+              },
+              "stateBankSystem": {
+                "code": "CS03",
+                "name": "Действует"
+              },
+              "state": {
+                "code": "ACTIVE",
+                "name": "Действует"
+              },
+              "type": {
+                "code": "salary",
+                "name": "зарплатная"
+              },
+              "category": {
+                "code": "gold",
+                "name": "Visa_Gold"
+              },
+              "paySystem": {
+                "code": "VISA",
+                "name": "VISA"
+              },
+              "product": {
+                "code": "Доп Зарп UP Gold Кэшбэк Газпром",
+                "name": "Доп Зарп UP Gold Кэшбэк Газпром"
+              },
+              "issueTechnology": {
+                "code": "",
+                "name": ""
+              },
+              "cardName": "Доп Зарп UP Gold Кэшбэк Газпром",
+              "cardFullName": "Доп Зарп UP Gold Кэшбэк Газпром",
+              "mainAccount": {
+                "base": {
+                  "systemInfo": {
+                    "systemId": "DRTL",
+                    "rawId": "10069663534"
+                  },
+                  "number": "40817810300602456511",
+                  "bank": {
+                    "bic": "044525823"
+                  },
+                  "currency": {
+                    "numCode": "810",
+                    "charCode": "RUR"
+                  },
+                  "state": {
+                    "code": "Open",
+                    "name": "Открыт",
+                    "reason": "Открыт",
+                    "date": "2020-08-15"
+                  },
+                  "isArrest": false
+                },
+                "detail": {
+                  "arrests": [
+                    {}
+                  ]
+                }
+              },
+              "holder": {
+                "systemId": "DRTL",
+                "rawId": "10069663534",
+                "fullName": "Казаков Иван Васильевич"
+              },
+              "balance": [
+                {
+                  "type": "mainAmount",
+                  "value": {
+                    "amount": "100000000.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "ownFunds",
+                  "value": {
+                    "amount": "100000000.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "creditAmount",
+                  "value": {
+                    "amount": "0.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "holdAmount",
+                  "value": {
+                    "amount": "0.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                }
+              ],
+              "originalState": {
+                "code": "0",
+                "name": "VALID CARD",
+                "reason": {
+                  "code": "",
+                  "name": ""
+                }
+              },
+              "private": {
+                "expDate": "02/24",
+                "holderName": "IVAN KAZAKOV",
+                "countFailPIN": 3,
+                "secretWord": "",
+                "cardNumberCode": "897090",
+                "isSecretWord": true
+              },
+              "isMain": false,
+              "isOverdraft": false,
+              "isTechnicalOverdraft": false,
+              "isPayPass": false,
+              "isMobilePay": false,
+              "isLoyalty": false
+            },
+            "detail": {
+              "startDate": "2020-08-15",
+              "issueDetail": {
+                "applicationBranch": {
+                  "bic": "044525823",
+                  "fullName": "\"Газпромбанк\" (Акционерное общество)"
+                },
+                "deliveryBranch": {
+                  "bic": "044525823",
+                  "systemCode": "DRTL",
+                  "code": "000/0000",
+                  "fullName": "\"Газпромбанк\" (Акционерное общество)/ДО 015/1042 Банка ГПБ (АО)"
+                }
+              },
+              "insuranceAmount": {
+                "amount": "0.00",
+                "currency": {
+                  "numCode": "810",
+                  "charCode": "RUR"
+                }
+              },
+              "workInfo": {
+                "organization": {
+                  "code": "1199",
+                  "name": "Общество с ограниченной ответственностью \"Газпромбанк-Инвест Девелопмент\""
+                }
+              },
+              "is3DSecure": false
+            }
+          },
+          {
+            "base": {
+              "isReissue": true,
+              "systemInfo": {
+                "systemId": "DRTL",
+                "rawId": "50186124512"
+              },
+              "virtualNum": "DRTL40146170296",
+              "maskNum": "404136****0142",
+              "pan": "4041369648900142",
+              "issueState": {
+                "code": "issued",
+                "name": "Выдана"
+              },
+              "blankState": {
+                "code": "CBS39",
+                "name": "Персонализирована принята по отчету"
+              },
+              "state": {
+                "code": "ACTIVE",
+                "name": "Действует"
+              },
+              "stateBankSystem": {
+                "code": "CS03",
+                "name": "Действует"
+              },
+              "type": {
+                "code": "personal",
+                "name": "личная"
+              },
+              "category": {
+                "code": "undefined",
+                "name": "МИР/JCB Advanced"
+              },
+              "paySystem": {
+                "code": "mir/jsb",
+                "name": "МИР"
+              },
+              "product": {
+                "code": "Зарп Visa Gold Кэшбэк Газпром",
+                "name": "Зарп Visa Gold Кэшбэк Газпром"
+              },
+              "issueTechnology": {
+                "code": "",
+                "name": ""
+              },
+              "cardName": "Зарп Visa Gold Кэшбэк Газпром",
+              "cardFullName": "Зарп Visa Gold Кэшбэк Газпром",
+              "mainAccount": {
+                "base": {
+                  "systemInfo": {
+                    "systemId": "DRTL",
+                    "rawId": "10225505610"
+                  },
+                  "number": "40817810400603370322",
+                  "bank": {
+                    "bic": "044525823"
+                  },
+                  "currency": {
+                    "numCode": "810",
+                    "charCode": "RUR"
+                  },
+                  "state": {
+                    "code": "Open",
+                    "name": "Открыт",
+                    "reason": "Открыт",
+                    "date": "2023-03-22"
+                  },
+                  "creationDate": "2023-03-22",
+                  "closeDateFact": "",
+                  "isArrest": false,
+                  "balance": [
+                    {
+                      "type": "mainAmount",
+                      "value": {
+                        "amount": "100000.00",
+                        "currency": {
+                          "numCode": "643",
+                          "charCode": "RUB"
+                        }
+                      }
+                    },
+                    {
+                      "type": "ownFunds",
+                      "value": {
+                        "amount": "100000.00",
+                        "currency": {
+                          "numCode": "643",
+                          "charCode": "RUB"
+                        }
+                      }
+                    },
+                    {
+                      "type": "creditAmount",
+                      "value": {
+                        "amount": "100000.00",
+                        "currency": {
+                          "numCode": "643",
+                          "charCode": "RUB"
+                        }
+                      }
+                    },
+                    {
+                      "type": "holdAmount",
+                      "value": {
+                        "amount": "100000.00",
+                        "currency": {
+                          "numCode": "643",
+                          "charCode": "RUB"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "detail": {
+                  "arrests": [
+                    {}
+                  ]
+                }
+              },
+              "holder": {
+                "systemId": "DRTL",
+                "rawId": "71000020072",
+                "fullName": "Обращенко Искандер Умарасхабович"
+              },
+              "balance": [
+                {
+                  "type": "mainAmount",
+                  "value": {
+                    "amount": "100000.00",
+                    "currency": {
+                      "numCode": "643",
+                      "charCode": "RUB"
+                    }
+                  }
+                },
+                {
+                  "type": "ownFunds",
+                  "value": {
+                    "amount": "100000.00",
+                    "currency": {
+                      "numCode": "643",
+                      "charCode": "RUB"
+                    }
+                  }
+                },
+                {
+                  "type": "creditAmount",
+                  "value": {
+                    "amount": "100000.00",
+                    "currency": {
+                      "numCode": "643",
+                      "charCode": "RUB"
+                    }
+                  }
+                },
+                {
+                  "type": "holdAmount",
+                  "value": {
+                    "amount": "100000.00",
+                    "currency": {
+                      "numCode": "643",
+                      "charCode": "RUB"
+                    }
+                  }
+                }
+              ],
+              "originalState": {
+                "code": "0",
+                "name": "VALID CARD",
+                "reason": {
+                  "code": "",
+                  "name": ""
+                }
+              },
+              "issueType": "Plastic",
+              "private": {
+                "expDate": "03/26",
+                "holderName": "I. OBRASHCHENKO",
+                "countFailPIN": 0,
+                "secretWord": "",
+                "cardNumberCode": "760494",
+                "isSecretWord": true
+              },
+              "isMain": true,
+              "isOverdraft": false,
+              "isTechnicalOverdraft": false,
+              "isPayPass": false,
+              "isMobilePay": false,
+              "isLoyalty": false,
+              "isReissue": false
+            },
+            "detail": {
+              "startDate": "2023-03-22",
+              "issueDetail": {
+                "applicationBranch": {
+                  "bic": "044525823",
+                  "fullName": "\"Газпромбанк\" (Акционерное общество)"
+                },
+                "deliveryBranch": {
+                  "bic": "044525823",
+                  "fullName": "\"Газпромбанк\" (Акционерное общество)/Дополнительный офис № 015/1055 \"Газпромбанк\" (Акционерное общество)",
+                  "systemCode": "DRTL",
+                  "code": "015/1055"
+                }
+              },
+              "insuranceAmount": {
+                "amount": "0.00",
+                "currency": {
+                  "numCode": "810",
+                  "charCode": "RUR"
+                }
+              },
+              "workInfo": {
+                "organization": {}
+              },
+              "services": [
+                {
+                  "name": "SmartPro",
+                  "state": {
+                    "code": "Действует",
+                    "name": "Действует",
+                    "date": "2023-03-22"
+                  }
+                }
+              ],
+              "is3DSecure": true
+            }
+          },
+          {
+            "base": {
+              "isReissue": true,
+              "systemInfo": {
+                "systemId": "DRTL",
+                "rawId": "50186124512"
+              },
+              "virtualNum": "DRTL40146170297",
+              "maskNum": "404136****0143",
+              "pan": "4041369648900142",
+              "issueState": {
+                "code": "issued",
+                "name": "Выдана"
+              },
+              "blankState": {
+                "code": "CBS39",
+                "name": "Персонализирована принята по отчету"
+              },
+              "state": {
+                "code": "ACTIVE",
+                "name": "Действует"
+              },
+              "stateBankSystem": {
+                "code": "CS03",
+                "name": "Действует"
+              },
+              "type": {
+                "code": "personal",
+                "name": "личная"
+              },
+              "category": {
+                "code": "undefined",
+                "name": "МИР/JCB Advanced"
+              },
+              "paySystem": {
+                "code": "mir/jsb",
+                "name": "МИР"
+              },
+              "product": {
+                "code": "Зарп МИРmc Premium Клуб ЗП Мир Армия ВДВ",
+                "name": "Зарп МИРmc Premium Клуб ЗП Мир Армия ВДВ"
+              },
+              "issueTechnology": {
+                "code": "",
+                "name": ""
+              },
+              "cardName": "Зарп Visa Gold Кэшбэк Газпром",
+              "cardFullName": "Зарп Visa Gold Кэшбэк Газпром",
+              "mainAccount": {
+                "base": {
+                  "systemInfo": {
+                    "systemId": "DRTL",
+                    "rawId": "10225505610"
+                  },
+                  "number": "40817810400603370322",
+                  "bank": {
+                    "bic": "044525823"
+                  },
+                  "currency": {
+                    "numCode": "810",
+                    "charCode": "RUR"
+                  },
+                  "state": {
+                    "code": "Open",
+                    "name": "Открыт",
+                    "reason": "Открыт",
+                    "date": "2023-03-22"
+                  },
+                  "creationDate": "2023-03-22",
+                  "closeDateFact": "",
+                  "isArrest": false
+                },
+                "detail": {
+                  "arrests": [
+                    {}
+                  ]
+                }
+              },
+              "holder": {
+                "systemId": "DRTL",
+                "rawId": "71000020072",
+                "fullName": "Обращенко Искандер Умарасхабович"
+              },
+              "balance": [
+                {
+                  "type": "mainAmount",
+                  "value": {
+                    "amount": "100000.00",
+                    "currency": {
+                      "numCode": "643",
+                      "charCode": "RUB"
+                    }
+                  }
+                },
+                {
+                  "type": "ownFunds",
+                  "value": {
+                    "amount": "100000.00",
+                    "currency": {
+                      "numCode": "643",
+                      "charCode": "RUB"
+                    }
+                  }
+                },
+                {
+                  "type": "creditAmount",
+                  "value": {
+                    "amount": "100000.00",
+                    "currency": {
+                      "numCode": "643",
+                      "charCode": "RUB"
+                    }
+                  }
+                },
+                {
+                  "type": "holdAmount",
+                  "value": {
+                    "amount": "100000.00",
+                    "currency": {
+                      "numCode": "643",
+                      "charCode": "RUB"
+                    }
+                  }
+                }
+              ],
+              "originalState": {
+                "code": "0",
+                "name": "VALID CARD",
+                "reason": {
+                  "code": "",
+                  "name": ""
+                }
+              },
+              "issueType": "Plastic",
+              "private": {
+                "expDate": "03/26",
+                "holderName": "I. OBRASHCHENKO",
+                "countFailPIN": 0,
+                "secretWord": "",
+                "cardNumberCode": "760494",
+                "isSecretWord": true
+              },
+              "isMain": true,
+              "isOverdraft": false,
+              "isTechnicalOverdraft": false,
+              "isPayPass": false,
+              "isMobilePay": false,
+              "isLoyalty": false,
+              "isReissue": false
+            },
+            "detail": {
+              "startDate": "2023-03-22",
+              "issueDetail": {
+                "applicationBranch": {
+                  "bic": "044525823",
+                  "fullName": "\"Газпромбанк\" (Акционерное общество)"
+                },
+                "deliveryBranch": {
+                  "bic": "044525823",
+                  "fullName": "\"Газпромбанк\" (Акционерное общество)/Дополнительный офис № 015/1055 \"Газпромбанк\" (Акционерное общество)",
+                  "systemCode": "DR02",
+                  "code": "015/1055"
+                }
+              },
+              "insuranceAmount": {
+                "amount": "0.00",
+                "currency": {
+                  "numCode": "810",
+                  "charCode": "RUR"
+                }
+              },
+              "workInfo": {
+                "organization": {}
+              },
+              "services": [
+                {
+                  "name": "SmartPro",
+                  "state": {
+                    "code": "Действует",
+                    "name": "Действует",
+                    "date": "2023-03-22"
+                  }
+                }
+              ],
+              "is3DSecure": true
+            }
+          },
+          {
+            "base": {
+              "systemInfo": {
+                "systemId": "DR02",
+                "rawId": "40146170298"
+              },
+              "virtualNum": "DRTL40146170298",
+              "maskNum": "487416******9004",
+              "pan": "4874164000229004",
+              "stateBankSystem": {
+                "code": "CS11",
+                "name": "На ожидании выдачи"
+              },
+              "issueState": {
+                "code": "nonpersonal",
+                "name": "не персонализирована (массовый выпуск)"
+              },
+              "blankState": {
+                "code": "CBS39",
+                "name": ""
+              },
+              "state": {
+                "code": "INACTIVE",
+                "name": "Действует"
+              },
+              "type": {
+                "code": "salary",
+                "name": "зарплатная"
+              },
+              "category": {
+                "code": "gold",
+                "name": "Visa_Gold"
+              },
+              "paySystem": {
+                "code": "VISA",
+                "name": "VISA"
+              },
+              "product": {
+                "code": "Зарп Visa Gold Кэшбэк Газпром",
+                "name": "Зарп Visa Gold Кэшбэк Газпром"
+              },
+              "issueTechnology": {
+                "code": "ПИН - конверт",
+                "name": "ПИН - конверт"
+              },
+              "cardName": "Зарп Visa Gold Кэшбэк Газпром",
+              "cardFullName": "Зарп Visa Gold Кэшбэк Газпром",
+              "mainAccount": {
+                "base": {
+                  "systemInfo": {
+                    "systemId": "DRTL",
+                    "rawId": "10069663534"
+                  },
+                  "number": "40817810300602456545",
+                  "bank": {
+                    "bic": "044525823"
+                  },
+                  "currency": {
+                    "numCode": "810",
+                    "charCode": "RUR"
+                  },
+                  "state": {
+                    "code": "Open",
+                    "name": "Открыт",
+                    "reason": "Открыт",
+                    "date": "2020-08-15"
+                  },
+                  "isArrest": false,
+                  "creationDate": "2023-08-15"
+                },
+                "detail": {
+                  "arrests": [
+                    {}
+                  ]
+                }
+              },
+              "holder": {
+                "systemId": "DRTL",
+                "rawId": "10069663534",
+                "fullName": "Казаков Иван Васильевич"
+              },
+              "balance": [
+                {
+                  "type": "mainAmount",
+                  "value": {
+                    "amount": "1000000.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "ownFunds",
+                  "value": {
+                    "amount": "1000000.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "creditAmount",
+                  "value": {
+                    "amount": "0.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                },
+                {
+                  "type": "holdAmount",
+                  "value": {
+                    "amount": "0.00",
+                    "currency": {
+                      "numCode": "781"
+                    }
+                  }
+                }
+              ],
+              "originalState": {
+                "code": "0",
+                "name": "VALID CARD",
+                "reason": {
+                  "code": "",
+                  "name": ""
+                }
+              },
+              "private": {
+                "expDate": "05/23",
+                "holderName": "IVAN KAZAKOV",
+                "countFailPIN": 3,
+                "secretWord": "",
+                "cardNumberCode": "897090",
+                "isSecretWord": true
+              },
+              "isMain": true,
+              "isOverdraft": false,
+              "isTechnicalOverdraft": false,
+              "isPayPass": false,
+              "isMobilePay": false,
+              "isLoyalty": false
+            },
+            "detail": {
+              "startDate": "2020-08-15",
+              "issueDetail": {
+                "applicationBranch": {
+                  "bic": "044525823",
+                  "fullName": "\"Газпромбанк\" (Акционерное общество)"
+                },
+                "deliveryBranch": {
+                  "code": "000/0000",
+                  "systemCode": "DR02",
+                  "bic": "044525823",
+                  "fullName": "\"Газпромбанк\" (Акционерное общество)/ДО 015/1042 Банка ГПБ (АО)"
+                }
+              },
+              "insuranceAmount": {
+                "amount": "0.00",
+                "currency": {
+                  "numCode": "810",
+                  "charCode": "RUR"
+                }
+              },
+              "workInfo": {
+                "organization": {
+                  "code": "1199",
+                  "name": "Общество с ограниченной ответственностью \"Газпромбанк-Инвест Девелопмент\""
+                }
+              },
+              "is3DSecure": false
+            }
+          },
+
+
+          {
+            "base": {
+              "isReissue": true,
+              "systemInfo": {
+                "systemId": "DRTL",
+                "rawId": "50186124512"
+              },
+              "virtualNum": "DRОшНеПредТариф",
+              "maskNum": "404136****0142",
+              "pan": "4041369648900142",
+              "issueState": {
+                "code": "issued",
+                "name": "Выдана"
+              },
+              "blankState": {
+                "code": "CBS39",
+                "name": "Персонализирована принята по отчету"
+              },
+              "state": {
+                "code": "ACTIVE",
+                "name": "Действует"
+              },
+              "stateBankSystem": {
+                "code": "CS03",
+                "name": "Действует"
+              },
+              "type": {
+                "code": "personal",
+                "name": "личная"
+              },
+              "category": {
+                "code": "undefined",
+                "name": "МИР/JCB Advanced"
+              },
+              "paySystem": {
+                "code": "mir/jsb",
+                "name": "МИР"
+              },
+              "product": {
+                "code": "ОшибкаНеПредусмотренаТарифом",
+                "name": "Зарп Visa Gold Кэшбэк Газпром"
+              },
+              "issueTechnology": {
+                "code": "",
+                "name": ""
+              },
+              "cardName": "Зарп Visa Gold Кэшбэк Газпром",
+              "cardFullName": "Зарп Visa Gold Кэшбэк Газпром",
+              "mainAccount": {
+                "base": {
+                  "systemInfo": {
+                    "systemId": "DRTL",
+                    "rawId": "10225505610"
+                  },
+                  "number": "40817810400603370322",
+                  "bank": {
+                    "bic": "044525823"
+                  },
+                  "currency": {
+                    "numCode": "810",
+                    "charCode": "RUR"
+                  },
+                  "state": {
+                    "code": "Open",
+                    "name": "Открыт",
+                    "reason": "Открыт",
+                    "date": "2023-03-22"
+                  },
+                  "creationDate": "2023-03-22",
+                  "closeDateFact": "",
+                  "isArrest": false,
+                  "balance": [
+                    {
+                      "type": "mainAmount",
+                      "value": {
+                        "amount": "100000.00",
+                        "currency": {
+                          "numCode": "643",
+                          "charCode": "RUB"
+                        }
+                      }
+                    },
+                    {
+                      "type": "ownFunds",
+                      "value": {
+                        "amount": "100000.00",
+                        "currency": {
+                          "numCode": "643",
+                          "charCode": "RUB"
+                        }
+                      }
+                    },
+                    {
+                      "type": "creditAmount",
+                      "value": {
+                        "amount": "100000.00",
+                        "currency": {
+                          "numCode": "643",
+                          "charCode": "RUB"
+                        }
+                      }
+                    },
+                    {
+                      "type": "holdAmount",
+                      "value": {
+                        "amount": "100000.00",
+                        "currency": {
+                          "numCode": "643",
+                          "charCode": "RUB"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "detail": {
+                  "arrests": [
+                    {}
+                  ]
+                }
+              },
+              "holder": {
+                "systemId": "DRTL",
+                "rawId": "71000020072",
+                "fullName": "Обращенко Искандер Умарасхабович"
+              },
+              "balance": [
+                {
+                  "type": "mainAmount",
+                  "value": {
+                    "amount": "100000.00",
+                    "currency": {
+                      "numCode": "643",
+                      "charCode": "RUB"
+                    }
+                  }
+                },
+                {
+                  "type": "ownFunds",
+                  "value": {
+                    "amount": "100000.00",
+                    "currency": {
+                      "numCode": "643",
+                      "charCode": "RUB"
+                    }
+                  }
+                },
+                {
+                  "type": "creditAmount",
+                  "value": {
+                    "amount": "100000.00",
+                    "currency": {
+                      "numCode": "643",
+                      "charCode": "RUB"
+                    }
+                  }
+                },
+                {
+                  "type": "holdAmount",
+                  "value": {
+                    "amount": "100000.00",
+                    "currency": {
+                      "numCode": "643",
+                      "charCode": "RUB"
+                    }
+                  }
+                }
+              ],
+              "originalState": {
+                "code": "0",
+                "name": "VALID CARD",
+                "reason": {
+                  "code": "",
+                  "name": ""
+                }
+              },
+              "issueType": "Plastic",
+              "private": {
+                "expDate": "03/26",
+                "holderName": "I. OBRASHCHENKO",
+                "countFailPIN": 0,
+                "secretWord": "",
+                "cardNumberCode": "760494",
+                "isSecretWord": true
+              },
+              "isMain": true,
+              "isOverdraft": false,
+              "isTechnicalOverdraft": false,
+              "isPayPass": false,
+              "isMobilePay": false,
+              "isLoyalty": false,
+              "isReissue": false
+            },
+            "detail": {
+              "startDate": "2023-03-22",
+              "issueDetail": {
+                "applicationBranch": {
+                  "bic": "044525823",
+                  "fullName": "\"Газпромбанк\" (Акционерное общество)"
+                },
+                "deliveryBranch": {
+                  "bic": "044525823",
+                  "fullName": "\"Газпромбанк\" (Акционерное общество)/Дополнительный офис № 015/1055 \"Газпромбанк\" (Акционерное общество)",
+                  "systemCode": "DRTL",
+                  "code": "015/1055"
+                }
+              },
+              "insuranceAmount": {
+                "amount": "0.00",
+                "currency": {
+                  "numCode": "810",
+                  "charCode": "RUR"
+                }
+              },
+              "workInfo": {
+                "organization": {}
+              },
+              "services": [
+                {
+                  "name": "SmartPro",
+                  "state": {
+                    "code": "Действует",
+                    "name": "Действует",
+                    "date": "2023-03-22"
+                  }
+                }
+              ],
+              "is3DSecure": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "warning": {
+    "details": []
+  }
+}
