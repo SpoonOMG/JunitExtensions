@@ -20,8 +20,9 @@ import framework.qa.config.Config;
 
 import static io.restassured.path.json.JsonPath.given;
 
-public class RestExtension implements BeforeEachCallback, BeforeAllCallback{
+public class RestExtension implements BeforeEachCallback, BeforeAllCallback {
     protected static final Config CFG = Config.getInstance();
+    protected static final String guid = "6F57A2C3507C4D6AA1A70E9C8C8CF911";
 
     @Override
     public void beforeEach(ExtensionContext extensionContext) throws Exception {
@@ -29,7 +30,7 @@ public class RestExtension implements BeforeEachCallback, BeforeAllCallback{
 
         RequestSpecification requestSpec = new RequestSpecBuilder()
                 .setContentType(ContentType.JSON)
-                .build().header("Authorization",CFG.token());
+                .build().header("Authorization", CFG.token()).header("GPB-guid", guid);
         RestAssured.requestSpecification = requestSpec;
 
         RestAssured.config = RestAssuredConfig.config().objectMapperConfig(

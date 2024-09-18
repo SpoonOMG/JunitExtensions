@@ -1,12 +1,13 @@
 package framework.qa.jupiter.parameters;
 
+import framework.qa.jupiter.annotations.Init;
 import framework.qa.models.init.*;
+import framework.qa.values.Params;
 import framework.qa.values.TestDataValues;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.ParameterContext;
 import org.junit.jupiter.api.extension.ParameterResolutionException;
 import org.junit.jupiter.api.extension.ParameterResolver;
-import framework.qa.values.Values;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -33,12 +34,14 @@ public class InitResolver implements ParameterResolver {
             Department department = new Department();
             Address address = new Address();
 
-            ValuesItem loginValue = new ValuesItem(Values.LOGIN, TestDataValues.login);
-            ValuesItem userFullNameValue = new ValuesItem(Values.USER_FULL_NAME,TestDataValues.userFullName);
-            ValuesItem titleValue = new ValuesItem(Values.TITLE,TestDataValues.title);
-            ValuesItem branchCodeValue = new ValuesItem(Values.BRANCH_CODE,TestDataValues.branchCode);
-            ValuesItem branchUnitCodeValue = new ValuesItem(Values.BRANCH_UNIT_CODE, TestDataValues.branchUnitCode);
-            ValuesItem virtualNumValue = new ValuesItem(Values.VIRTUAL_NUM,TestDataValues.virtualNum);
+            ValuesItem loginValue = new ValuesItem(Params.LOGIN, TestDataValues.login);
+            ValuesItem userFullNameValue = new ValuesItem(Params.USER_FULL_NAME,TestDataValues.userFullName);
+            ValuesItem titleValue = new ValuesItem(Params.TITLE,TestDataValues.title);
+            ValuesItem branchCodeValue = new ValuesItem(Params.BRANCH_CODE,TestDataValues.branchCode);
+            ValuesItem branchUnitCodeValue = new ValuesItem(Params.BRANCH_UNIT_CODE, TestDataValues.branchUnitCode);
+            ValuesItem virtualNumValue = new ValuesItem(Params.VIRTUAL_NUM,TestDataValues.virtualNum);
+            ValuesItem branchCode5ntValue = new ValuesItem(Params.BRANCH_CODE_5NT,TestDataValues.branchCode5nt);
+            ValuesItem addressIsIncorrectValue = new ValuesItem(Params.ADDRESS_IS_INCORRECT,TestDataValues.addressIsIncorrect);
 
             List<ValuesItem> values = new LinkedList<>();
             values.add(loginValue);
@@ -47,6 +50,8 @@ public class InitResolver implements ParameterResolver {
             values.add(branchCodeValue);
             values.add(branchUnitCodeValue);
             values.add(virtualNumValue);
+            values.add(branchCode5ntValue);
+            values.add(addressIsIncorrectValue);
 
             VerifyData verifyData = new VerifyData();
             verifyData.setValues(values);

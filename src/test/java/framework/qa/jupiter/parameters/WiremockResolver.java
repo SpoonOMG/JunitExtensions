@@ -1,5 +1,6 @@
 package framework.qa.jupiter.parameters;
 
+import framework.qa.jupiter.annotations.Mock;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.ParameterContext;
 import org.junit.jupiter.api.extension.ParameterResolutionException;

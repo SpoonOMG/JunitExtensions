@@ -8,7 +8,7 @@ public class Scenario{
 	private String kindCode= "CARD";
 
 	@JsonProperty("code")
-	private String code = "000";
+	private String code = "001";
 
 	@JsonProperty("systemInit")
 	private String systemInit = "OMNI-OKS-CARDS-CLOSE";

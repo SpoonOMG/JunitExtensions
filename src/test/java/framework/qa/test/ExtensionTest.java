@@ -1,6 +1,6 @@
 package framework.qa.test;
 
-import framework.qa.jupiter.parameters.Mock;
+import framework.qa.jupiter.annotations.Mock;
 import framework.qa.utils.Wiremock;
 import org.junit.jupiter.api.*;
 
@@ -46,7 +46,7 @@ public class ExtensionTest extends BaseTest {
 //        values.add(titleValue);
 //        values.add(branchCodeValue);
 //        values.add(branchUnitCodeValue);
-//        values.add(new ValuesItem(Values.LOGIN, "1234"));
+//        values.add(new ValuesItem(Params.LOGIN, "1234"));
 //
 //        initRootBody.getData().getVerifyData().setValues(values);
 //        Response response = given().body(initRootBody).post("api/v1/metadata/init")
@@ -82,7 +82,7 @@ public class ExtensionTest extends BaseTest {
 //        values.add(titleValue);
 //        values.add(branchCodeValue);
 //        values.add(branchUnitCodeValue);
-//        values.add(new ValuesItem(Values.LOGIN, "1234"));
+//        values.add(new ValuesItem(Params.LOGIN, "1234"));
 //
 //        initRootBody.getData().getVerifyData().setValues(values);
 //        Response response = given().body(initRootBody).post("api/v1/metadata/init")
@@ -111,7 +111,7 @@ public class ExtensionTest extends BaseTest {
 //        values.add(titleValue);
 //        values.add(branchCodeValue);
 //        values.add(branchUnitCodeValue);
-//        values.add(new ValuesItem(Values.LOGIN, "1234"));
+//        values.add(new ValuesItem(Params.LOGIN, "1234"));
 //
 //        initRootBody.getData().getVerifyData().setValues(values);
 //        Response response = given().body(initRootBody).post("api/v1/metadata/init")
@@ -141,7 +141,7 @@ public class ExtensionTest extends BaseTest {
 ////        values.add(titleValue);
 ////        values.add(branchCodeValue);
 ////        values.add(branchUnitCodeValue);
-////        values.add(new ValuesItem(Values.LOGIN, "1234"));
+////        values.add(new ValuesItem(Params.LOGIN, "1234"));
 ////
 ////        initRootBody.getData().getVerifyData().setValues(values);
 ////        Response response = given().body(initRootBody).post("api/v1/metadata/init")

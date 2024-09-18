@@ -4,14 +4,14 @@ import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.WireMock;
 import framework.qa.jupiter.callbacks.RestExtension;
 import framework.qa.jupiter.callbacks.TestSaver;
-import framework.qa.jupiter.parameters.Init;
+import framework.qa.jupiter.annotations.Init;
 import framework.qa.jupiter.parameters.InitResolver;
 import framework.qa.models.init.InitRoot;
 import framework.qa.models.init.ValuesItem;
+import framework.qa.values.Params;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
-import framework.qa.values.Values;
 //import thread.qa.parameters.RandomUserResolver;
 
 import java.util.LinkedList;
@@ -814,7 +814,7 @@ public class ExtensionTestWiremockInMemory extends BaseTest {
         values.add(titleValue);
         values.add(branchCodeValue);
         values.add(branchUnitCodeValue);
-        values.add(new ValuesItem(Values.LOGIN, "ufo"));
+        values.add(new ValuesItem(Params.LOGIN, "ufo"));
 
         initRootBody.getData().getVerifyData().setValues(values);
         System.out.println(initRootBody);
@@ -848,7 +848,7 @@ public class ExtensionTestWiremockInMemory extends BaseTest {
         values.add(titleValue);
         values.add(branchCodeValue);
         values.add(branchUnitCodeValue);
-        values.add(new ValuesItem(Values.LOGIN, "выполняю тест 3"));
+        values.add(new ValuesItem(Params.LOGIN, "выполняю тест 3"));
 
         initRootBody.getData().getVerifyData().setValues(values);
         System.out.println(initRootBody);
@@ -882,7 +882,7 @@ public class ExtensionTestWiremockInMemory extends BaseTest {
         values.add(titleValue);
         values.add(branchCodeValue);
         values.add(branchUnitCodeValue);
-        values.add(new ValuesItem(Values.LOGIN, "выполняю тест 5"));
+        values.add(new ValuesItem(Params.LOGIN, "выполняю тест 5"));
 
         initRootBody.getData().getVerifyData().setValues(values);
         System.out.println(initRootBody);
@@ -916,7 +916,7 @@ public class ExtensionTestWiremockInMemory extends BaseTest {
         values.add(titleValue);
         values.add(branchCodeValue);
         values.add(branchUnitCodeValue);
-        values.add(new ValuesItem(Values.LOGIN, "выполняю тест 7"));
+        values.add(new ValuesItem(Params.LOGIN, "выполняю тест 7"));
 
         initRootBody.getData().getVerifyData().setValues(values);
         System.out.println(initRootBody);

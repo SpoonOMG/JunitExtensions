@@ -1,4 +1,4 @@
-package framework.qa.jupiter.parameters;
+package framework.qa.jupiter.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

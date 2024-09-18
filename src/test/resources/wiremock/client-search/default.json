@@ -1,337 +1,233 @@
 {
-  "base": {
-    "guid": "00CD5BE45E4C4AC1A93368E7E7DFF29C",
-    "hid": "373673398",
-    "identityType": "3",
-    "actualDate": "2024-04-25",
-    "fullName": "Терентьева Ольга Георгиевна",
-    "surname": "Терентьева",
-    "name": "Ольга",
-    "patronymic": "Георгиевна",
-    "gender": "FEMALE",
-    "birthPlace": "гор. Куйбышев Новосибирской обл.",
-    "birthSettlement": "гор. Куйбышев Новосибирской обл.",
-    "birthCountry": "РОССИЙСКАЯ ФЕДЕРАЦИЯ",
-    "bankruptcy": "false",
-    "categories": [
+  "status": "success",
+  "actualTimestamp": 1607342013827,
+  "data": {
+    "clients": [
       {
-        "type": "REGULAR"
-      }
-    ],
-    "residents": [
-      {
-        "type": "base",
-        "state": {
-          "terminalFlag": true
-        }
-      },
-      {
-        "type": "tax",
-        "state": {}
-      }
-    ],
-    "citizenships": [
-      {
-        "countryName": "РОССИЯ"
-      }
-    ],
-    "birthdate": "1970-10-29"
-  },
-  "addresses": [
-    {
-      "hid": "258715022",
-      "type": "HOME",
-      "primary": false,
-      "actualDate": "2024-04-25",
-      "postalCode": "644047",
-      "kladrPostalCode": "644047",
-      "countryCode": "643",
-      "countryName": "Россия",
-      "district": "Сибирский",
-      "regionType": "обл",
-      "regionCode": "55",
-      "regionName": "Омская",
-      "cityType": "г",
-      "city": "Омск",
-      "streetType": "п",
-      "street": "Козицкого",
-      "houseNumber": "7",
-      "flat": "48",
-      "okatoCode": "52401382000",
-      "kladrCode": "5500000100000510005",
-      "fiasCode": "fb2941a9-fe89-4ca9-a0a1-5e7f22435f93",
-      "fullAddress": "Россия, обл, Омская, г, Омск, п, Козицкого, д. 7, кв. 48",
-      "validationCode": "VALIDATED",
-      "qualityCode": "GOOD",
-      "rawSource": "Россия, обл, Омская, г, Омск, п, Козицкого, д. 7, кв. 48",
-      "isForeign": false
-    },
-    {
-      "hid": "258715023",
-      "type": "POSTAL",
-      "primary": false,
-      "actualDate": "2024-04-25",
-      "postalCode": "644047",
-      "kladrPostalCode": "644047",
-      "countryCode": "643",
-      "countryName": "Россия",
-      "district": "Сибирский",
-      "regionType": "обл",
-      "regionCode": "55",
-      "regionName": "Омская",
-      "cityType": "г",
-      "city": "Омск",
-      "streetType": "п",
-      "street": "Козицкого",
-      "houseNumber": "7",
-      "flat": "48",
-      "okatoCode": "52401382000",
-      "kladrCode": "5500000100000510005",
-      "fiasCode": "fb2941a9-fe89-4ca9-a0a1-5e7f22435f93",
-      "fullAddress": "Россия, обл, Омская, г, Омск, п, Козицкого, д. 7, кв. 48",
-      "validationCode": "VALIDATED",
-      "qualityCode": "GOOD",
-      "rawSource": "Россия, обл, Омская, г, Омск, п, Козицкого, д. 7, кв. 48",
-      "isForeign": false
-    },
-    {
-      "hid": "258715024",
-      "type": "CONSTANT_REGISTRATION",
-      "primary": true,
-      "actualDate": "2024-04-25",
-      "postalCode": "644047",
-      "kladrPostalCode": "644047",
-      "countryCode": "643",
-      "countryName": "Россия",
-      "district": "Сибирский",
-      "regionType": "обл",
-      "regionCode": "55",
-      "regionName": "Омская",
-      "cityType": "г",
-      "city": "Омск",
-      "streetType": "п",
-      "street": "Козицкого",
-      "houseNumber": "7",
-      "flat": "48",
-      "okatoCode": "52401382000",
-      "kladrCode": "5500000100000510005",
-      "fiasCode": "fb2941a9-fe89-4ca9-a0a1-5e7f22435f93",
-      "fullAddress": "Россия, обл, Омская, г, Омск, п, Козицкого, д. 7, кв. 48",
-      "registrationDate": "2019-11-13",
-      "validationCode": "VALIDATED",
-      "qualityCode": "GOOD",
-      "rawSource": "Россия, обл, Омская, г, Омск, п, Козицкого, д. 7, кв. 48",
-      "isForeign": false
-    }
-  ],
-  "documents": [
-    {
-      "hid": "182349194",
-      "type": "PASSPORT_RU",
-      "primary": true,
-      "actualDate": "2024-04-25",
-      "series": "50 15",
-      "number": "436174",
-      "fullValue": "50 15436174",
-      "issueDate": "2015-11-30",
-      "issueAuthority": "Отделением УФМС России по Новосибирской области в Куйбышевском районе",
-      "departmentCode": "540-026",
-      "state": {
-        "code": "ACTUAL"
-      }
-    },
-    {
-      "type": "INN",
-      "fullValue": "545206854879",
-      "state": {}
-    }
-  ],
-  "phones": [
-    {
-      "hid": "167263454",
-      "type": "WORK",
-      "primary": false,
-      "actualDate": "2018-07-20",
-      "countryCode": "7",
-      "cityCode": "3812",
-      "number": "232479",
-      "fullNumber": "73812232479",
-      "timezone": "UTC+6",
-      "numberProfile": "STATIONARY",
-      "rawSource": "+73812232479",
-      "state": {
-        "code": "ACTUAL"
-      },
-      "author": "IKAR:8048678",
-      "isForeign": false
-    },
-    {
-      "hid": "167263455",
-      "type": "MOBILE",
-      "primary": false,
-      "actualDate": "2022-02-02",
-      "countryCode": "7",
-      "cityCode": "906",
-      "number": "9920562",
-      "fullNumber": "79069920562",
-      "timezone": "UTC+6",
-      "numberProfile": "MOBILE",
-      "rawSource": "+79069920562",
-      "state": {
-        "code": "ACTUAL"
-      },
-      "author": "DR29:10017888265",
-      "isForeign": false
-    },
-    {
-      "hid": "279013380",
-      "type": "MAIN",
-      "primary": false,
-      "actualDate": "2024-04-25",
-      "countryCode": "7",
-      "cityCode": "906",
-      "number": "9920562",
-      "fullNumber": "79069920562",
-      "timezone": "UTC+6",
-      "numberProfile": "MOBILE",
-      "rawSource": "79069920562",
-      "state": {
-        "code": "ACTUAL"
-      },
-      "author": "FRNT:27bceba1-fc19-45bd-9184-4cd8c34ab81f",
-      "isForeign": false
-    },
-    {
-      "hid": "279013381",
-      "type": "PC",
-      "primary": false,
-      "actualDate": "2024-04-17",
-      "countryCode": "7",
-      "cityCode": "906",
-      "number": "9920562",
-      "fullNumber": "79069920562",
-      "timezone": "UTC+6",
-      "numberProfile": "MOBILE",
-      "rawSource": "79069920562",
-      "state": {
-        "code": "ACTUAL"
-      },
-      "author": "DR29:10017888265",
-      "isForeign": false
-    }
-  ],
-  "mails": [
-    {
-      "hid": "69550778",
-      "type": "HOME",
-      "primary": false,
-      "actualDate": "2024-04-25",
-      "value": "olga.georg29@mail.ru",
-      "state": {}
-    }
-  ],
-  "sources": [
-    {
-      "systemInfo": {
-        "systemId": "IKAR",
-        "rawId": "8048678"
-      },
-      "hid": "130100170"
-    },
-    {
-      "systemInfo": {
-        "systemId": "DR29",
-        "rawId": "10017888265"
-      },
-      "hid": "373673397"
-    },
-    {
-      "systemInfo": {
-        "systemId": "FRNT",
-        "rawId": "27bceba1-fc19-45bd-9184-4cd8c34ab81f"
-      },
-      "hid": "589446443"
-    }
-  ],
-  "detail": {
-    "compliance": {
-      "category": "1",
-      "changeDate": "2022-02-20"
-    },
-    "dignitaryFlag": false,
-    "lastFio": [],
-    "biometrics": {
-      "isAgreement": false
-    },
-    "consents": [
-      {
-        "type": "GOODS_SERVICES_ADVERTISING",
-        "consentValue": "COMMON_DENIED",
-        "actualDate": "2024-04-25"
-      },
-      {
-        "type": "CREDIT_BUREAU_REQUEST",
-        "consentValue": "COMMON_GRANTED",
-        "actualDate": "2024-04-25",
-        "startDate": "2024-04-25",
-        "endDate": "2024-10-25"
-      },
-      {
-        "type": "VOICE_BIOMETRICS",
-        "consentValue": "COMMON_DENIED",
-        "actualDate": "2024-04-25",
-        "startDate": "2022-02-02"
-      },
-      {
-        "type": "ESIA_ACTUALIZE_DATA",
-        "consentValue": "COMMON_UNKNOWN",
-        "actualDate": "2024-04-25"
-      }
-    ],
-    "isDkbo": true
-  },
-  "crs": {
-    "status": "NON_REPORTABLE_PERSON",
-    "employeeFullName": "Loader5nt",
-    "approveDate": "2022-02-02",
-    "notUniqueTin": false,
-    "tag": "UNKNOWN",
-    "countries": [
-      {
-        "reasonNoTin": "UNKNOWN",
-        "code": "643"
-      }
-    ],
-    "validationCode": "VALIDATED",
-    "validationCodeINN": "NOT_VAL_INN_02"
-  },
-  "fatca": {
-    "status": "NON_US",
-    "employeeFullName": "Loader5nt",
-    "approveDate": "2022-02-02"
-  },
-  "entityStoplist": [
-    {
-      "totalMatches": "1",
-      "internalNumber": "1",
-      "suspectChecks": [
-        {
-          "name": "Перечень 550–П (код отказа 03)",
-          "inclusionReasonCode": "2.02.03",
+        "base": {
+          "guid": "6F57A2C3507C4D6AA1A70E9C8C8CF919",
+          "hid": "195942247",
+          "identityType": "3",
+          "actualDate": "2020-11-27",
+          "fullName": "Казаков Иван Васильевич",
+          "surname": "Казаков",
+          "name": "Иван",
+          "patronymic": "Васильевич",
+          "gender": "MALE",
+          "birthPlace": "Москва",
+          "birthSettlement": "г Москва",
+          "birthRayon": "г Москва",
+          "birthRegion": "г Москва",
+          "birthCountry": "РОССИЙСКАЯ ФЕДЕРАЦИЯ",
           "categories": [
             {
-              "code": "UNKNOWN"
+              "type": "REGULAR"
             }
           ],
-          "message": "Клиент обнаружен в Едином списке ДФМ"
-        }
-      ]
-    }
-  ],
-  "status": "success",
-  "stoplist": {
-    "status": "success",
-    "entityStoplist": []
-  },
-  "service": {}
+          "residents": [
+            {
+              "type": "base",
+              "state": {
+                "terminalFlag": true
+              }
+            },
+            {
+              "type": "tax",
+              "state": {}
+            }
+          ],
+          "citizenships": [
+            {
+              "countryName": "РОССИЙСКАЯ ФЕДЕРАЦИЯ"
+            }
+          ],
+          "birthdate": "1985-10-17"
+        },
+        "addresses": [
+          {
+            "hid": "87678847",
+            "type": "CONSTANT_REGISTRATION",
+            "primary": false,
+            "actualDate": "2020-11-18",
+            "postalCode": "117041",
+            "kladrPostalCode": "117041",
+            "countryCode": "643",
+            "countryName": "Россия",
+            "district": "Центральный",
+            "regionType": "г",
+            "regionCode": "77",
+            "regionName": "Москва",
+            "cityType": "г",
+            "city": "Москва",
+            "streetType": "",
+            "street": "",
+            "houseNumber": "",
+            "building": "1",
+            "flat": "225",
+            "okatoCode": "45293594000",
+            "kladrCode": "7700000000042730039",
+            "fiasCode": "28cb6660-de62-4c4a-9fe1-e409c30f0874",
+            "fullAddress": "",
+            "registrationDate": "2010-10-10",
+            "validationCode": "VALIDATED",
+            "qualityCode": "GOOD",
+            "isForeign": false
+          },
+          {
+            "hid": "87678848",
+            "type": "HOME",
+            "primary": false,
+            "actualDate": "2020-11-18",
+            "postalCode": "117041",
+            "kladrPostalCode": "117041",
+            "countryCode": "643",
+            "countryName": "Россия",
+            "district": "Центральный",
+            "regionType": "г",
+            "regionCode": "77",
+            "regionName": "Москва",
+            "cityType": "г",
+            "city": "Москва",
+            "streetType": "",
+            "street": "",
+            "houseNumber": "35",
+            "building": "1",
+            "flat": "225",
+            "okatoCode": "45293594000",
+            "kladrCode": "7700000000042730039",
+            "fiasCode": "28cb6660-de62-4c4a-9fe1-e409c30f0874",
+            "fullAddress": "",
+            "validationCode": "VALIDATED",
+            "qualityCode": "GOOD",
+            "isForeign": false
+          }
+        ],
+        "documents": [
+          {
+            "hid": "100957263",
+            "type": "PASSPORT_RU",
+            "primary": true,
+            "actualDate": "2020-11-27",
+            "series": "45 09",
+            "number": "987654",
+            "fullValue": "45 09987654",
+            "issueDate": "2015-03-10",
+            "issueAuthority": "о-нием по р-ну Южное Бутово ОУФМС России по гор.Москве",
+            "departmentCode": "077-089",
+            "state": {
+              "code": "ACTUAL"
+            }
+          }
+        ],
+        "phones": [
+          {
+            "hid": "77200806",
+            "type": "MOBILE",
+            "primary": false,
+            "actualDate": "2020-11-18",
+            "countryCode": "7",
+            "cityCode": "964",
+            "number": "5524477",
+            "fullNumber": "79645524477",
+            "timezone": "UTC+3",
+            "numberProfile": "MOBILE",
+            "rawSource": "79645524477",
+            "state": {
+              "code": "ACTUAL"
+            },
+            "isForeign": false
+          },
+          {
+            "hid": "77200940",
+            "type": "PC",
+            "primary": false,
+            "actualDate": "2020-11-19",
+            "countryCode": "7",
+            "cityCode": "964",
+            "number": "5524477",
+            "fullNumber": "79645524477",
+            "timezone": "UTC+3",
+            "numberProfile": "MOBILE",
+            "state": {
+              "code": "ACTUAL"
+            },
+            "isForeign": false
+          }
+        ],
+        "mails": [
+          {
+            "hid": "4363744",
+            "type": "HOME",
+            "primary": false,
+            "actualDate": "2020-11-19",
+            "value": "ivan.kazak@mail.ru",
+            "state": {}
+          }
+        ],
+        "detail": {
+          "foreignSurname": "Kazakov",
+          "foreignName": "Ivan",
+          "dignitaryFlag": false,
+          "lastFio": [],
+          "biometrics": {
+            "isAgreement": false
+          },
+          "consents": [
+            {
+              "type": "GOODS_SERVICES_ADVERTISING",
+              "consentValue": "COMMON_GRANTED",
+              "actualDate": "2020-11-17",
+              "startDate": "2020-11-17"
+            },
+            {
+              "type": "VOICE_BIOMETRICS",
+              "consentValue": "COMMON_DENIED",
+              "actualDate": "2020-11-17",
+              "startDate": "2020-11-17"
+            },
+            {
+              "type": "CREDIT_BUREAU_REQUEST",
+              "consentValue": "COMMON_GRANTED",
+              "actualDate": "2020-11-17"
+            }
+          ],
+          "isDkbo": true
+        },
+        "crs": {
+          "status": "NON_REPORTABLE_PERSON",
+          "employeeFullName": "Ерохин Сергей Сергеевич",
+          "approveDate": "2020-11-17",
+          "countries": [
+            {
+              "reasonNoTin": "UNKNOWN",
+              "code": "RUS"
+            }
+          ]
+        },
+        "fatca": {
+          "status": "NON_US",
+          "employeeFullName": "Ерохин Сергей Сергеевич",
+          "approveDate": "2020-11-17"
+        },
+        "entityStoplist": [
+          {
+            "totalMatches": "1",
+            "internalNumber": "1",
+            "suspectChecks": [
+              {
+                "name": "Сведения о недействительных российских паспортах",
+                "inclusionReasonCode": "1.01.01",
+                "categories": [
+                  {
+                    "code": "UNKNOWN"
+                  }
+                ],
+                "message": "Паспорт Клиента недействителен. Необходимо затребовать у Клиента действующий документ, удостоверяющий личность"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }

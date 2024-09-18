@@ -13,7 +13,7 @@ public class LocalConfig implements Config {
 
     @Override
     public String wiremockUrl() {
-        return "http://localhost:8082/omni-oks-cards-wiremock/";
+        return "http://localhost:8082/";
     }
 
     public String token() {
