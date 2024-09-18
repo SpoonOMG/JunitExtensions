@@ -1,12 +1,12 @@
 package framework.qa.test;
 
+import framework.qa.jupiter.annotations.Init;
+import framework.qa.jupiter.annotations.Mock;
+import framework.qa.models.init.InitRoot;
+import framework.qa.utils.Wiremock;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import framework.qa.models.init.InitRoot;
-import framework.qa.jupiter.annotations.Init;
-import framework.qa.jupiter.annotations.Mock;
-import framework.qa.utils.Wiremock;
 
 import java.util.UUID;
 
@@ -15,7 +15,7 @@ import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class WiremockTests extends BaseTest {
+public class WiremockTests3 extends BaseTest {
 
     @DisplayName("Получение экрана успеха1")
     @Test
@@ -40,14 +40,13 @@ public class WiremockTests extends BaseTest {
         step("Отправка запроса на init", () -> {
             initRootBody.getMeta().setChannel("ufo");
             Response response = given().header("gpb-requestId", gpbRequestId)
+
                     .body(initRootBody)
                     .post("api/v1/metadata/init")
                     .then().extract().response();
-            step("Проверка статуса экрана");
             assertAll(
                     () -> assertEquals("5NT_CARD_PARAMS", response.path("screen.load.id")));
         });
-        step("Очистка моков");
         clientSearchMock.wiremockRemove();
         productCardsMock.wiremockRemove();
     }
