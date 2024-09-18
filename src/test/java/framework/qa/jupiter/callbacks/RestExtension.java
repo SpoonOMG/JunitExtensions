@@ -26,11 +26,31 @@ public class RestExtension implements BeforeEachCallback, BeforeAllCallback {
 
     @Override
     public void beforeEach(ExtensionContext extensionContext) throws Exception {
+//        RestAssured.baseURI = CFG.baseUrl();
+//
+//        RequestSpecification requestSpec = new RequestSpecBuilder()
+//                .setContentType(ContentType.JSON)
+//                .build();
+//        RestAssured.requestSpecification = requestSpec;
+//
+//        RestAssured.config = RestAssuredConfig.config().objectMapperConfig(
+//                ObjectMapperConfig.objectMapperConfig().jackson2ObjectMapperFactory((cls, charset) -> {
+//                    ObjectMapper objectMapper = new ObjectMapper();
+//                    objectMapper.registerModule(new JavaTimeModule());
+//                    objectMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
+//                    objectMapper.configure(DeserializationFeature.ADJUST_DATES_TO_CONTEXT_TIME_ZONE, true);
+//                    return objectMapper;
+//                })
+//        );
+    }
+
+    @Override
+    public void beforeAll(ExtensionContext extensionContext) throws Exception {
         RestAssured.baseURI = CFG.baseUrl();
 
         RequestSpecification requestSpec = new RequestSpecBuilder()
                 .setContentType(ContentType.JSON)
-                .build().header("Authorization", CFG.token()).header("GPB-guid", guid);
+                .build()                    .header("Authorization", CFG.token()).header("GPB-guid", guid);
         RestAssured.requestSpecification = requestSpec;
 
         RestAssured.config = RestAssuredConfig.config().objectMapperConfig(
@@ -42,10 +62,6 @@ public class RestExtension implements BeforeEachCallback, BeforeAllCallback {
                     return objectMapper;
                 })
         );
-    }
-
-    @Override
-    public void beforeAll(ExtensionContext extensionContext) throws Exception {
         RestAssured.filters(
                 new RequestLoggingFilter(),
                 new ResponseLoggingFilter(),

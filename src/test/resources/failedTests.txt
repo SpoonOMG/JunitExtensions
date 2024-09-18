@@ -1,1 +1,0 @@
---test framework.qa.test.WiremockTests.initTestWithWiremockExtension7* --test framework.qa.test.WiremockTests.initTestWithWiremockExtension6* --test framework.qa.test.WiremockTests.initTestWithWiremockExtension5* --test framework.qa.test.WiremockTests.initTestWithWiremockExtension3*
