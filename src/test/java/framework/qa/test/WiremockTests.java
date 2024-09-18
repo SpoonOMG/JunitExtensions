@@ -40,7 +40,6 @@ public class WiremockTests extends BaseTest {
         step("отправляем запрос на init", () -> {
             initRootBody.getMeta().setChannel("ufo");
             Response response = given().header("gpb-requestId", gpbRequestId)
-
                     .body(initRootBody)
                     .post("api/v1/metadata/init")
                     .then().extract().response();
