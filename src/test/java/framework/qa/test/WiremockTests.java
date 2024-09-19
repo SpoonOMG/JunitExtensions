@@ -47,9 +47,10 @@ public class WiremockTests extends BaseTest {
             assertAll(
                     () -> assertEquals("5NT_CARD_PARAMS", response.path("screen.load.id")));
         });
-        step("Очистка моков");
-        clientSearchMock.wiremockRemove();
-        productCardsMock.wiremockRemove();
+        step("Очистка мок", () -> {
+            clientSearchMock.wiremockRemove();
+            productCardsMock.wiremockRemove();
+        });
     }
 
     @DisplayName("Получение экрана успеха2")
