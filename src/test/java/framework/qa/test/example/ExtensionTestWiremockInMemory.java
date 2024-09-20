@@ -8,7 +8,7 @@
 //import framework.qa.jupiter.parameters.InitResolver;
 //import framework.qa.models.init.InitRoot;
 //import framework.qa.models.init.ValuesItem;
-//import framework.qa.values.Params;
+//import framework.qa.consts.Params;
 //import io.restassured.response.Response;
 //import org.junit.jupiter.api.*;
 //import org.junit.jupiter.api.extension.ExtendWith;

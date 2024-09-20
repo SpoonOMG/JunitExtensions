@@ -58,6 +58,7 @@ public class RestExtension implements BeforeEachCallback, BeforeAllCallback {
                     ObjectMapper objectMapper = new ObjectMapper();
                     objectMapper.registerModule(new JavaTimeModule());
                     objectMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
+                    objectMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
                     objectMapper.configure(DeserializationFeature.ADJUST_DATES_TO_CONTEXT_TIME_ZONE, true);
                     return objectMapper;
                 })

@@ -1,4 +1,15 @@
-//package framework.qa.test;
+import framework.qa.jupiter.annotations.Init;
+import framework.qa.models.init.InitRoot;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
+
+import static io.restassured.RestAssured.given;//package framework.qa.test;
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 //
 //import framework.qa.jupiter.annotations.Mock;
 //import framework.qa.utils.Wiremock;
@@ -163,28 +174,28 @@
 ////    }
 ////
 ////
-////    @DisplayName("перебираю канал")
-////    @ParameterizedTest
-////    @MethodSource("provideForTestInitTestChannel")
-////    public void initTestChannel(String channel, @Init InitRoot initRootBody) {
-////        initRootBody.getMeta().setChannel(channel);
-////        String actual = given().body(initRootBody).contentType("application/json").log().all().post("http://localhost:8082")
-////                .then().extract().response().path("123124");
-////
-////        assertAll(
-////                () -> assertEquals("400", actual));
-////    }
-////
-////
-////    private static Stream<Arguments> provideForTestInitTestChannel() {
-////        return Stream.of(
-////                Arguments.of("ufo"),
-////                Arguments.of("ufo-dsa"),
-////                Arguments.of("ufo-cc"),
-////                Arguments.of("ib"),
-////                Arguments.of("mobile"),
-////                Arguments.of("mb"),
-////                Arguments.of("web")
-////        );
-////    }
+//    @DisplayName("перебираю канал")
+//    @ParameterizedTest
+//    @MethodSource("provideForTestInitTestChannel")
+//    public void initTestChannel(String channel, @Init InitRoot initRootBody) {
+//        initRootBody.getMeta().setChannel(channel);
+//        String actual = given().body(initRootBody).contentType("application/json").log().all().post("http://localhost:8082")
+//                .then().extract().response().path("123124");
+//
+//        assertAll(
+//                () -> assertEquals("400", actual));
+//    }
+//
+//
+//    private static Stream<Arguments> provideForTestInitTestChannel() {
+//        return Stream.of(
+//                Arguments.of("ufo"),
+//                Arguments.of("ufo-dsa"),
+//                Arguments.of("ufo-cc"),
+//                Arguments.of("ib"),
+//                Arguments.of("mobile"),
+//                Arguments.of("mb"),
+//                Arguments.of("web")
+//        );
+//    }
 //}

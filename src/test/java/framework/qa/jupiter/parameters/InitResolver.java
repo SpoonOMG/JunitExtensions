@@ -2,7 +2,7 @@ package framework.qa.jupiter.parameters;
 
 import framework.qa.jupiter.annotations.Init;
 import framework.qa.models.init.*;
-import framework.qa.values.Params;
+import framework.qa.consts.Params;
 import framework.qa.values.TestDataValues;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.ParameterContext;
