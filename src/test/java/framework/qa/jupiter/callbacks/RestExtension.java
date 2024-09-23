@@ -20,29 +20,10 @@ import framework.qa.config.Config;
 
 import static io.restassured.path.json.JsonPath.given;
 
-public class RestExtension implements BeforeEachCallback, BeforeAllCallback {
+public class RestExtension implements BeforeAllCallback {
     protected static final Config CFG = Config.getInstance();
     protected static final String guid = "6F57A2C3507C4D6AA1A70E9C8C8CF911";
 
-    @Override
-    public void beforeEach(ExtensionContext extensionContext) throws Exception {
-//        RestAssured.baseURI = CFG.baseUrl();
-//
-//        RequestSpecification requestSpec = new RequestSpecBuilder()
-//                .setContentType(ContentType.JSON)
-//                .build();
-//        RestAssured.requestSpecification = requestSpec;
-//
-//        RestAssured.config = RestAssuredConfig.config().objectMapperConfig(
-//                ObjectMapperConfig.objectMapperConfig().jackson2ObjectMapperFactory((cls, charset) -> {
-//                    ObjectMapper objectMapper = new ObjectMapper();
-//                    objectMapper.registerModule(new JavaTimeModule());
-//                    objectMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
-//                    objectMapper.configure(DeserializationFeature.ADJUST_DATES_TO_CONTEXT_TIME_ZONE, true);
-//                    return objectMapper;
-//                })
-//        );
-    }
 
     @Override
     public void beforeAll(ExtensionContext extensionContext) throws Exception {

@@ -16,4 +16,17 @@ public interface Config {
     String wiremockUrl();
     String token();
 
+     String mqHost();
+
+    Integer port();
+
+    String queueManager();
+
+    String channel();
+
+    String mq_appName();
+
+    String pass();
+
+    String user();
 }

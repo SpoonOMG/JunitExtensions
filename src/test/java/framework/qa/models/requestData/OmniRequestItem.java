@@ -11,7 +11,7 @@ import framework.qa.models.init.Meta;
 
 import java.io.Serializable;
 
-public final class OmniRequestItem{
+public final class OmniRequestItem implements Serializable {
     @JsonProperty("meta")
     private OmniRequestMeta meta;
     @JsonProperty("data")
