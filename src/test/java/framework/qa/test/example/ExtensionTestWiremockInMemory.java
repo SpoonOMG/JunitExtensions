@@ -52,7 +52,7 @@
 //
 //    @BeforeEach
 //    void configure() {
-//        new WireMock(8080).register((post(urlPathEqualTo("/omni-oks-cards/api/v1/metadata/init"))
+//        new WireMock(8080).register((post(urlPathEqualTo("/omni-oks-cards/omni-oks-cards/api/v1/metadata/init"))
 //                .willReturn(
 //                        okJson(
 //                                """
@@ -819,7 +819,7 @@
 //        initRootBody.getData().getVerifyData().setValues(values);
 //        System.out.println(initRootBody);
 //
-//        Response response = given().body(initRootBody).post("api/v1/metadata/init")
+//        Response response = given().body(initRootBody).post("omni-oks-cards/api/v1/metadata/init")
 //                .then().extract().response();
 ////        assertAll(
 ////                () -> assertEquals(200, response.getStatusCode()));
@@ -832,7 +832,7 @@
 //
 //        initRootBody.getMeta().setChannel("выполняю тест 2");
 //        System.out.println(initRootBody);
-//        Response response = given().body(initRootBody).post("api/v1/metadata/init")
+//        Response response = given().body(initRootBody).post("omni-oks-cards/api/v1/metadata/init")
 //                .then().log().all().extract().response();
 ////
 ////        assertAll(
@@ -853,7 +853,7 @@
 //        initRootBody.getData().getVerifyData().setValues(values);
 //        System.out.println(initRootBody);
 //
-//        Response response = given().body(initRootBody).post("api/v1/metadata/init")
+//        Response response = given().body(initRootBody).post("omni-oks-cards/api/v1/metadata/init")
 //                .then().extract().response();
 ////        assertAll(
 ////                () -> assertEquals(200, response.getStatusCode()));
@@ -866,7 +866,7 @@
 //
 //        initRootBody.getMeta().setChannel("ufo-cc");
 //        System.out.println(initRootBody);
-//        Response response = given().body(initRootBody).post("api/v1/metadata/init")
+//        Response response = given().body(initRootBody).post("omni-oks-cards/api/v1/metadata/init")
 //                .then().log().all().extract().response();
 ////
 ////        assertAll(
@@ -887,7 +887,7 @@
 //        initRootBody.getData().getVerifyData().setValues(values);
 //        System.out.println(initRootBody);
 //
-//        Response response = given().body(initRootBody).post("api/v1/metadata/init")
+//        Response response = given().body(initRootBody).post("omni-oks-cards/api/v1/metadata/init")
 //                .then().extract().response();
 ////        assertAll(
 ////                () -> assertEquals(200, response.getStatusCode()));
@@ -900,7 +900,7 @@
 //
 //        initRootBody.getMeta().setChannel("ib");
 //        System.out.println(initRootBody);
-//        Response response = given().body(initRootBody).post("api/v1/metadata/init")
+//        Response response = given().body(initRootBody).post("omni-oks-cards/api/v1/metadata/init")
 //                .then().log().all().extract().response();
 ////
 ////        assertAll(
@@ -921,7 +921,7 @@
 //        initRootBody.getData().getVerifyData().setValues(values);
 //        System.out.println(initRootBody);
 //
-//        Response response = given().body(initRootBody).post("api/v1/metadata/init")
+//        Response response = given().body(initRootBody).post("omni-oks-cards/api/v1/metadata/init")
 //                .then().extract().response();
 ////        assertAll(
 ////                () -> assertEquals(200, response.getStatusCode()));
@@ -934,7 +934,7 @@
 //
 //        initRootBody.getMeta().setChannel("mb");
 //        System.out.println(initRootBody);
-//        Response response = given().body(initRootBody).post("api/v1/metadata/init")
+//        Response response = given().body(initRootBody).post("omni-oks-cards/api/v1/metadata/init")
 //                .then().log().all().extract().response();
 ////
 ////        assertAll(
@@ -949,7 +949,7 @@
 ////    @MethodSource("provideForTestInitTestChannel")
 ////    public void initTestChannel(String channel, @Init InitRoot initRootBody) {
 ////        initRootBody.getMeta().setChannel(channel);
-////        String actual = given().body(initRootBody).log().all().post("api/v1/metadata/init")
+////        String actual = given().body(initRootBody).log().all().post("omni-oks-cards/api/v1/metadata/init")
 ////                .then().extract().response().path("123124");
 ////
 ////        assertAll(

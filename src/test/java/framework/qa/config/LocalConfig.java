@@ -8,7 +8,7 @@ public class LocalConfig implements Config {
     }
     @Override
     public String baseUrl() {
-        return "http://localhost:8080/omni-oks-cards/";
+        return "http://localhost:8080/";
     }
 
     @Override

@@ -1,12 +1,3 @@
-import framework.qa.jupiter.annotations.Init;
-import framework.qa.models.init.InitRoot;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
-
-import java.util.stream.Stream;
-
 import static io.restassured.RestAssured.given;//package framework.qa.test;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -48,7 +39,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 ////        fr.jsonFile("/Users/andrey/IdeaProjects/stadalone/JunitExtensions/src/test/resources/wiremock/client-search/default.json");
 ////        js.apply(jsonBody, "base.guid", "1234");
 //////        System.out.println(jsonBody);
-////        Response response = given().body(jsonBody).post("api/v1/metadata/init")
+////        Response response = given().body(jsonBody).post("omni-oks-cards/api/v1/metadata/init")
 ////                .then().extract().response();
 //
 ////
@@ -60,7 +51,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 ////        values.add(new ValuesItem(Params.LOGIN, "1234"));
 ////
 ////        initRootBody.getData().getVerifyData().setValues(values);
-////        Response response = given().body(initRootBody).post("api/v1/metadata/init")
+////        Response response = given().body(initRootBody).post("omni-oks-cards/api/v1/metadata/init")
 ////                .then().extract().response();
 ////
 ////        assertAll(
@@ -84,7 +75,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 ////        fr.jsonFile("/Users/andrey/IdeaProjects/stadalone/JunitExtensions/src/test/resources/wiremock/client-search/default.json");
 ////        js.apply(jsonBody, "base.guid", "1234");
 //////        System.out.println(jsonBody);
-////        Response response = given().body(jsonBody).post("api/v1/metadata/init")
+////        Response response = given().body(jsonBody).post("omni-oks-cards/api/v1/metadata/init")
 ////                .then().extract().response();
 //
 ////
@@ -96,7 +87,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 ////        values.add(new ValuesItem(Params.LOGIN, "1234"));
 ////
 ////        initRootBody.getData().getVerifyData().setValues(values);
-////        Response response = given().body(initRootBody).post("api/v1/metadata/init")
+////        Response response = given().body(initRootBody).post("omni-oks-cards/api/v1/metadata/init")
 ////                .then().extract().response();
 ////
 ////        assertAll(
@@ -113,7 +104,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 ////fr.jsonFile("/Users/andrey/IdeaProjects/stadalone/JunitExtensions/src/test/resources/wiremock/client-search/default.json");
 ////js.apply(jsonBody, "base.guid", "1234");
 //////        System.out.println(jsonBody);
-////        Response response = given().body(jsonBody).post("api/v1/metadata/init")
+////        Response response = given().body(jsonBody).post("omni-oks-cards/api/v1/metadata/init")
 ////                .then().extract().response();
 //
 ////
@@ -125,7 +116,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 ////        values.add(new ValuesItem(Params.LOGIN, "1234"));
 ////
 ////        initRootBody.getData().getVerifyData().setValues(values);
-////        Response response = given().body(initRootBody).post("api/v1/metadata/init")
+////        Response response = given().body(initRootBody).post("omni-oks-cards/api/v1/metadata/init")
 ////                .then().extract().response();
 ////
 ////        assertAll(
@@ -144,7 +135,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 ////        js.apply(jsonBody, "base.guid", "4321");
 //////        System.out.println(jsonBody);
 ////
-////        Response response = given().body(jsonBody).post("api/v1/metadata/init")
+////        Response response = given().body(jsonBody).post("omni-oks-cards/api/v1/metadata/init")
 ////                .then().extract().response();
 //////
 //////        List<ValuesItem> values = new LinkedList<>();
@@ -155,7 +146,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 //////        values.add(new ValuesItem(Params.LOGIN, "1234"));
 //////
 //////        initRootBody.getData().getVerifyData().setValues(values);
-//////        Response response = given().body(initRootBody).post("api/v1/metadata/init")
+//////        Response response = given().body(initRootBody).post("omni-oks-cards/api/v1/metadata/init")
 //////                .then().extract().response();
 //////
 //////        assertAll(
@@ -166,7 +157,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 ////    @Test
 ////    public void initTestUfoDsa(@Init InitRoot initRootBody) {
 ////        initRootBody.getMeta().setChannel("ufo-dsa");
-////        Response response = given().body(initRootBody).post("api/v1/metadata/init")
+////        Response response = given().body(initRootBody).post("omni-oks-cards/api/v1/metadata/init")
 ////                .then().log().all().extract().response();
 ////
 ////        assertAll(

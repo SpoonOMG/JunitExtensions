@@ -1,0 +1,505 @@
+{
+  "status": "success",
+  "actualTimestamp": 1727195043100,
+  "data": {
+    "offices": [
+      {
+        "vspCode": "2099ДО2016042001",
+        "officeTypeId": "0",
+        "moscowTimeDifference": "0",
+        "geolocation": {
+          "longitude": "37.622952",
+          "latitude": "55.768310"
+        },
+        "openDate": "2016-04-20T00:00:00",
+        "closeDate": "3000-01-01T00:00:00",
+        "mail": [
+          {
+            "type": "WORK",
+            "value": "RO_099_1039@gazprombank.ru"
+          },
+          {
+            "type": "ORDER",
+            "value": "RO_099_1039@gazprombank.ru"
+          }
+        ],
+        "phone": [
+          {
+            "type": "WORK",
+            "rawSource": "+78001000701"
+          }
+        ],
+        "directorate": {},
+        "limitedMobilityCondition": "Кнопка вызова сотрудника Банка (при входе);Отсутствует пандус, передвижение возможно без него",
+        "atmsTid": "405324, 407544",
+        "atmTids": [
+          "405324, 407544"
+        ],
+        "schedules": [
+          {
+            "periods": [
+              {
+                "base": true,
+                "weekDayFrom": {
+                  "code": "1",
+                  "name": "Понедельник",
+                  "shortName": "пн"
+                },
+                "weekDayTo": {
+                  "code": "5",
+                  "name": "Пятница",
+                  "shortName": "пт"
+                },
+                "type": {
+                  "code": "2",
+                  "name": "Предпраздничный день"
+                },
+                "dateFrom": "2021-08-05",
+                "dateTo": "2099-12-31",
+                "timeSlots": [
+                  {
+                    "timeFrom": "10:00",
+                    "timeTo": "18:00"
+                  }
+                ]
+              },
+              {
+                "base": true,
+                "weekDayFrom": {
+                  "code": "1",
+                  "name": "Понедельник",
+                  "shortName": "пн"
+                },
+                "weekDayTo": {
+                  "code": "5",
+                  "name": "Пятница",
+                  "shortName": "пт"
+                },
+                "type": {
+                  "code": "3",
+                  "name": "Рабочий день"
+                },
+                "dateFrom": "2021-08-05",
+                "dateTo": "2099-12-31",
+                "timeSlots": [
+                  {
+                    "timeFrom": "10:00",
+                    "timeTo": "19:00"
+                  }
+                ]
+              },
+              {
+                "base": true,
+                "weekDayFrom": {
+                  "code": "6",
+                  "name": "Суббота",
+                  "shortName": "сб"
+                },
+                "weekDayTo": {
+                  "code": "7",
+                  "name": "Воскресенье",
+                  "shortName": "вс"
+                },
+                "type": {
+                  "code": "4",
+                  "name": "Выходной / Праздничный день"
+                },
+                "dateFrom": "2021-08-05",
+                "dateTo": "2099-12-31"
+              }
+            ],
+            "isForJuric": false,
+            "isForPhis": true
+          }
+        ],
+        "limitedMobilityConditions": [
+          {
+            "name": "Кнопка вызова сотрудника Банка (при входе)"
+          },
+          {
+            "name": "Отсутствует пандус, передвижение возможно без него"
+          }
+        ],
+        "branchId": "1",
+        "cardSuccessor": {},
+        "stateId": "1",
+        "bank": {
+          "branchCode": "000",
+          "branchFullName": "«Газпромбанк» (Акционерное общество)",
+          "fullName": "\"Газпромбанк\" (Акционерное общество)",
+          "code": "000",
+          "crdCode": "000",
+          "department": {
+            "type": {
+              "code": "ВСП",
+              "name": "Внутреннее структурное подразделение"
+            },
+            "fullName": "Дополнительный офис № 099/1039 \"Газпромбанк\" (Акционерное общество)",
+            "shortName": "ДО № 099/1039 Банка ГПБ (АО)",
+            "userName": "ДО № 099/1039 \"Цветной бульвар\"",
+            "code": "099/1039",
+            "id": "48"
+          }
+        },
+        "isPremium": true,
+        "isBiometric": true,
+        "isParking": true,
+        "isSelfService": true,
+        "isPersonalManager": false,
+        "isEsiaCenter": false,
+        "isFunctioning": true,
+        "isJuric": false,
+        "isPhys": true,
+        "isUto": false,
+        "isAccessibility": true,
+        "isAppointment": false,
+        "forDisabled": true,
+        "isAtmPresence": true,
+        "schedule": {
+          "physicalWeekday": "\n пн-пт 10:00-19:00;\n\nпредпразд пн-пт 10:00-18:00",
+          "specialPhysicalWeekday": "",
+          "physicalHoliday": "\nвыходной сб-вс",
+          "legalWeekday": "",
+          "specialLegalWeekday": "",
+          "physicalCurr": "пн-пт 10:00-19:00\r\nпредпразд пн-пт 10:00-18:00\r\nсб-вс выходной",
+          "physicalBase": "пн-пт 10:00-19:00\r\nпредпразд пн-пт 10:00-18:00\r\nсб-вс выходной",
+          "physicalDays": "вт 24.09.2024: 10:00 - 19:00\r\nср 25.09.2024: 10:00 - 19:00\r\nчт 26.09.2024: 10:00 - 19:00\r\nпт 27.09.2024: 10:00 - 19:00\r\nсб 28.09.2024:       -\r\nвс 29.09.2024:       -\r\nпн 30.09.2024: 10:00 - 19:00\r\nвт 01.10.2024: 10:00 - 19:00\r\nср 02.10.2024: 10:00 - 19:00\r\nчт 03.10.2024: 10:00 - 19:00\r\nпт 04.10.2024: 10:00 - 19:00\r\nсб 05.10.2024:       -\r\nвс 06.10.2024:       -\r\nпн 07.10.2024: 10:00 - 19:00\r\n"
+        },
+        "address": {
+          "region": "Москва",
+          "regionType": "г",
+          "nearestCity": "",
+          "settlementType": "г",
+          "settlement": "Москва",
+          "shortAddress": "г Москва, Цветной б-р, д 2",
+          "fullAddress": "127051, г Москва, Мещанский р-н, Цветной б-р, д 2",
+          "fiasCode": "77000000000000006180001",
+          "fiasId": "83c35db2-5d13-40cf-94e8-aaf4da0eff0c",
+          "cityFiasId": "0c5b2444-70a0-4932-980c-b4dc0d3f02b5",
+          "cityFiasCode": "77000000000000000000000",
+          "kladrCode": "7700000000006180001",
+          "metro": [
+            {
+              "name": "Трубная",
+              "line": {
+                "name": "Люблинско-Дмитровская линия",
+                "code": "10"
+              },
+              "distance": "100",
+              "icon": {
+                "code": "metro",
+                "url": "",
+                "colorScheme": {
+                  "primary": "99CC00",
+                  "secondary": "#ACBFE4"
+                }
+              }
+            },
+            {
+              "name": "Цветной бульвар",
+              "line": {
+                "name": "Серпуховско-Тимирязевская линия",
+                "code": "9"
+              },
+              "distance": "400",
+              "icon": {
+                "code": "metro",
+                "url": "",
+                "colorScheme": {
+                  "primary": "999999",
+                  "secondary": "#ACBFE4"
+                }
+              }
+            },
+            {
+              "name": "Кузнецкий мост",
+              "line": {
+                "name": "Таганско-Краснопресненская линия",
+                "code": "7"
+              },
+              "distance": "700",
+              "icon": {
+                "code": "metro",
+                "url": "",
+                "colorScheme": {
+                  "primary": "800080",
+                  "secondary": "#ACBFE4"
+                }
+              }
+            }
+          ],
+          "nearestSubway": "Трубная-100м;Цветной бульвар-400м;Кузнецкий мост-700м",
+          "cb": "127051, г. Москва, Цветной бульвар, дом 2, 1 этаж, помещение IX, комната 1а",
+          "regionCode": "77",
+          "briefAddress": "Цветной б-р,2"
+        },
+        "services": [
+          {
+            "type": {
+              "name": "ПИФ",
+              "code": "ПИФ"
+            },
+            "degree": {
+              "value": "полное предоставление услуги",
+              "code": "1"
+            },
+            "isJuric": false,
+            "isPhys": true,
+            "isOpen": true,
+            "file_url": ""
+          },
+          {
+            "type": {
+              "name": "Ипотечное кредитование ФЛ",
+              "code": "КРЕДИПОТФЛ"
+            },
+            "degree": {
+              "value": "полное предоставление услуги",
+              "code": "2"
+            },
+            "isJuric": false,
+            "isPhys": true,
+            "isOpen": true,
+            "file_url": ""
+          },
+          {
+            "type": {
+              "name": "Потребительское кредитование ФЛ",
+              "code": "КРЕДПОТРФЛ"
+            },
+            "degree": {
+              "value": "полное предоставление услуги",
+              "code": "1"
+            },
+            "schedule": "\n пн-пт;\n\nвыходной сб-вс",
+            "scheduleCurr": "пн-пт\r\nсб-вс выходной",
+            "scheduleBase": "пн-пт\r\nсб-вс выходной",
+            "scheduleDays": "вт 24.09.2024:       -\r\nср 25.09.2024:       -\r\nчт 26.09.2024:       -\r\nпт 27.09.2024:       -\r\nсб 28.09.2024:       -\r\nвс 29.09.2024:       -\r\nпн 30.09.2024:       -\r\nвт 01.10.2024:       -\r\nср 02.10.2024:       -\r\nчт 03.10.2024:       -\r\nпт 04.10.2024:       -\r\nсб 05.10.2024:       -\r\nвс 06.10.2024:       -\r\nпн 07.10.2024:       -\r\n",
+            "schedules": [
+              {
+                "periods": [
+                  {
+                    "base": true,
+                    "weekDayFrom": {
+                      "code": "1",
+                      "name": "Понедельник",
+                      "shortName": "пн"
+                    },
+                    "weekDayTo": {
+                      "code": "5",
+                      "name": "Пятница",
+                      "shortName": "пт"
+                    },
+                    "type": {
+                      "code": "3",
+                      "name": "Рабочий день"
+                    },
+                    "dateFrom": "2022-08-10",
+                    "dateTo": "2099-12-31"
+                  },
+                  {
+                    "base": true,
+                    "weekDayFrom": {
+                      "code": "6",
+                      "name": "Суббота",
+                      "shortName": "сб"
+                    },
+                    "weekDayTo": {
+                      "code": "7",
+                      "name": "Воскресенье",
+                      "shortName": "вс"
+                    },
+                    "type": {
+                      "code": "4",
+                      "name": "Выходной / Праздничный день"
+                    },
+                    "dateFrom": "2022-08-10",
+                    "dateTo": "2099-12-31"
+                  }
+                ],
+                "isForJuric": false,
+                "isForPhis": true
+              }
+            ],
+            "isJuric": false,
+            "isPhys": true,
+            "isOpen": true,
+            "file_url": ""
+          },
+          {
+            "type": {
+              "name": "НПФ \"Газфонд\"",
+              "code": "ГАЗФОНД"
+            },
+            "degree": {
+              "value": "полное предоставление услуги",
+              "code": "1"
+            },
+            "isJuric": false,
+            "isPhys": true,
+            "isOpen": true,
+            "file_url": ""
+          },
+          {
+            "type": {
+              "name": "Индивидуальный инвестиционный счёт",
+              "code": "ИИС"
+            },
+            "degree": {
+              "value": "Прием торговых поручений на бумажном носителе не осуществляется",
+              "code": "2"
+            },
+            "isJuric": false,
+            "isPhys": true,
+            "isOpen": true,
+            "file_url": ""
+          },
+          {
+            "type": {
+              "name": "Кассовое обслуживание физических лиц",
+              "code": "КОФЛ"
+            },
+            "degree": {
+              "value": "полное предоставление услуги",
+              "code": "1"
+            },
+            "scheduleCurr": "пн-пт 11:00-19:00\r\nсб-вс выходной",
+            "scheduleBase": "пн-пт 11:00-19:00\r\nсб-вс выходной",
+            "scheduleDays": "ср 13.09.2023: 11:00 - 19:00\r\nчт 14.09.2023: 11:00 - 19:00\r\nпт 15.09.2023: 11:00 - 19:00\r\nсб 16.09.2023:       -\r\nвс 17.09.2023:       -\r\nпн 18.09.2023: 11:00 - 19:00\r\nвт 19.09.2023: 11:00 - 19:00\r\nср 20.09.2023: 11:00 - 19:00\r\nчт 21.09.2023: 11:00 - 19:00\r\nпт 22.09.2023: 11:00 - 19:00\r\nсб 23.09.2023:       -\r\nвс 24.09.2023:       -\r\nпн 25.09.2023: 11:00 - 19:00\r\nвт 26.09.2023: 11:00 - 19:00\r\n",
+            "isJuric": false,
+            "isPhys": true,
+            "isOpen": true,
+            "file_url": ""
+          },
+          {
+            "type": {
+              "name": "Вклады ФЛ",
+              "code": "ВКЛАДФЛ"
+            },
+            "degree": {
+              "value": "полное предоставление услуги",
+              "code": "1"
+            },
+            "isJuric": false,
+            "isPhys": true,
+            "isOpen": true,
+            "file_url": ""
+          },
+          {
+            "type": {
+              "name": "Операции с драгоценными металлами",
+              "code": "ОДМ"
+            },
+            "degree": {
+              "value": "полное предоставление услуги",
+              "code": "1"
+            },
+            "isJuric": false,
+            "isPhys": true,
+            "isOpen": true,
+            "file_url": ""
+          },
+          {
+            "type": {
+              "name": "Денежные переводы",
+              "code": "ДЕНПЕР"
+            },
+            "degree": {
+              "value": "полное предоставление услуги",
+              "code": "1"
+            },
+            "isJuric": false,
+            "isPhys": true,
+            "isOpen": true,
+            "file_url": ""
+          },
+          {
+            "type": {
+              "name": "Валюто-обменные операции",
+              "code": "ОБМЕНОП"
+            },
+            "degree": {
+              "value": "полное предоставление услуги",
+              "code": "1"
+            },
+            "kinds": [
+              "CHF",
+              "EUR",
+              "GBP",
+              "USD"
+            ],
+            "isJuric": false,
+            "isPhys": true,
+            "isOpen": true,
+            "file_url": ""
+          },
+          {
+            "type": {
+              "name": "Банковские карты",
+              "code": "БК"
+            },
+            "degree": {
+              "value": "полное предоставление услуги",
+              "code": "1"
+            },
+            "isJuric": false,
+            "isPhys": true,
+            "isOpen": true,
+            "file_url": ""
+          },
+          {
+            "type": {
+              "name": "Сейфовые ячейки под сделку",
+              "code": "СЕЙФСДЕЛ"
+            },
+            "degree": {
+              "value": "полное предоставление услуги",
+              "code": "1"
+            },
+            "scheduleCurr": "пн-пт 10:00-17:00\r\nсб-вс выходной",
+            "scheduleBase": "пн-пт 10:00-17:00\r\nсб-вс выходной",
+            "scheduleDays": "ср 13.09.2023: 10:00 - 17:00\r\nчт 14.09.2023: 10:00 - 17:00\r\nпт 15.09.2023: 10:00 - 17:00\r\nсб 16.09.2023:       -\r\nвс 17.09.2023:       -\r\nпн 18.09.2023: 10:00 - 17:00\r\nвт 19.09.2023: 10:00 - 17:00\r\nср 20.09.2023: 10:00 - 17:00\r\nчт 21.09.2023: 10:00 - 17:00\r\nпт 22.09.2023: 10:00 - 17:00\r\nсб 23.09.2023:       -\r\nвс 24.09.2023:       -\r\nпн 25.09.2023: 10:00 - 17:00\r\nвт 26.09.2023: 10:00 - 17:00\r\n",
+            "isJuric": false,
+            "isPhys": true,
+            "isOpen": true,
+            "file_url": ""
+          },
+          {
+            "type": {
+              "name": "Сейфовые ячейки под хранение",
+              "code": "СЕЙФХРАН"
+            },
+            "degree": {
+              "value": "полное предоставление услуги",
+              "code": "1"
+            },
+            "isJuric": false,
+            "isPhys": true,
+            "isOpen": true,
+            "file_url": ""
+          },
+          {
+            "type": {
+              "name": "Обслуживание по программе Премиум",
+              "code": "ПРЕМИУМ"
+            },
+            "degree": {
+              "value": "полное предоставление услуги",
+              "code": "1"
+            },
+            "isJuric": false,
+            "isPhys": true,
+            "isOpen": true,
+            "file_url": ""
+          }
+        ],
+        "instance5nt": {
+          "id": "1",
+          "code": "00",
+          "mnemonic": "DRTL",
+          "branchCode": "000"
+        }
+      }
+    ]
+  }
+}

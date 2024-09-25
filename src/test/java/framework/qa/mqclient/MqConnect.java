@@ -55,7 +55,7 @@ public class MqConnect {
     }
 
 
-   public void sendMqMessage(String queueName, Object msg) throws JMSException, JsonProcessingException {
+   public void sendMqMessage(String queueName, Object msg, String requestId) throws JMSException, JsonProcessingException {
        ObjectMapper om = new ObjectMapper();
        String stringMessage=om.writeValueAsString(msg);
         //установили соединение с IBM MQ
@@ -67,7 +67,7 @@ public class MqConnect {
         //сформировали сообщение в очередь
         Message message = queueSession.createTextMessage(stringMessage);
         message.setStringProperty("X_CreateDateTime", "2023-05-22T20:45:00.259Z");
-        message.setStringProperty("X_From", "RMI");
+        message.setStringProperty("X_TransactionID", requestId);
         //отправили сообщение в очередь
         queueSender.send(message);
         //закрыли соединение
@@ -75,24 +75,6 @@ public class MqConnect {
         queueSession.close();
     }
 
-    //    @Тогда("Считали из очереди MQ {string} сообщение по заголовку {string} со значением {string}")
-//    public void считалиИзОчередиMQСообщение(String mq_name, String header_name, String header_value) throws JMSException {
-//        //сделали коннект к MQ
-//        var queueConnection = connect.get();
-//
-//        //читаем сообщение
-//        var queueSession = queueConnection.createQueueSession(false, Session.AUTO_ACKNOWLEDGE);
-//        var queue = queueSession.createQueue(mq_name);
-//        var receiver = queueSession.createReceiver(queue, header_name + "='" + header_value + "'");
-//        queueConnection.start();
-//        var message = Optional.ofNullable(receiver.receive(60 * 1000)).get();
-//
-//        logger.debug("Сообщение: " + ((TextMessage) message));
-//        logger.debug("Тело сообщения: " + ((TextMessage) message).getText());
-//        mqResponseBody = ((TextMessage) message).getText();
-//        queueSession.close();
-//        receiver.close();
-//    }
     public String readMqMessage(String queueName, String mqHeader, String mqHeaderValue ) throws JMSException {
         //установили соединение с IBM MQ
         MqConnect mqConnect = new MqConnect();
@@ -113,9 +95,4 @@ public class MqConnect {
         return mqResponseBody;
     }
 
-//    public static void main(String[] args) throws JMSException {
-//        MqConnect mqConnect = new MqConnect();
-//        mqConnect.sendMqMessage();
-//        mqConnect.readMqMessage();
-//    }
 }

@@ -1,4 +1,4 @@
-//todo Реализовать mqExtension
+////todo Реализовать mqExtension
 //package framework.qa.jupiter.callbacks;
 //
 //import com.fasterxml.jackson.core.JsonProcessingException;
@@ -10,6 +10,8 @@
 //import com.jayway.jsonpath.internal.JsonContext;
 //import framework.qa.config.Config;
 //import framework.qa.models.requestData.OmniRequestItem;
+//import org.junit.jupiter.api.extension.BeforeAllCallback;
+//import org.junit.jupiter.api.extension.ExtensionContext;
 //
 //import javax.jms.*;
 //import java.util.Arrays;
@@ -18,8 +20,13 @@
 //import java.util.Optional;
 //import java.util.function.Supplier;
 //
-//public class MqExtension {
+//public class MqExtension implements BeforeAllCallback {
 //    protected static final Config CFG = Config.getInstance();
+//    @Override
+//    public void beforeAll(ExtensionContext extensionContext) throws Exception {
+//
+//    }
+//
 //
 //    public Supplier<QueueConnection> connect() throws JMSException {
 //        return () -> {
@@ -101,6 +108,8 @@
 //        queueReceiver.close();
 //        return mqResponseBody;
 //    }
+//
+//
 //
 ////    public static void main(String[] args) throws JMSException {
 ////        MqConnect mqConnect = new MqConnect();

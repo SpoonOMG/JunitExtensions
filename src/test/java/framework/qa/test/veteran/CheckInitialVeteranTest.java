@@ -28,7 +28,7 @@ public class CheckInitialVeteranTest extends BaseVeteranTest {
 
     @DisplayName("Получение успешного экрана при запросе на check initial c минимальным набором параметров")
     @Test
-    public void baseCheckTestUfocheckSmartCardParams(@CheckRequest OmniRequestItem check) {
+    public void veteranCheckInitialShouldReturnSuccessScreenWithMinParams(@CheckRequest OmniRequestItem check) {
         String gpbRequestId = UUID.randomUUID().toString();
 
         step("Отправка запроса на check", () -> {

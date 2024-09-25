@@ -43,7 +43,7 @@
 //            Response response = given().header("gpb-requestId", gpbRequestId)
 //
 //                    .body(initRootBody)
-//                    .post("api/v1/metadata/init")
+//                    .post("omni-oks-cards/api/v1/metadata/init")
 //                    .then().extract().response();
 //            assertAll(
 //                    () -> assertEquals("5NT_CARD_PARAMS", response.path("screen.load.id")));
@@ -76,7 +76,7 @@
 //            initRootBody.getMeta().setChannel("ufo");
 //            Response response = given().header("gpb-requestId", gpbRequestId)
 //                    .body(initRootBody)
-//                    .post("api/v1/metadata/init")
+//                    .post("omni-oks-cards/api/v1/metadata/init")
 //                    .then().extract().response();
 //            assertAll(
 //                    () -> assertEquals("OMNI_CARD_ERROR_STATUS", response.path("screen.load.id")));
@@ -110,7 +110,7 @@
 //            initRootBody.getMeta().setChannel("ufo");
 //            Response response = given().header("gpb-requestId", gpbRequestId)
 //                    .body(initRootBody)
-//                    .post("api/v1/metadata/init")
+//                    .post("omni-oks-cards/api/v1/metadata/init")
 //                    .then().extract().response();
 //            assertAll(
 //                    () -> assertEquals("5NT_CARD_PARAMS", response.path("screen.load.id")));
@@ -143,7 +143,7 @@
 //            initRootBody.getMeta().setChannel("ufo");
 //            Response response = given().header("gpb-requestId", gpbRequestId)
 //                    .body(initRootBody)
-//                    .post("api/v1/metadata/init")
+//                    .post("omni-oks-cards/api/v1/metadata/init")
 //                    .then().extract().response();
 //            assertAll(
 //                    () -> assertEquals("OMNI_CARD_ERROR_STATUS", response.path("screen.load.id")));
@@ -176,7 +176,7 @@
 //            initRootBody.getMeta().setChannel("ufo");
 //            Response response = given().header("gpb-requestId", gpbRequestId)
 //                    .body(initRootBody)
-//                    .post("api/v1/metadata/init")
+//                    .post("omni-oks-cards/api/v1/metadata/init")
 //                    .then().extract().response();
 //            assertAll(
 //                    () -> assertEquals("5NT_CARD_PARAMS", response.path("screen.load.id")));
@@ -209,7 +209,7 @@
 //            initRootBody.getMeta().setChannel("ufo");
 //            Response response = given().header("gpb-requestId", gpbRequestId)
 //                    .body(initRootBody)
-//                    .post("api/v1/metadata/init")
+//                    .post("omni-oks-cards/api/v1/metadata/init")
 //                    .then().extract().response();
 //            assertAll(
 //                    () -> assertEquals("OMNI_CARD_ERROR_STATUS", response.path("screen.load.id")));
@@ -243,7 +243,7 @@
 //            initRootBody.getMeta().setChannel("ufo");
 //            Response response = given().header("gpb-requestId", gpbRequestId)
 //                    .body(initRootBody)
-//                    .post("api/v1/metadata/init")
+//                    .post("omni-oks-cards/api/v1/metadata/init")
 //                    .then().extract().response();
 //            assertAll(
 //                    () -> assertEquals("5NT_CARD_PARAMS", response.path("screen.load.id")));
@@ -276,7 +276,7 @@
 //            initRootBody.getMeta().setChannel("ufo");
 //            Response response = given().header("gpb-requestId", gpbRequestId)
 //                    .body(initRootBody)
-//                    .post("api/v1/metadata/init")
+//                    .post("omni-oks-cards/api/v1/metadata/init")
 //                    .then().extract().response();
 //            assertAll(
 //                    () -> assertEquals("OMNI_CARD_ERROR_STATUS", response.path("screen.load.id")));

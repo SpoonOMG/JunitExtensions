@@ -95,6 +95,8 @@ public class TestDataValues {
     public static String ftBuilding = "1";
     public static String rgRegionName = "Москва";
     public static String isDkbo = "true";
+    public static String CardNumber = "4041369648900142";
+    public static String dateExpiration = "0427";
 
 
 }

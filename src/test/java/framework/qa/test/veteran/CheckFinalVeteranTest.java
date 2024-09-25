@@ -8,6 +8,7 @@ import framework.qa.jupiter.annotations.CheckRequest;
 import framework.qa.jupiter.annotations.Mock;
 import framework.qa.models.requestData.*;
 import framework.qa.test.BaseTest;
+import framework.qa.utils.JsonLoader;
 import framework.qa.utils.Wiremock;
 import framework.qa.values.*;
 import io.restassured.response.Response;
@@ -30,7 +31,7 @@ public class CheckFinalVeteranTest extends BaseVeteranTest {
 
     @DisplayName("Получение успешного экрана при запросе на check final c минимальным набором параметров")
     @Test
-    public void baseCheckTestUfocheckLocation(@CheckRequest OmniRequestItem check,
+    public void veteranCheckFinalShouldReturnSuccessScreenWithMinParams(@CheckRequest OmniRequestItem check,
                                               @Mock Wiremock issuCheckMock) {
         String gpbRequestId = UUID.randomUUID().toString();
         step("Конфигурация мок issuCheckMock", () -> {
