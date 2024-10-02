@@ -57,7 +57,7 @@ public class InitVeteranTest extends BaseVeteranTest {
             init.getData().getScenario().setCode(veteranScenarioCode);
             Response response = given().header("gpb-requestId", gpbRequestId)
                     .body(init)
-                    .post("omni-oks-cards/api/v1/metadata/init")
+                    .post("api/v1/metadata/init")
                     .then().extract().response();
             step("Проверка статуса экрана");
             assertAll(
@@ -100,7 +100,7 @@ public class InitVeteranTest extends BaseVeteranTest {
             init.getData().getScenario().setCode(veteranScenarioCode);
             Response response = given().header("gpb-requestId", gpbRequestId)
                     .body(init)
-                    .post("omni-oks-cards/api/v1/metadata/init")
+                    .post("api/v1/metadata/init")
                     .then().extract().response();
             step("Проверка параметров client-search в operation");
             assertAll(
@@ -199,7 +199,7 @@ public class InitVeteranTest extends BaseVeteranTest {
             init.getData().getScenario().setCode(veteranScenarioCode);
             Response response = given().header("gpb-requestId", gpbRequestId)
                     .body(init)
-                    .post("omni-oks-cards/api/v1/metadata/init")
+                    .post("api/v1/metadata/init")
                     .then().extract().response();
             step("Проверка параметров client-search в operation");
             assertAll(

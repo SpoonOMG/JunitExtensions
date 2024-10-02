@@ -34,7 +34,7 @@ public abstract class BaseVeteranTest extends BaseTest {
     protected String dateExpiration = "0427";
 
 
-    List<ScreenValueBack> operationFinalMaxParam() {
+    protected List<ScreenValueBack> operationFinalMaxParam() {
         List<ScreenValueBack> operationFinals = new ArrayList<>();
         operationFinals.add(new ScreenValueBack(Params.LOGIN,                       TestDataValues.login));
         operationFinals.add(new ScreenValueBack(Params.SOURCE_CHANNEL,              TestDataValues.sourceChannel));
@@ -77,7 +77,7 @@ public abstract class BaseVeteranTest extends BaseTest {
         return operationFinals;
     }
 
-    List<ScreenValueBack> operationFinalMinParam() {
+    protected List<ScreenValueBack> operationFinalMinParam() {
         List<ScreenValueBack> operation = new ArrayList<>();
         operation.add(new ScreenValueBack(Params.LOGIN, TestDataValues.login));
         operation.add(new ScreenValueBack(Params.BRANCH_CODE, branchCode));
