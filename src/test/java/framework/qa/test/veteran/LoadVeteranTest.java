@@ -11,6 +11,7 @@ import framework.qa.models.requestData.ScreenCommandFront;
 import framework.qa.models.requestData.ScreenValueBack;
 import framework.qa.utils.Wiremock;
 import framework.qa.values.TestDataValues;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -35,7 +36,9 @@ public class LoadVeteranTest extends BaseVeteranTest {
     public void veteranLoadShouldReturnSuccessScreenWithMinParams(@LoadRequest OmniRequestItem load) {
         String gpbRequestId = UUID.randomUUID().toString();
         step("Отправка запроса на load", () -> {
-            Response response = given().header("gpb-requestId", gpbRequestId)
+            Response response = given()                    .contentType(ContentType.JSON)
+                    .header("gpb-requestId", gpbRequestId)
+                    .header("Authorization", CFG.token()).header("GPB-guid", guid)
                     .body(load)
                     .post("api/v1/metadata/load")
                     .then().extract().response();
@@ -56,7 +59,9 @@ public class LoadVeteranTest extends BaseVeteranTest {
         step("Отправка запроса на load", () -> {
 
             load.getData().getVerifyData().setValues(operationFinalMaxParam());
-            Response response = given().header("gpb-requestId", gpbRequestId)
+            Response response = given()                    .contentType(ContentType.JSON)
+                    .header("gpb-requestId", gpbRequestId)
+                    .header("Authorization", CFG.token()).header("GPB-guid", guid)
                     .body(load)
                     .post("api/v1/metadata/load")
                     .then().extract().response();

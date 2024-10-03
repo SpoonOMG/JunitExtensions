@@ -8,7 +8,9 @@ import framework.qa.mqclient.MqConnect;
 import framework.qa.test.BaseTest;
 import framework.qa.utils.Wiremock;
 import framework.qa.consts.ScenarioCodeEnum;
+import framework.qa.utils.WiremockRetrofit;
 import framework.qa.values.TestDataValues;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -33,8 +35,8 @@ public class InitVeteranTest extends BaseVeteranTest {
     @DisplayName("Получение успешного экрана при запросе на init с обязательными параметрами")
     @Test
     public void veteranInitShouldReturnSuccessWithRequiredParams(@InitRequest OmniRequestItem init,
-                                      @Mock Wiremock clientSearchMock,
-                                      @Mock Wiremock productCardsMock) {
+                                      @Mock WiremockRetrofit clientSearchMock,
+                                      @Mock WiremockRetrofit productCardsMock) {
         String gpbRequestId = UUID.randomUUID().toString();
 
         step("Конфигурация мок client-search", () -> {
@@ -55,7 +57,10 @@ public class InitVeteranTest extends BaseVeteranTest {
         step("Отправка запроса на init", () -> {
             init.getData().getScenario().setId(veteranScenarioId);
             init.getData().getScenario().setCode(veteranScenarioCode);
-            Response response = given().header("gpb-requestId", gpbRequestId)
+            Response response = given()
+                    .contentType(ContentType.JSON)
+                    .header("gpb-requestId", gpbRequestId)
+                    .header("Authorization", CFG.token()).header("GPB-guid", guid)
                     .body(init)
                     .post("api/v1/metadata/init")
                     .then().extract().response();
@@ -76,8 +81,8 @@ public class InitVeteranTest extends BaseVeteranTest {
     @DisplayName("Получение успешного экрана при запросе на init с проверкой заполнения параметров из client-search")
     @Test
     public void veteranInitCheckClientSearchReturnedParams(@InitRequest OmniRequestItem init,
-                                                @Mock Wiremock clientSearchMock,
-                                                @Mock Wiremock productCardsMock) {
+                                                @Mock WiremockRetrofit clientSearchMock,
+                                                @Mock WiremockRetrofit productCardsMock) {
         String gpbRequestId = UUID.randomUUID().toString();
 
         step("Конфигурация мок client-search", () -> {
@@ -98,7 +103,9 @@ public class InitVeteranTest extends BaseVeteranTest {
         step("Отправка запроса на init", () -> {
             init.getData().getScenario().setId(veteranScenarioId);
             init.getData().getScenario().setCode(veteranScenarioCode);
-            Response response = given().header("gpb-requestId", gpbRequestId)
+            Response response = given()                    .contentType(ContentType.JSON)
+                    .header("gpb-requestId", gpbRequestId)
+                    .header("Authorization", CFG.token()).header("GPB-guid", guid)
                     .body(init)
                     .post("api/v1/metadata/init")
                     .then().extract().response();
@@ -175,8 +182,8 @@ public class InitVeteranTest extends BaseVeteranTest {
                                                           String val,
                                                           String incorrectDataMessage,
                                                           @InitRequest OmniRequestItem init,
-                                                          @Mock Wiremock clientSearchMock,
-                                                          @Mock Wiremock productCardsMock) {
+                                                          @Mock WiremockRetrofit clientSearchMock,
+                                                          @Mock WiremockRetrofit productCardsMock) {
         String gpbRequestId = UUID.randomUUID().toString();
 
         step("Конфигурация мок client-search", () -> {
@@ -197,7 +204,9 @@ public class InitVeteranTest extends BaseVeteranTest {
         step("Отправка запроса на init", () -> {
             init.getData().getScenario().setId(veteranScenarioId);
             init.getData().getScenario().setCode(veteranScenarioCode);
-            Response response = given().header("gpb-requestId", gpbRequestId)
+            Response response = given()                    .contentType(ContentType.JSON)
+                    .header("gpb-requestId", gpbRequestId)
+                    .header("Authorization", CFG.token()).header("GPB-guid", guid)
                     .body(init)
                     .post("api/v1/metadata/init")
                     .then().extract().response();

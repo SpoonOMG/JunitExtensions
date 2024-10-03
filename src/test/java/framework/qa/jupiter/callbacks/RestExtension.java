@@ -29,10 +29,10 @@ public class RestExtension implements BeforeAllCallback {
     public void beforeAll(ExtensionContext extensionContext) throws Exception {
         RestAssured.baseURI = CFG.baseUrl();
 
-        RequestSpecification requestSpec = new RequestSpecBuilder()
-                .setContentType(ContentType.JSON)
-                .build()                    .header("Authorization", CFG.token()).header("GPB-guid", guid);
-        RestAssured.requestSpecification = requestSpec;
+//        RequestSpecification requestSpec = new RequestSpecBuilder()
+//                .setContentType(ContentType.JSON)
+//                .build()                    .header("Authorization", CFG.token()).header("GPB-guid", guid);
+//        RestAssured.requestSpecification = requestSpec;
 
         RestAssured.config = RestAssuredConfig.config().objectMapperConfig(
                 ObjectMapperConfig.objectMapperConfig().jackson2ObjectMapperFactory((cls, charset) -> {

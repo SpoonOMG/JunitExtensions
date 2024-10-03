@@ -3,8 +3,10 @@ package framework.qa.utils;
 import com.github.jknack.handlebars.internal.text.translate.UnicodeUnescaper;
 import framework.qa.config.Config;
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.apache.commons.lang3.StringEscapeUtils;
+import org.junit.jupiter.api.Test;
 
 
 import static io.restassured.RestAssured.given;
@@ -39,7 +41,7 @@ public class Wiremock {
                 "        },\n" +
                 "        \"body\": \""+utfJsonBody+"}\"}}";
 
-        Response response= given()
+        Response response= given().header("Content-Type","application/json; charset=UTF-8")
                 .baseUri(CFG.wiremockUrl())
                 .body(request)
                 .post("/__admin/mappings")
@@ -54,5 +56,16 @@ public class Wiremock {
                 .baseUri(CFG.wiremockUrl())
                 .delete("/__admin/mappings/"+uuid)
                 .then().extract().response();
+    }
+
+
+    @Test
+    void test(){
+        wiremockSend("wiremock/client-search/default.json",
+                "/omni-information/api/v2/client/search",
+                "data.clients.[?(@.base.guid==\"6F57A2C3507C4D6AA1A70E9C8C8CF919\")].base.hid",
+                "",
+                "gpbRequestId");
+        wiremockRemove();
     }
 }

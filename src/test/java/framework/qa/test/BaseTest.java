@@ -20,7 +20,8 @@ import java.util.List;
 import static framework.qa.values.TestDataValues.*;
 import static framework.qa.values.TestDataValues.title;
 
-@ExtendWith({TestSaver.class,
+@ExtendWith({
+        TestSaver.class,
         RestExtension.class,
         WiremockResolver.class,
         InitRequestResolver.class,

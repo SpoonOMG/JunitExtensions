@@ -10,8 +10,9 @@ import framework.qa.models.requestData.OmniRequestItem;
 import framework.qa.models.requestData.ScreenCommandFront;
 import framework.qa.models.requestData.ScreenValueBack;
 import framework.qa.utils.JsonLoader;
-import framework.qa.utils.Wiremock;
+import framework.qa.utils.WiremockRetrofit;
 import framework.qa.values.TestDataValues;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.junit.jupiter.api.DisplayName;
@@ -36,7 +37,7 @@ public class CheckExecuteVeteranTest extends BaseVeteranTest {
 
     @DisplayName("Получение успешного экрана при запросе на check final c минимальным набором параметров")
     @Test
-    public void veteranCheckExecuteShouldReturnSuccessScreenWithMinParams(@Mock Wiremock clientSearchMock,
+    public void veteranCheckExecuteShouldReturnSuccessScreenWithMinParams(@Mock WiremockRetrofit clientSearchMock,
                                                                           @CheckRequest OmniRequestItem check) {
         String gpbRequestId = UUID.randomUUID().toString();
         step("Конфигурация мок client-search", () -> {
@@ -68,7 +69,9 @@ public class CheckExecuteVeteranTest extends BaseVeteranTest {
 
             check.getData().getVerifyData().setValues(verifyDataValues);
             check.getData().getOperation().setValues(operationValues);
-            Response response = given().header("gpb-requestId", gpbRequestId)
+            Response response = given()                    .contentType(ContentType.JSON)
+                    .header("gpb-requestId", gpbRequestId)
+                    .header("Authorization", CFG.token()).header("GPB-guid", guid)
                     .body(check)
                     .post("api/v1/metadata/check")
                     .then().extract().response();

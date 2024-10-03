@@ -39,6 +39,12 @@ dependencies {
     //json
     'com.jayway.jsonpath:json-path:2.9.0'
 
+    //
+    testImplementation "com.squareup.retrofit2:retrofit:2.11.0"
+    testImplementation "com.squareup.retrofit2:converter-jackson:2.11.0"
+    testImplementation "com.squareup.okhttp3:logging-interceptor:4.12.0"
+    testImplementation "com.squareup.okhttp3:okhttp-urlconnection:3.14.9"
+
     // Wiremock
     testImplementation "com.github.tomakehurst:wiremock-jre8:3.0.1"
     testImplementation "com.github.tomakehurst:wiremock-standalone:3.0.1"

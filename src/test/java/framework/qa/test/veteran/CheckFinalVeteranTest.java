@@ -9,8 +9,9 @@ import framework.qa.jupiter.annotations.Mock;
 import framework.qa.models.requestData.*;
 import framework.qa.test.BaseTest;
 import framework.qa.utils.JsonLoader;
-import framework.qa.utils.Wiremock;
+import framework.qa.utils.WiremockRetrofit;
 import framework.qa.values.*;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -32,7 +33,7 @@ public class CheckFinalVeteranTest extends BaseVeteranTest {
     @DisplayName("Получение успешного экрана при запросе на check final c минимальным набором параметров")
     @Test
     public void veteranCheckFinalShouldReturnSuccessScreenWithMinParams(@CheckRequest OmniRequestItem check,
-                                              @Mock Wiremock issuCheckMock) {
+                                              @Mock WiremockRetrofit issuCheckMock) {
         String gpbRequestId = UUID.randomUUID().toString();
         step("Конфигурация мок issuCheckMock", () -> {
             issuCheckMock.wiremockSend("wiremock/issue-check/card-issue-check-isMobilePinTrue.json",
@@ -58,7 +59,9 @@ public class CheckFinalVeteranTest extends BaseVeteranTest {
             check.getData().getVerifyData().setScreenStage("final");
 
             check.getData().getOperation().setValues(operationFinalMinParam());
-            Response response = given().header("gpb-requestId", gpbRequestId)
+            Response response = given()                    .contentType(ContentType.JSON)
+                    .header("gpb-requestId", gpbRequestId)
+                    .header("Authorization", CFG.token()).header("GPB-guid", guid)
                     .body(check)
                     .post("api/v1/metadata/check")
                     .then().extract().response();

@@ -8,6 +8,7 @@ import framework.qa.jupiter.annotations.CheckRequest;
 import framework.qa.models.requestData.*;
 import framework.qa.test.BaseTest;
 import framework.qa.values.*;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -34,7 +35,9 @@ public class CheckInitialVeteranTest extends BaseVeteranTest {
         step("Отправка запроса на check", () -> {
             check.getData().getScenario().setId(veteranScenarioId);
             check.getData().getScenario().setCode(veteranScenarioCode);
-            Response response = given().header("gpb-requestId", gpbRequestId)
+            Response response = given()                    .contentType(ContentType.JSON)
+                    .header("gpb-requestId", gpbRequestId)
+                    .header("Authorization", CFG.token()).header("GPB-guid", guid)
                     .body(check)
                     .post("api/v1/metadata/check")
                     .then().extract().response();
