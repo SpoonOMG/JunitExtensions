@@ -4,6 +4,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Headers {
     public GpbRequestId gpbrequestId;
 
+    public Headers(GpbRequestId gpbrequestId) {
+        this.gpbrequestId = gpbrequestId;
+    }
+
 
     @JsonProperty("gpb-requestId")
     public GpbRequestId getGpbrequestId() {

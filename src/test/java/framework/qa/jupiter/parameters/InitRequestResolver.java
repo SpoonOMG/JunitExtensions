@@ -36,53 +36,61 @@ public class InitRequestResolver implements ParameterResolver {
             valueBackList.add(new ScreenValueBack(Params.BRANCH_CODE_5NT, TestDataValues.branchCode5nt));
             valueBackList.add(new ScreenValueBack(Params.ADDRESS_IS_INCORRECT, TestDataValues.addressIsIncorrect));
 
-            Operation operation = new Operation(UUID.randomUUID().toString());
-//            operation.setOrderId(UUID.randomUUID().toString());
+//            Operation operation = new Operation(UUID.randomUUID().toString());
+////            operation.setOrderId(UUID.randomUUID().toString());
+//
+//            VerifyData verifyData = new VerifyData();
+//            verifyData.setValues(valueBackList);
+//            verifyData.setScreenStage("initial");
+//
+//            DepartmentAddress departmentAddress = new DepartmentAddress();
+//            departmentAddress.setFullAddress(TestDataValues.address);
+//
+//            EmployeeDepartment department = new EmployeeDepartment();
+//            department.setAddress(departmentAddress);
+//            department.setCode(TestDataValues.branchCode);
+//            department.setFullName(TestDataValues.userFullName);
+//            department.setBranchCode(TestDataValues.branchUnitCode);
+//
+//            Employee employee = new Employee();
+//            employee.setLogin(TestDataValues.login);
+//            employee.setPosition(TestDataValues.title);
+//            employee.setDepartment(department);
+//
+//            ClientContext clientContext = new ClientContext();
+//            clientContext.setVersion(TestDataValues.version);
+//            clientContext.setEmployee(employee);
+//
+//            Scenario scenario = new Scenario(ScenarioCodeEnum.sc_57eb451bc6aa383.getId(),
+//                    "CARDS",
+//                    "Банковские карты",
+//                    "DEBIT",
+//                    "Дебетовые",
+//                    "#EMPTY#",
+//                    ScenarioCodeEnum.sc_57eb451bc6aa383.getCode(),
+//                    "Умная карта",
+//                    true,
+//                    "OMNI",
+//                    "OMNI-OKS-CARDS",
+//                    "OMNI-OKS-CARDS",
+//                    "DRTL");
+//
+//
+//            RequestData requestData = new RequestData();
+//            requestData.setClientContext(clientContext);
+//            requestData.setVerifyData(verifyData);
+//            requestData.setOperation(operation);
+//            requestData.setScenario(scenario);
 
-            VerifyData verifyData = new VerifyData();
-            verifyData.setValues(valueBackList);
-            verifyData.setScreenStage("initial");
 
-            DepartmentAddress departmentAddress = new DepartmentAddress();
-            departmentAddress.setFullAddress(TestDataValues.address);
-
-            EmployeeDepartment department = new EmployeeDepartment();
-            department.setAddress(departmentAddress);
-            department.setCode(TestDataValues.branchCode);
-            department.setFullName(TestDataValues.userFullName);
-            department.setBranchCode(TestDataValues.branchUnitCode);
-
-            Employee employee = new Employee();
-            employee.setLogin(TestDataValues.login);
-            employee.setPosition(TestDataValues.title);
-            employee.setDepartment(department);
-
-            ClientContext clientContext = new ClientContext();
-            clientContext.setVersion(TestDataValues.version);
-            clientContext.setEmployee(employee);
-
-            Scenario scenario = new Scenario(ScenarioCodeEnum.sc_57eb451bc6aa383.getId(),
-                    "CARDS",
-                    "Банковские карты",
-                    "DEBIT",
-                    "Дебетовые",
-                    "#EMPTY#",
-                    ScenarioCodeEnum.sc_57eb451bc6aa383.getCode(),
-                    "Умная карта",
-                    true,
-                    "OMNI",
-                    "OMNI-OKS-CARDS",
-                    "OMNI-OKS-CARDS",
-                    "DRTL");
-
-
-            RequestData requestData = new RequestData();
-            requestData.setClientContext(clientContext);
-            requestData.setVerifyData(verifyData);
-            requestData.setOperation(operation);
-            requestData.setScenario(scenario);
-
-            return new OmniRequestItem(requestData,new OmniRequestMeta("DRTL", ChannelEnum.UFO.getName(),"OMNI",null));
+            return new OmniRequestItem (
+                    new OmniRequestMeta("DRTL", ChannelEnum.UFO.getName(),"OMNI",null),
+                    new RequestData(new Scenario(null, ScenarioCodeEnum.sc_421e8df062b2939.getCode(), "OMNI"),
+                            new Operation(UUID.randomUUID().toString()),
+                            new ClientContext(),
+                            new VerifyData(valueBackList)
+                    ));
+//            return new OmniRequestItem(requestData,new OmniRequestMeta("DRTL", ChannelEnum.UFO.getName(),"OMNI",null));
 
 //            InitRequestParams initRequestParams = new InitRequestParams();
 //            initRequestParams.setChannel(ChannelEnum.UFO);

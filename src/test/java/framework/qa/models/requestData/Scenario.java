@@ -11,6 +11,12 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class Scenario {
 
+    public Scenario(String id, String code, String systemExecute) {
+        this.id = id;
+        this.code = code;
+        this.systemExecute = systemExecute;
+    }
+
     public String getId() {
         return id;
     }

@@ -14,6 +14,7 @@ import static io.restassured.RestAssured.given;
 public class Wiremock {
     protected static final Config CFG = Config.getInstance();
     protected String uuid;
+    public String requestId;
 
 
     public void wiremockSend(String mockPath, String enpointMapping,  String att, String value, String gpbRequestIdMapping) {

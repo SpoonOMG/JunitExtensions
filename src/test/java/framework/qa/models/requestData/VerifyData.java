@@ -8,7 +8,6 @@ import lombok.experimental.Accessors;
 import java.util.List;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @Data
 @Accessors(chain = true)
 public class VerifyData {
@@ -20,6 +19,13 @@ public class VerifyData {
     private String screenId;
 
     private ScreenCommandFront command;
+
+    public VerifyData(List<ScreenValueBack> values) {
+        this.values = values;
+    }
+
+    public VerifyData() {
+    }
 
     public ScreenCommandFront getCommand() {
         return command;

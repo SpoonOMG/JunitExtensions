@@ -1,4 +1,4 @@
-package framework.qa.utils;
+package framework.qa.api;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import framework.qa.models.wiremock.request.WiremockRoot;
@@ -9,8 +9,7 @@ import retrofit2.http.DELETE;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 
-// Интерфейс для вашего RESTful сервиса
-interface ExampleService {
+public interface WiremockApi {
     @POST("/__admin/mappings")
     @JsonInclude(JsonInclude.Include.NON_NULL)
     Call<RootWiremockResponse> makeMock(@Body WiremockRoot body);

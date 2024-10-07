@@ -19,6 +19,13 @@ public class RequestData {
 
     private VerifyData verifyData;
 
+    public RequestData(Scenario scenario, Operation operation, ClientContext clientContext, VerifyData verifyData) {
+        this.scenario = scenario;
+        this.operation = operation;
+        this.clientContext = clientContext;
+        this.verifyData = verifyData;
+    }
+
 
     public Scenario getScenario() {
         return scenario;

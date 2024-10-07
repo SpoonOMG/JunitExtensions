@@ -5,6 +5,12 @@ public class Request {
     public String url;
     public Headers headers;
 
+    public Request(String method, String url, Headers headers) {
+        this.method = method;
+        this.url = url;
+        this.headers = headers;
+    }
+
     public String getMethod() {
         return method;
     }

@@ -24,6 +24,11 @@ public final class OmniRequestItem implements Serializable {
         this.data = data;
     }
 
+    public OmniRequestItem(OmniRequestMeta meta, RequestData data) {
+        this.meta = meta;
+        this.data = data;
+    }
+
 
     public RequestData getData() {
         return data;

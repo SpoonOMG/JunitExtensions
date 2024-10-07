@@ -5,6 +5,12 @@ public class Response {
     public ResponseHeaders headers;
     public String body;
 
+    public Response(int status, ResponseHeaders headers, String body) {
+        this.status = status;
+        this.headers = headers;
+        this.body = body;
+    }
+
     public int getStatus() {
         return status;
     }

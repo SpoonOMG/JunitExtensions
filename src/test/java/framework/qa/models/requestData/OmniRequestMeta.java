@@ -11,6 +11,10 @@ public final class OmniRequestMeta {
 
     private String systemId;
 
+    public OmniRequestMeta(String channel) {
+        this.channel = channel;
+    }
+
     public void setSystemId(String systemId) {
         this.systemId = systemId;
     }
