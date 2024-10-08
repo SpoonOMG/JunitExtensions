@@ -4,10 +4,7 @@ import framework.qa.api.InitApi;
 import framework.qa.api.InitApiClient;
 import framework.qa.config.Config;
 import framework.qa.consts.Params;
-import framework.qa.jupiter.annotations.InitApiRequest;
-import framework.qa.jupiter.annotations.InitRequest;
-import framework.qa.jupiter.annotations.InitRq;
-import framework.qa.jupiter.annotations.Wmock;
+import framework.qa.jupiter.annotations.*;
 import framework.qa.jupiter.callbacks.InitRqExtension;
 import framework.qa.jupiter.callbacks.WmockExtension;
 //import framework.qa.jupiter.parameters.InitApiResolver;
@@ -44,7 +41,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 })
 
 public class InitVeteranTest {
-   private final InitApiClient initApi = new InitApiClient();
+    private final InitApiClient initApi = new InitApiClient();
 
 //
 //    @BeforeEach
@@ -62,25 +59,31 @@ public class InitVeteranTest {
 //    }
 
 
-    @Wmock(
-            enpointMapping = "/omni-information/api/v2/client/search",
-            mockFile = "wiremock/client-search/default.json",
-            pathToField = "data.clients.[?(@.base.guid==\"6F57A2C3507C4D6AA1A70E9C8C8CF919\")].base.hid",
-            value = "1234"
-    )
+    @Wmocks({
+            @Wmock(
+                    enpointMapping = "/omni-information/api/v2/client/search",
+                    mockFile = "wiremock/client-search/default.json",
+                    pathToField = "data.clients.[?(@.base.guid==\"6F57A2C3507C4D6AA1A70E9C8C8CF919\")].base.hid",
+                    value = "1234"
+            ),
+            @Wmock(
+                    enpointMapping = "/omni-information-card/api/v3/client/product/cards",
+                    mockFile = "wiremock/product-cards/default.json",
+                    pathToField = "actualTimestamp",
+                    value = "1234"
+            )})
     @Test
-     void exampleTest(RootWiremockResponse rwr,
-                      @InitRequest OmniRequestItem init
+    void exampleTest(
+                     @InitRequest OmniRequestItem init
     ) throws IOException {
-        String gpbrequestId = rwr.getRequest().getHeaders().getGpbrequestId().getEqualTo();
+        String gpbrequestId = "1";
         String myFieldName = "##requestId";
-
-        ResponseItem response=initApi.initRequest(gpbrequestId,init);
+        ResponseItem response = initApi.initRequest(gpbrequestId, init);
 
         List<ValuesItem> operationValues = response.getData().getOperation().getValues();
         String value = Optional.ofNullable(response.getData()).map(Data::getOperation).map(Operation::getValues)
                 .flatMap(valuesItems -> ServiceUtils.extractValue(operationValues, myFieldName))
-                .map(ValuesItem::getValue).orElse(null).replaceAll("[()]","");
+                .map(ValuesItem::getValue).orElse(null).replaceAll("[()]", "");
 
         System.out.println(value);
         Assertions.assertEquals(gpbrequestId, value);
