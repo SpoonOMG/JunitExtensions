@@ -85,7 +85,7 @@ public class InitRequestResolver implements ParameterResolver {
 
             return new OmniRequestItem (
                     new OmniRequestMeta("DRTL", ChannelEnum.UFO.getName(),"OMNI",null),
-                    new RequestData(new Scenario(null, ScenarioCodeEnum.sc_421e8df062b2939.getCode(), "OMNI"),
+                    new RequestData(new Scenario(ScenarioCodeEnum.sc_421e8df062b2939.getId(), ScenarioCodeEnum.sc_421e8df062b2939.getCode(), "OMNI"),
                             new Operation(UUID.randomUUID().toString()),
                             new ClientContext(),
                             new VerifyData(valueBackList)

@@ -2,14 +2,23 @@ package framework.qa.models.omniresponseitem;
 
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import framework.qa.models.omniresponse.CommandsItem;
+import framework.qa.models.omniresponse.GroupsItem;
+import framework.qa.models.omniresponse.ServerFeature;
 
 public class Load{
 
 	@JsonProperty("component")
 	private String component;
 
+	@JsonProperty("serverFeature")
+	private framework.qa.models.omniresponse.ServerFeature serverFeature;
+
+	@JsonProperty("header")
+	private String header;
+
 	@JsonProperty("groups")
-	private List<GroupsItem> groups;
+	private List<framework.qa.models.omniresponse.GroupsItem> groups;
 
 	@JsonProperty("cacheable")
 	private boolean cacheable;
@@ -17,11 +26,25 @@ public class Load{
 	@JsonProperty("id")
 	private String id;
 
+	@JsonProperty("logInfo")
+	private String logInfo;
+
+	@JsonProperty("defCommandId")
+	private String defCommandId;
+
 	@JsonProperty("commands")
-	private List<Object> commands;
+	private List<CommandsItem> commands;
 
 	public String getComponent(){
 		return component;
+	}
+
+	public ServerFeature getServerFeature(){
+		return serverFeature;
+	}
+
+	public String getHeader(){
+		return header;
 	}
 
 	public List<GroupsItem> getGroups(){
@@ -36,7 +59,15 @@ public class Load{
 		return id;
 	}
 
-	public List<Object> getCommands(){
+	public String getLogInfo(){
+		return logInfo;
+	}
+
+	public String getDefCommandId(){
+		return defCommandId;
+	}
+
+	public List<CommandsItem> getCommands(){
 		return commands;
 	}
 }

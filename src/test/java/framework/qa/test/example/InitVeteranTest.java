@@ -76,14 +76,14 @@ public class InitVeteranTest {
     void exampleTest(
                      @InitRequest OmniRequestItem init
     ) throws IOException {
-        String gpbrequestId = "1";
+        String gpbrequestId = "gpbrequestIddd";
         String myFieldName = "##requestId";
         ResponseItem response = initApi.initRequest(gpbrequestId, init);
 
         List<ValuesItem> operationValues = response.getData().getOperation().getValues();
         String value = Optional.ofNullable(response.getData()).map(Data::getOperation).map(Operation::getValues)
                 .flatMap(valuesItems -> ServiceUtils.extractValue(operationValues, myFieldName))
-                .map(ValuesItem::getValue).orElse(null).replaceAll("[()]", "");
+                .map(ValuesItem::getValue).orElse(null);
 
         System.out.println(value);
         Assertions.assertEquals(gpbrequestId, value);

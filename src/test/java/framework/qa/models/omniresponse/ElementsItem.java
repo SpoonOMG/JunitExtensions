@@ -44,6 +44,13 @@ public class ElementsItem{
 	@JsonProperty("logInfo")
 	private String logInfo;
 
+	public String getStyle() {
+		return style;
+	}
+
+	@JsonProperty("style")
+	private String style;
+
 	@JsonProperty("specific")
 	private Specific specific;
 

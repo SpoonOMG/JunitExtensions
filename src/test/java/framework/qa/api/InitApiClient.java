@@ -8,7 +8,7 @@ import retrofit2.Retrofit;
 import java.io.IOException;
 
 public class InitApiClient extends ApiClient{
-    private String guid = "";
+    private String guid = "6F57A2C3507C4D6AA1A70E9C8C8CF919";
     private final InitApi initApi;
 
 
