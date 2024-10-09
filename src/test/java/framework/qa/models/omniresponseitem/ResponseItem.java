@@ -2,7 +2,7 @@ package framework.qa.models.omniresponseitem;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class ResponseItem {
+public class ResponseItem{
 
 	@JsonProperty("data")
 	private Data data;

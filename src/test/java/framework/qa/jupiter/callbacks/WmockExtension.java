@@ -21,12 +21,12 @@ import java.util.UUID;
 
 public class WmockExtension implements BeforeEachCallback, ParameterResolver, AfterEachCallback {
     protected static final Config CFG = Config.getInstance();
-    protected String uuid;
+//    protected String uuid;
     protected List<String> uuidList;
     public String gpbrequestId = UUID.randomUUID().toString();
     public static final ExtensionContext.Namespace NAMESPACE = ExtensionContext.Namespace.create(WmockExtension.class);
 
-    private static final OkHttpClient okHttpClient = new OkHttpClient.Builder().addNetworkInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
+    private static final OkHttpClient okHttpClient = new OkHttpClient.Builder().addNetworkInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.NONE))
             .build();
 
     private final Retrofit retrofit = new Retrofit.Builder()
@@ -46,17 +46,17 @@ public class WmockExtension implements BeforeEachCallback, ParameterResolver, Af
                         RootWiremockResponse result = null;
                         try {
                             result = wiremockApi.makeMock(new WiremockRoot(
-                                    new Request("POST", wmock.enpointMapping(), new Headers(new GpbRequestId("gpbrequestIddd"))),
+                                    new Request("POST", wmock.enpointMapping(), new Headers(new GpbRequestId(gpbrequestId))),
                                     new Response(200, new ResponseHeaders("application/json"), new JsonAttChanger().apply(wmock.mockFile(), wmock.pathToField(), wmock.value()))
                             )).execute().body();
                         } catch (IOException e) {
                             throw new RuntimeException(e);
                         }
-                        uuid = result.getUuid();
-                        System.out.println("МОЙ ЮИД----->"+uuid);
+//                        uuid = result.getUuid();
+//                        System.out.println("МОЙ ЮИД----->"+uuid);
                         created.add(result);
                     }
-                    extensionContext.getStore(NAMESPACE).put("mock", created);
+                    extensionContext.getStore(NAMESPACE).put(extensionContext.getUniqueId(), created);
 
                 }
         );
@@ -67,13 +67,13 @@ public class WmockExtension implements BeforeEachCallback, ParameterResolver, Af
                 .ifPresent(
                         mock -> {
                             WiremockRoot wiremockRoot = new WiremockRoot(
-                                    new Request("POST", mock.enpointMapping(), new Headers(new GpbRequestId("gpbrequestIddd"))),
+                                    new Request("POST", mock.enpointMapping(), new Headers(new GpbRequestId(gpbrequestId))),
                                     new Response(200, new ResponseHeaders("application/json"), new JsonAttChanger().apply(mock.mockFile(), mock.pathToField(), mock.value()))
                             );
                             try {
                                 RootWiremockResponse result = wiremockApi.makeMock(wiremockRoot).execute().body();
-                                uuid = result.getUuid();
-                                extensionContext.getStore(NAMESPACE).put("mock", result);
+//                                uuid = result.getUuid();
+                                extensionContext.getStore(NAMESPACE).put(extensionContext.getUniqueId(), result);
                             } catch (IOException e) {
                                 throw new RuntimeException(e);
                             }
@@ -83,19 +83,26 @@ public class WmockExtension implements BeforeEachCallback, ParameterResolver, Af
 
     @Override
     public boolean supportsParameter(ParameterContext parameterContext, ExtensionContext extensionContext) throws ParameterResolutionException {
-        return parameterContext.getParameter().getType().isAssignableFrom(RootWiremockResponse.class);
+       Class<?> type = parameterContext.getParameter().getType();
+
+
+        return type.isAssignableFrom(RootWiremockResponse.class)||type.isAssignableFrom(RootWiremockResponse[].class);
     }
 
     @Override
     public Object resolveParameter(ParameterContext parameterContext, ExtensionContext extensionContext) throws ParameterResolutionException {
-        return extensionContext.getStore(NAMESPACE).get("mock");
+        Class<?> type = parameterContext.getParameter().getType();
+        List<RootWiremockResponse> createdMocks = extensionContext.getStore(NAMESPACE).get(extensionContext.getUniqueId(),List.class);
+
+        return type.isAssignableFrom(RootWiremockResponse.class)? createdMocks.get(0):createdMocks.toArray();
     }
 
     @Override
     public void afterEach(ExtensionContext extensionContext) throws Exception {
-
-
         WiremockApi wiremockApi = retrofit.create(WiremockApi.class);
-        wiremockApi.deleteMock(uuidList.get(0)).execute();
+        List<RootWiremockResponse> removeMocks = extensionContext.getStore(NAMESPACE).get(extensionContext.getUniqueId(), List.class);
+        for (RootWiremockResponse rwr:removeMocks) {
+            wiremockApi.deleteMock(rwr.getUuid()).execute();
+        }
     }
 }

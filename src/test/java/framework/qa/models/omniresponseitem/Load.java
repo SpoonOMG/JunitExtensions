@@ -2,9 +2,6 @@ package framework.qa.models.omniresponseitem;
 
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import framework.qa.models.omniresponse.CommandsItem;
-import framework.qa.models.omniresponse.GroupsItem;
-import framework.qa.models.omniresponse.ServerFeature;
 
 public class Load{
 
@@ -12,13 +9,13 @@ public class Load{
 	private String component;
 
 	@JsonProperty("serverFeature")
-	private framework.qa.models.omniresponse.ServerFeature serverFeature;
+	private ServerFeature serverFeature;
 
 	@JsonProperty("header")
 	private String header;
 
 	@JsonProperty("groups")
-	private List<framework.qa.models.omniresponse.GroupsItem> groups;
+	private List<GroupsItem> groups;
 
 	@JsonProperty("cacheable")
 	private boolean cacheable;

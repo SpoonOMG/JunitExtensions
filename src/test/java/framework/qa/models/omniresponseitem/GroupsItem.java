@@ -2,9 +2,6 @@ package framework.qa.models.omniresponseitem;
 
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import framework.qa.models.omniresponse.ElementsItem;
-import framework.qa.models.omniresponse.ServerFeature;
-import framework.qa.models.omniresponse.Style;
 
 public class GroupsItem{
 
@@ -15,16 +12,13 @@ public class GroupsItem{
 	private String component;
 
 	@JsonProperty("elements")
-	private List<framework.qa.models.omniresponse.ElementsItem> elements;
+	private List<ElementsItem> elements;
 
 	@JsonProperty("logInfo")
 	private String logInfo;
 
 	@JsonProperty("visible")
 	private boolean visible;
-
-	@JsonProperty("serverFeature")
-	private framework.qa.models.omniresponse.ServerFeature serverFeature;
 
 	@JsonProperty("alias")
 	private String alias;
@@ -34,6 +28,9 @@ public class GroupsItem{
 
 	@JsonProperty("style")
 	private Style style;
+
+	@JsonProperty("dependencies")
+	private List<DependenciesItem> dependencies;
 
 	public boolean isExcluded(){
 		return excluded;
@@ -55,10 +52,6 @@ public class GroupsItem{
 		return visible;
 	}
 
-	public ServerFeature getServerFeature(){
-		return serverFeature;
-	}
-
 	public String getAlias(){
 		return alias;
 	}
@@ -69,5 +62,9 @@ public class GroupsItem{
 
 	public Style getStyle(){
 		return style;
+	}
+
+	public List<DependenciesItem> getDependencies(){
+		return dependencies;
 	}
 }
