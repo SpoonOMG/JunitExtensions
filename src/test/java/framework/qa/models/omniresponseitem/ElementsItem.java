@@ -1,154 +1,162 @@
 package framework.qa.models.omniresponseitem;
 
 import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class ElementsItem{
+public class ElementsItem {
 
-	@JsonProperty("component")
-	private String component;
+    public String getMarkup() {
+        return markup;
+    }
 
-	@JsonProperty("visible")
-	private boolean visible;
+    @JsonProperty("markup")
+    private String markup;
 
-	@JsonProperty("type")
-	private String type;
+    @JsonProperty("component")
+    private String component;
 
-	@JsonProperty("value")
-	private String value;
+    @JsonProperty("visible")
+    private boolean visible;
 
-	@JsonProperty("dependencies")
-	private List<DependenciesItem> dependencies;
+    @JsonProperty("type")
+    private String type;
 
-	@JsonProperty("serverFeature")
-	private ServerFeature serverFeature;
+    @JsonProperty("value")
+    private String value;
 
-	@JsonProperty("alias")
-	private String alias;
+    @JsonProperty("dependencies")
+    private List<DependenciesItem> dependencies;
 
-	@JsonProperty("id")
-	private String id;
+    @JsonProperty("serverFeature")
+    private ServerFeature serverFeature;
 
-	@JsonProperty("placeholder")
-	private String placeholder;
+    @JsonProperty("alias")
+    private String alias;
 
-	@JsonProperty("required")
-	private boolean required;
+    @JsonProperty("id")
+    private String id;
 
-	@JsonProperty("errors")
-	private List<ErrorsItem> errors;
+    @JsonProperty("placeholder")
+    private String placeholder;
 
-	@JsonProperty("disabled")
-	private boolean disabled;
+    @JsonProperty("required")
+    private boolean required;
 
-	@JsonProperty("style")
-	private Style style;
+    @JsonProperty("errors")
+    private List<ErrorsItem> errors;
 
-	@JsonProperty("label")
-	private String label;
+    @JsonProperty("disabled")
+    private boolean disabled;
 
-	@JsonProperty("logInfo")
-	private String logInfo;
+    @JsonProperty("style")
+    private Style style;
 
-	@JsonProperty("specific")
-	private Specific specific;
+    @JsonProperty("label")
+    private String label;
 
-	@JsonProperty("validator")
-	private Validator validator;
+    @JsonProperty("logInfo")
+    private String logInfo;
 
-	@JsonProperty("maxLength")
-	private String maxLength;
+    @JsonProperty("specific")
+    private Specific specific;
 
-	@JsonProperty("keyboard")
-	private String keyboard;
+    @JsonProperty("validator")
+    private Validator validator;
 
-	@JsonProperty("minLength")
-	private String minLength;
+    @JsonProperty("maxLength")
+    private String maxLength;
 
-	@JsonProperty("converter")
-	private Converter converter;
+    @JsonProperty("keyboard")
+    private String keyboard;
 
-	public String getComponent(){
-		return component;
-	}
+    @JsonProperty("minLength")
+    private String minLength;
 
-	public boolean isVisible(){
-		return visible;
-	}
+    @JsonProperty("converter")
+    private Converter converter;
 
-	public String getType(){
-		return type;
-	}
+    public String getComponent() {
+        return component;
+    }
 
-	public String getValue(){
-		return value;
-	}
+    public boolean isVisible() {
+        return visible;
+    }
 
-	public List<DependenciesItem> getDependencies(){
-		return dependencies;
-	}
+    public String getType() {
+        return type;
+    }
 
-	public ServerFeature getServerFeature(){
-		return serverFeature;
-	}
+    public String getValue() {
+        return value;
+    }
 
-	public String getAlias(){
-		return alias;
-	}
+    public List<DependenciesItem> getDependencies() {
+        return dependencies;
+    }
 
-	public String getId(){
-		return id;
-	}
+    public ServerFeature getServerFeature() {
+        return serverFeature;
+    }
 
-	public String getPlaceholder(){
-		return placeholder;
-	}
+    public String getAlias() {
+        return alias;
+    }
 
-	public boolean isRequired(){
-		return required;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public List<ErrorsItem> getErrors(){
-		return errors;
-	}
+    public String getPlaceholder() {
+        return placeholder;
+    }
 
-	public boolean isDisabled(){
-		return disabled;
-	}
+    public boolean isRequired() {
+        return required;
+    }
 
-	public Style getStyle(){
-		return style;
-	}
+    public List<ErrorsItem> getErrors() {
+        return errors;
+    }
 
-	public String getLabel(){
-		return label;
-	}
+    public boolean isDisabled() {
+        return disabled;
+    }
 
-	public String getLogInfo(){
-		return logInfo;
-	}
+    public Style getStyle() {
+        return style;
+    }
 
-	public Specific getSpecific(){
-		return specific;
-	}
+    public String getLabel() {
+        return label;
+    }
 
-	public Validator getValidator(){
-		return validator;
-	}
+    public String getLogInfo() {
+        return logInfo;
+    }
 
-	public String getMaxLength(){
-		return maxLength;
-	}
+    public Specific getSpecific() {
+        return specific;
+    }
 
-	public String getKeyboard(){
-		return keyboard;
-	}
+    public Validator getValidator() {
+        return validator;
+    }
 
-	public String getMinLength(){
-		return minLength;
-	}
+    public String getMaxLength() {
+        return maxLength;
+    }
 
-	public Converter getConverter(){
-		return converter;
-	}
+    public String getKeyboard() {
+        return keyboard;
+    }
+
+    public String getMinLength() {
+        return minLength;
+    }
+
+    public Converter getConverter() {
+        return converter;
+    }
 }

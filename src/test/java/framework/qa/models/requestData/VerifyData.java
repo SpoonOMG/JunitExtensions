@@ -20,6 +20,13 @@ public class VerifyData {
 
     private ScreenCommandFront command;
 
+    public VerifyData(List<ScreenValueBack> values, String screenStage, String screenId, ScreenCommandFront command) {
+        this.values = values;
+        this.screenStage = screenStage;
+        this.screenId = screenId;
+        this.command = command;
+    }
+
     public VerifyData(List<ScreenValueBack> values) {
         this.values = values;
     }

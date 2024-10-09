@@ -1,70 +1,79 @@
 package framework.qa.models.omniresponseitem;
 
 import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class GroupsItem{
+public class GroupsItem {
 
-	@JsonProperty("excluded")
-	private boolean excluded;
 
-	@JsonProperty("component")
-	private String component;
+    @JsonProperty("id")
+    private String id;
 
-	@JsonProperty("elements")
-	private List<ElementsItem> elements;
+    @JsonProperty("excluded")
+    private boolean excluded;
 
-	@JsonProperty("logInfo")
-	private String logInfo;
+    @JsonProperty("component")
+    private String component;
 
-	@JsonProperty("visible")
-	private boolean visible;
+    @JsonProperty("elements")
+    private List<ElementsItem> elements;
 
-	@JsonProperty("alias")
-	private String alias;
+    @JsonProperty("logInfo")
+    private String logInfo;
 
-	@JsonProperty("disabled")
-	private boolean disabled;
+    @JsonProperty("visible")
+    private boolean visible;
 
-	@JsonProperty("style")
-	private Style style;
+    @JsonProperty("alias")
+    private String alias;
 
-	@JsonProperty("dependencies")
-	private List<DependenciesItem> dependencies;
+    @JsonProperty("disabled")
+    private boolean disabled;
 
-	public boolean isExcluded(){
-		return excluded;
-	}
+    @JsonProperty("style")
+    private Style style;
 
-	public String getComponent(){
-		return component;
-	}
+    @JsonProperty("dependencies")
+    private List<DependenciesItem> dependencies;
 
-	public List<ElementsItem> getElements(){
-		return elements;
-	}
+    public boolean isExcluded() {
+        return excluded;
+    }
 
-	public String getLogInfo(){
-		return logInfo;
-	}
+    public String getComponent() {
+        return component;
+    }
 
-	public boolean isVisible(){
-		return visible;
-	}
+    public List<ElementsItem> getElements() {
+        return elements;
+    }
 
-	public String getAlias(){
-		return alias;
-	}
+    public String getLogInfo() {
+        return logInfo;
+    }
 
-	public boolean isDisabled(){
-		return disabled;
-	}
+    public boolean isVisible() {
+        return visible;
+    }
 
-	public Style getStyle(){
-		return style;
-	}
+    public String getAlias() {
+        return alias;
+    }
 
-	public List<DependenciesItem> getDependencies(){
-		return dependencies;
-	}
+    public boolean isDisabled() {
+        return disabled;
+    }
+
+    public Style getStyle() {
+        return style;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public List<DependenciesItem> getDependencies() {
+        return dependencies;
+    }
 }

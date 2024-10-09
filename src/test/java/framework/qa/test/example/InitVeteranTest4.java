@@ -1,6 +1,6 @@
 package framework.qa.test.example;
 
-import framework.qa.api.InitApiClient;
+import framework.qa.api.OmniApiClient;
 import framework.qa.jupiter.annotations.InitRequest;
 import framework.qa.jupiter.annotations.Wmock;
 import framework.qa.jupiter.annotations.Wmocks;
@@ -26,7 +26,7 @@ import java.util.Optional;
 })
 
 public class InitVeteranTest4 {
-    private final InitApiClient initApi = new InitApiClient();
+    private final OmniApiClient initApi = new OmniApiClient();
 
 
 

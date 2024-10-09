@@ -1,240 +1,260 @@
-//package framework.qa.test.veteran;
-//
-//import framework.qa.jupiter.annotations.CheckRequest;
-//import framework.qa.jupiter.annotations.InitRequest;
-//import framework.qa.jupiter.annotations.Mock;
-//import framework.qa.models.requestData.*;
-//import framework.qa.mqclient.MqConnect;
-//import framework.qa.test.BaseTest;
-//import framework.qa.utils.Wiremock;
-//import framework.qa.consts.ScenarioCodeEnum;
-//import framework.qa.utils.WiremockRetrofit;
-//import framework.qa.values.TestDataValues;
-//import io.restassured.http.ContentType;
-//import io.restassured.response.Response;
-//import org.junit.jupiter.api.Assertions;
-//import org.junit.jupiter.api.DisplayName;
-//import org.junit.jupiter.api.Tag;
-//import org.junit.jupiter.api.Test;
-//import org.junit.jupiter.params.ParameterizedTest;
-//import org.junit.jupiter.params.provider.Arguments;
-//import org.junit.jupiter.params.provider.MethodSource;
-//
-//import java.util.UUID;
-//import java.util.stream.Stream;
-//
-//import static io.qameta.allure.Allure.step;
-//import static io.restassured.RestAssured.given;
-//import static org.junit.jupiter.api.Assertions.assertAll;
-//import static org.junit.jupiter.api.Assertions.assertEquals;
-//
-//@Tag("Ветераны")
-//@Tag("init")
-//public class InitVeteranTest extends BaseVeteranTest {
-//
-//    @DisplayName("Получение успешного экрана при запросе на init с обязательными параметрами")
-//    @Test
-//    public void veteranInitShouldReturnSuccessWithRequiredParams(@InitRequest OmniRequestItem init,
-//                                      @Mock WiremockRetrofit clientSearchMock,
-//                                      @Mock WiremockRetrofit productCardsMock) {
-//        String gpbRequestId = UUID.randomUUID().toString();
-//
-//        step("Конфигурация мок client-search", () -> {
-//            clientSearchMock.wiremockSend("wiremock/client-search/default.json",
-//                    "/omni-information/api/v2/client/search",
-//                    "data.clients.[?(@.base.guid==\"6F57A2C3507C4D6AA1A70E9C8C8CF919\")].base.hid",
-//                    "",
-//                    gpbRequestId);
-//        });
-//        step("Конфигурация мок product-cards", () -> {
-//            productCardsMock.wiremockSend("wiremock/product-cards/default.json",
-//                    "/omni-information-card/api/v3/client/product/cards",
-//                    "actualTimestamp",
-//                    "1234",
-//                    gpbRequestId);
-//        });
-//
-//        step("Отправка запроса на init", () -> {
-//            init.getData().getScenario().setId(veteranScenarioId);
-//            init.getData().getScenario().setCode(veteranScenarioCode);
-//            Response response = given()
-//                    .contentType(ContentType.JSON)
-//                    .header("gpb-requestId", gpbRequestId)
-//                    .header("Authorization", CFG.token()).header("GPB-guid", guid)
-//                    .body(init)
-//                    .post("api/v1/metadata/init")
-//                    .then().extract().response();
-//            step("Проверка статуса экрана");
-//            assertAll(
-//                    () -> assertEquals("5NT_ARMY_PARAMS_DO", response.path("screen.load.id")),
-//                    () -> assertEquals("initial", response.path("screen.stage")),
-//                    () -> assertEquals(true, response.path("screen.success"))
-//            );
-//        });
-//
-//        step("Очистка мок", () -> {
-//            clientSearchMock.wiremockRemove();
-//            productCardsMock.wiremockRemove();
-//        });
-//    }
-//
-//    @DisplayName("Получение успешного экрана при запросе на init с проверкой заполнения параметров из client-search")
-//    @Test
-//    public void veteranInitCheckClientSearchReturnedParams(@InitRequest OmniRequestItem init,
-//                                                @Mock WiremockRetrofit clientSearchMock,
-//                                                @Mock WiremockRetrofit productCardsMock) {
-//        String gpbRequestId = UUID.randomUUID().toString();
-//
-//        step("Конфигурация мок client-search", () -> {
-//            clientSearchMock.wiremockSend("wiremock/client-search/default.json",
-//                    "/omni-information/api/v2/client/search",
-//                    "data.clients.[?(@.base.guid==\"6F57A2C3507C4D6AA1A70E9C8C8CF919\")].base.hid",
-//                    "",
-//                    gpbRequestId);
-//        });
-//        step("Конфигурация мок product-cards", () -> {
-//            productCardsMock.wiremockSend("wiremock/product-cards/default.json",
-//                    "/omni-information-card/api/v3/client/product/cards",
-//                    "actualTimestamp",
-//                    "1234",
-//                    gpbRequestId);
-//        });
-//
-//        step("Отправка запроса на init", () -> {
-//            init.getData().getScenario().setId(veteranScenarioId);
-//            init.getData().getScenario().setCode(veteranScenarioCode);
-//            Response response = given()                    .contentType(ContentType.JSON)
-//                    .header("gpb-requestId", gpbRequestId)
-//                    .header("Authorization", CFG.token()).header("GPB-guid", guid)
-//                    .body(init)
-//                    .post("api/v1/metadata/init")
-//                    .then().extract().response();
-//            step("Проверка параметров client-search в operation");
-//            assertAll(
-//                    () -> assertEquals(TestDataValues.cellPhone, response.jsonPath().getString("data.operation.values.find{it.id==\"CELLPHONE\"}.value")),
-//                    () -> assertEquals(TestDataValues.docSeries, response.jsonPath().getString("data.operation.values.find{it.id==\"docSeries\"}.value")),
-//                    () -> assertEquals(TestDataValues.clientPhone, response.jsonPath().getString("data.operation.values.find{it.id==\"##clientPhone\"}.value")),
-//                    () -> assertEquals(TestDataValues.latinClientName, response.jsonPath().getString("data.operation.values.find{it.id==\"latinClientName\"}.value")),
-//                    () -> assertEquals(TestDataValues.areEmbossedCardsAvailable, response.jsonPath().getString("data.operation.values.find{it.id==\"##areEmbossedCardsAvailable\"}.value")),
-//                    () -> assertEquals(TestDataValues.countryISOCODE, response.jsonPath().getString("data.operation.values.find{it.id==\"countryISOCODE\"}.value")),
-//                    () -> assertEquals(TestDataValues.areInstantCardsAvailable, response.jsonPath().getString("data.operation.values.find{it.id==\"##areInstantCardsAvailable\"}.value")),
-//                    () -> assertEquals(TestDataValues.full_name, response.jsonPath().getString("data.operation.values.find{it.id==\"##full_name\"}.value")),
-//                    () -> assertEquals(TestDataValues.EMAIL, response.jsonPath().getString("data.operation.values.find{it.id==\"EMAIL\"}.value")),
-//                    () -> assertEquals(TestDataValues.rgCity, response.jsonPath().getString("data.operation.values.find{it.id==\"rgCity\"}.value")),
-//                    () -> assertEquals(TestDataValues.rgFlat, response.jsonPath().getString("data.operation.values.find{it.id==\"rgFlat\"}.value")),
-//                    () -> assertEquals(TestDataValues.isResident, response.jsonPath().getString("data.operation.values.find{it.id==\"isResident\"}.value")),
-//                    () -> assertEquals(TestDataValues.ftRegionName, response.jsonPath().getString("data.operation.values.find{it.id==\"ftRegionName\"}.value")),
-//                    () -> assertEquals(TestDataValues.rgCountryCode, response.jsonPath().getString("data.operation.values.find{it.id==\"rgCountryCode\"}.value")),
-//                    () -> assertEquals(TestDataValues.rgHouse, response.jsonPath().getString("data.operation.values.find{it.id==\"rgHouse\"}.value")),
-//                    () -> assertEquals(TestDataValues.location, response.jsonPath().getString("data.operation.values.find{it.id==\"##location\"}.value")),
-//                    () -> assertEquals(TestDataValues.aflt_surname, response.jsonPath().getString("data.operation.values.find{it.id==\"partnerdevParam.aflt_surname\"}.value")),
-//                    () -> assertEquals(TestDataValues.registration_address, response.jsonPath().getString("data.operation.values.find{it.id==\"##registration_address\"}.value")),
-//                    () -> assertEquals(TestDataValues.ftHouse, response.jsonPath().getString("data.operation.values.find{it.id==\"ftHouse\"}.value")),
-//                    () -> assertEquals(TestDataValues.cellPhoneWithSep, response.jsonPath().getString("data.operation.values.find{it.id==\"##CELLPHONE\"}.value")),
-//                    () -> assertEquals(TestDataValues.secondName, response.jsonPath().getString("data.operation.values.find{it.id==\"##secondName\"}.value")),
-//                    () -> assertEquals(TestDataValues.patronymic, response.jsonPath().getString("data.operation.values.find{it.id==\"patronymic\"}.value")),
-//                    () -> assertEquals(TestDataValues.expiredPassport, response.jsonPath().getString("data.operation.values.find{it.id==\"##expiredPassport\"}.value")),
-//                    () -> assertEquals(TestDataValues.name, response.jsonPath().getString("data.operation.values.find{it.id==\"name\"}.value")),
-//                    () -> assertEquals(TestDataValues.docTypeCode, response.jsonPath().getString("data.operation.values.find{it.id==\"docTypeCode\"}.value")),
-//                    () -> assertEquals(TestDataValues.document, response.jsonPath().getString("data.operation.values.find{it.id==\"##document\"}.value")),
-//                    () -> assertEquals(TestDataValues.birth_date, response.jsonPath().getString("data.operation.values.find{it.id==\"##birth_date\"}.value")),
-//                    () -> assertEquals(TestDataValues.guidOperation, response.jsonPath().getString("data.operation.values.find{it.id==\"guid\"}.value")),
-//                    () -> assertEquals(TestDataValues.rgPostalCode, response.jsonPath().getString("data.operation.values.find{it.id==\"rgPostalCode\"}.value")),
-//                    () -> assertEquals(TestDataValues.fact_address, response.jsonPath().getString("data.operation.values.find{it.id==\"##fact_address\"}.value")),
-//                    () -> assertEquals(TestDataValues.embossing_client_name, response.jsonPath().getString("data.operation.values.find{it.id==\"##embossing_client_name\"}.value")),
-//                    () -> assertEquals(TestDataValues.docNum, response.jsonPath().getString("data.operation.values.find{it.id==\"docNum\"}.value")),
-//                    () -> assertEquals(TestDataValues.firstName, response.jsonPath().getString("data.operation.values.find{it.id==\"##firstName\"}.value")),
-//                    () -> assertEquals(TestDataValues.lastName, response.jsonPath().getString("data.operation.values.find{it.id==\"##lastName\"}.value")),
-//                    () -> assertEquals(TestDataValues.CRSCountryCode, response.jsonPath().getString("data.operation.values.find{it.id==\"CRSCountryCode\"}.value")),
-//                    () -> assertEquals(TestDataValues.issuedBy, response.jsonPath().getString("data.operation.values.find{it.id==\"issuedBy\"}.value")),
-//                    () -> assertEquals(TestDataValues.ftCity, response.jsonPath().getString("data.operation.values.find{it.id==\"ftCity\"}.value")),
-//                    () -> assertEquals(TestDataValues.EMAIL, response.jsonPath().getString("data.operation.values.find{it.id==\"##email\"}.value")),
-//                    () -> assertEquals(TestDataValues.rgRegionCode, response.jsonPath().getString("data.operation.values.find{it.id==\"rgRegionCode\"}.value")),
-//                    () -> assertEquals(TestDataValues.surname, response.jsonPath().getString("data.operation.values.find{it.id==\"surname\"}.value")),
-//                    () -> assertEquals(TestDataValues.PDL, response.jsonPath().getString("data.operation.values.find{it.id==\"PDL\"}.value")),
-//                    () -> assertEquals(TestDataValues.issueDate, response.jsonPath().getString("data.operation.values.find{it.id==\"issueDate\"}.value")),
-//                    () -> assertEquals(TestDataValues.ftPostalCode, response.jsonPath().getString("data.operation.values.find{it.id==\"ftPostalCode\"}.value")),
-//                    () -> assertEquals(TestDataValues.ftRegionCode, response.jsonPath().getString("data.operation.values.find{it.id==\"ftRegionCode\"}.value")),
-//                    () -> assertEquals(TestDataValues.birthCountryCode, response.jsonPath().getString("data.operation.values.find{it.id==\"birthCountryCode\"}.value")),
-//                    () -> assertEquals(TestDataValues.ftCountryCode, response.jsonPath().getString("data.operation.values.find{it.id==\"ftCountryCode\"}.value")),
-//                    () -> assertEquals(TestDataValues.birthDate, response.jsonPath().getString("data.operation.values.find{it.id==\"birthDate\"}.value")),
-//                    () -> assertEquals(TestDataValues.sexCode, response.jsonPath().getString("data.operation.values.find{it.id==\"sexCode\"}.value")),
-//                    () -> assertEquals(TestDataValues.ftFlat, response.jsonPath().getString("data.operation.values.find{it.id==\"ftFlat\"}.value")),
-//                    () -> assertEquals(TestDataValues.departCode, response.jsonPath().getString("data.operation.values.find{it.id==\"departCode\"}.value")),
-//                    () -> assertEquals(TestDataValues.aflt_name, response.jsonPath().getString("data.operation.values.find{it.id==\"partnerdevParam.aflt_name\"}.value")),
-//                    () -> assertEquals(TestDataValues.ftBuilding, response.jsonPath().getString("data.operation.values.find{it.id==\"ftBuilding\"}.value")),
-//                    () -> assertEquals(TestDataValues.rgRegionName, response.jsonPath().getString("data.operation.values.find{it.id==\"rgRegionName\"}.value")),
-//                    () -> assertEquals(TestDataValues.isDkbo, response.jsonPath().getString("data.operation.values.find{it.id==\"isDkbo\"}.value")),
-//                    () -> assertEquals("initial", response.path("screen.stage"))
-//            );
-//        });
-//
-//        step("Очистка мок", () -> {
-//            clientSearchMock.wiremockRemove();
-//            productCardsMock.wiremockRemove();
-//        });
-//    }
-//
-//    @DisplayName("Получение успешного экрана при запросе на init с валидацией параметров из client-search")
-//    @ParameterizedTest
-//    @MethodSource("provideForinitTestCheckClientSearchValidationParams")
-//    public void veteranInitCheckClientSearchValidationParams(String att,
-//                                                          String val,
-//                                                          String incorrectDataMessage,
-//                                                          @InitRequest OmniRequestItem init,
-//                                                          @Mock WiremockRetrofit clientSearchMock,
-//                                                          @Mock WiremockRetrofit productCardsMock) {
-//        String gpbRequestId = UUID.randomUUID().toString();
-//
-//        step("Конфигурация мок client-search", () -> {
-//            clientSearchMock.wiremockSend("wiremock/client-search/default.json",
-//                    "/omni-information/api/v2/client/search",
-//                    att,
-//                    val,
-//                    gpbRequestId);
-//        });
-//        step("Конфигурация мок product-cards", () -> {
-//            productCardsMock.wiremockSend("wiremock/product-cards/default.json",
-//                    "/omni-information-card/api/v3/client/product/cards",
-//                    "actualTimestamp",
-//                    "1234",
-//                    gpbRequestId);
-//        });
-//
-//        step("Отправка запроса на init", () -> {
-//            init.getData().getScenario().setId(veteranScenarioId);
-//            init.getData().getScenario().setCode(veteranScenarioCode);
-//            Response response = given()                    .contentType(ContentType.JSON)
-//                    .header("gpb-requestId", gpbRequestId)
-//                    .header("Authorization", CFG.token()).header("GPB-guid", guid)
-//                    .body(init)
-//                    .post("api/v1/metadata/init")
-//                    .then().extract().response();
-//            step("Проверка параметров client-search в operation");
-//            assertAll(
-//                    () -> assertEquals("Клиентские данные некорректны", response.jsonPath().getString("data.operation.values.find{it.id==\"incorrectDataError\"}.value")),
-//                    () -> assertEquals(incorrectDataMessage, response.jsonPath().getString("data.operation.values.find{it.id==\"incorrectDataMessage\"}.value"))
-//            );
-//        });
-//
-//        step("Очистка мок", () -> {
-//            clientSearchMock.wiremockRemove();
-//            productCardsMock.wiremockRemove();
-//        });
-//    }
-//
-//    private static Stream<Arguments> provideForinitTestCheckClientSearchValidationParams() {
-//        return Stream.of(
-//                Arguments.of("data.clients.[?(@.base.guid==\"6F57A2C3507C4D6AA1A70E9C8C8CF919\")].base.surname", "", "Некорректное или отсутствующее имя клиента."),
-//                Arguments.of("data.clients.[?(@.base.guid==\"6F57A2C3507C4D6AA1A70E9C8C8CF919\")].base.name", "", "Некорректное или отсутствующее имя клиента.")
-////                Arguments.of("data.clients.[?(@.base.guid==\"6F57A2C3507C4D6AA1A70E9C8C8CF919\")].base.birthdate", "2010-10-17", "Дата рождения клиента  в системе банка отсутствует или заполнена некорректно.")
-//
-//        );
-//    }
-//
-//
-//}
-//
-//
-//
-//
+package framework.qa.test.veteran;
+
+import framework.qa.api.OmniApiClient;
+import framework.qa.consts.Params;
+import framework.qa.consts.UiFieldsNames;
+import framework.qa.jupiter.annotations.InitRequest;
+import framework.qa.jupiter.annotations.Wmock;
+import framework.qa.jupiter.annotations.Wmocks;
+import framework.qa.models.omniresponseitem.ResponseItem;
+import framework.qa.models.omniresponseitem.ValuesItem;
+import framework.qa.models.requestData.*;
+import framework.qa.models.wiremock.response.RootWiremockResponse;
+import framework.qa.values.TestDataValues;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import static io.qameta.allure.Allure.step;
+import static io.restassured.RestAssured.given;
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+@Tag("Ветераны")
+@Tag("init")
+public class InitVeteranTest extends BaseVeteranTest {
+    private final OmniApiClient initApi = new OmniApiClient();
+
+    @Test
+    @DisplayName("Получение успешного экрана при запросе на init с обязательными параметрами")
+    @Wmocks({
+            @Wmock(
+                    enpointMapping = "/omni-information/api/v2/client/search",
+                    mockFile = "wiremock/client-search/default.json",
+                    pathToField = "data.clients.[?(@.base.guid==\"6F57A2C3507C4D6AA1A70E9C8C8CF919\")].base.hid",
+                    value = ""
+            ),
+            @Wmock(
+                    enpointMapping = "/omni-information-card/api/v3/client/product/cards",
+                    mockFile = "wiremock/product-cards/default.json",
+                    pathToField = "actualTimestamp",
+                    value = "1234"
+            )})
+    public void veteranInitShouldReturnSuccessWithRequiredParams(
+            RootWiremockResponse rwr,
+            @InitRequest OmniRequestItem init
+    ) throws IOException {
+        String gpbrequestId = rwr.getRequest().getHeaders().getGpbrequestId().getEqualTo();
+        init.getData().getScenario().setId(veteranScenarioId);
+        init.getData().getScenario().setCode(veteranScenarioCode);
+        ResponseItem response = initApi.initRequest(gpbrequestId, init);
+        assertAll(
+                () -> assertEquals("5NT_ARMY_PARAMS_DO", response.getScreen().getLoad().getId()),
+                () -> assertEquals("initial", response.getScreen().getStage()),
+                () -> assertEquals(true, response.getScreen().isSuccess())
+        );
+    }
+
+    @Test
+    @DisplayName("Получение успешного экрана при запросе на init с проверкой заполнения параметров из client-search")
+    @Wmocks({
+            @Wmock(
+                    enpointMapping = "/omni-information/api/v2/client/search",
+                    mockFile = "wiremock/client-search/default.json",
+                    pathToField = "data.clients.[?(@.base.guid==\"6F57A2C3507C4D6AA1A70E9C8C8CF919\")].base.hid",
+                    value = ""
+            ),
+            @Wmock(
+                    enpointMapping = "/omni-information-card/api/v3/client/product/cards",
+                    mockFile = "wiremock/product-cards/default.json",
+                    pathToField = "actualTimestamp",
+                    value = "1234"
+            )})
+    public void veteranInitCheckClientSearchReturnedParams(RootWiremockResponse rwr,
+                                                           @InitRequest OmniRequestItem init) throws IOException {
+        String gpbrequestId = rwr.getRequest().getHeaders().getGpbrequestId().getEqualTo();
+        init.getData().getScenario().setId(veteranScenarioId);
+        init.getData().getScenario().setCode(veteranScenarioCode);
+        ResponseItem response = initApi.initRequest(gpbrequestId, init);
+        List<ValuesItem> operationValues = response.getData().getOperation().getValues();
+
+        step("Проверка параметров client-search в operation");
+
+        Map<String, String> collect = response.getData().getOperation().getValues().stream().collect(Collectors.toMap(ValuesItem::getId, ValuesItem::getValue));
+        collect.get(Params.CELL_PHONE);
+
+        assertAll(
+                () -> assertEquals(TestDataValues.cellPhone, collect.get(Params.CELL_PHONE)),
+                () -> assertEquals(TestDataValues.docSeries, collect.get(Params.DOC_SERIES)),
+                () -> assertEquals(TestDataValues.clientPhone, collect.get(UiFieldsNames.UI_CLIENT_PHONE)),
+                () -> assertEquals(TestDataValues.latinClientName, collect.get(Params.LATIN_CLIENT_NAME)),
+                () -> assertEquals(TestDataValues.areEmbossedCardsAvailable, collect.get(UiFieldsNames.ARE_EMBOSSED_CARDS_AVAILABLE)),
+                () -> assertEquals(TestDataValues.countryISOCODE, collect.get(Params.COUNTRY_ISO_CODE)),
+                () -> assertEquals(TestDataValues.areInstantCardsAvailable, collect.get(UiFieldsNames.ARE_INSTANT_CARDS_AVAILABLE)),
+                () -> assertEquals(TestDataValues.full_name, collect.get(UiFieldsNames.UI_FULL_NAME)),
+                () -> assertEquals(TestDataValues.EMAIL, collect.get(Params.EMAIL)),
+                () -> assertEquals(TestDataValues.rgCity, collect.get(Params.RG_CITY)),
+                () -> assertEquals(TestDataValues.rgFlat, collect.get(Params.RG_FLAT)),
+                () -> assertEquals(TestDataValues.isResident, collect.get(Params.IS_RESIDENT)),
+                () -> assertEquals(TestDataValues.ftRegionName, collect.get(Params.FT_REGION_NAME)),
+                () -> assertEquals(TestDataValues.rgCountryCode, collect.get(Params.RG_COUNTRY_CODE)),
+                () -> assertEquals(TestDataValues.rgHouse, collect.get(Params.RG_HOUSE)),
+                () -> assertEquals(TestDataValues.location, collect.get(UiFieldsNames.UI_LOCATION)),
+                () -> assertEquals(TestDataValues.aflt_surname, collect.get(Params.PARTNERDEV_PARAM_SURNAME)),
+                () -> assertEquals(TestDataValues.registration_address, collect.get(UiFieldsNames.UI_REGISTRATION_ADDRESS)),
+                () -> assertEquals(TestDataValues.ftHouse, collect.get(Params.FT_HOUSE)),
+                () -> assertEquals(TestDataValues.cellPhoneWithSep, collect.get(UiFieldsNames.UI_CELLPHONE)),
+                () -> assertEquals(TestDataValues.secondName, collect.get(UiFieldsNames.UI_SECOND_NAME)),
+                () -> assertEquals(TestDataValues.patronymic, collect.get(Params.PATRONYMIC)),
+                () -> assertEquals(TestDataValues.expiredPassport, collect.get(UiFieldsNames.UI_EXPIRED_PASSPORT)),
+                () -> assertEquals(TestDataValues.name, collect.get(Params.NAME)),
+                () -> assertEquals(TestDataValues.docTypeCode, collect.get(Params.DOC_TYPE_CODE)),
+                () -> assertEquals(TestDataValues.document, collect.get(UiFieldsNames.UI_DOCUMENT)),
+                () -> assertEquals(TestDataValues.birth_date, collect.get(UiFieldsNames.UI_BIRTH_DATE)),
+                () -> assertEquals(TestDataValues.guidOperation, collect.get(Params.GUID)),
+                () -> assertEquals(TestDataValues.rgPostalCode, collect.get(Params.RG_POSTAL_CODE)),
+                () -> assertEquals(TestDataValues.fact_address, collect.get(UiFieldsNames.UI_FACT_ADDRESS)),
+                () -> assertEquals(TestDataValues.embossing_client_name, collect.get(UiFieldsNames.UI_EMBOSSING_CLIENT_NAME)),
+                () -> assertEquals(TestDataValues.docNum, collect.get(Params.DOC_NUM)),
+                () -> assertEquals(TestDataValues.firstName, collect.get(UiFieldsNames.UI_FIRST_NAME)),
+                () -> assertEquals(TestDataValues.lastName, collect.get(UiFieldsNames.UI_LAST_NAME)),
+                () -> assertEquals(TestDataValues.CRSCountryCode, collect.get(Params.CRS_COUNTRY_CODE)),
+                () -> assertEquals(TestDataValues.issuedBy, collect.get(Params.ISSUED_BY)),
+                () -> assertEquals(TestDataValues.ftCity, collect.get(Params.FT_CITY)),
+                () -> assertEquals(TestDataValues.EMAIL, collect.get(UiFieldsNames.UI_EMAIL)),
+                () -> assertEquals(TestDataValues.rgRegionCode, collect.get(Params.RG_REGION_CODE)),
+                () -> assertEquals(TestDataValues.surname, collect.get(Params.SURNAME)),
+                () -> assertEquals(TestDataValues.PDL, collect.get(Params.PDL)),
+                () -> assertEquals(TestDataValues.issueDate, collect.get(Params.ISSUE_DATE)),
+                () -> assertEquals(TestDataValues.ftPostalCode, collect.get(Params.FT_POSTAL_CODE)),
+                () -> assertEquals(TestDataValues.ftRegionCode, collect.get(Params.FT_REGION_CODE)),
+                () -> assertEquals(TestDataValues.birthCountryCode, collect.get(Params.BIRTH_COUNTRY_CODE)),
+                () -> assertEquals(TestDataValues.ftCountryCode, collect.get(Params.FT_COUNTRY_CODE)),
+                () -> assertEquals(TestDataValues.birthDate, collect.get(Params.BIRTH_DATE)),
+                () -> assertEquals(TestDataValues.sexCode, collect.get(Params.SEX_CODE)),
+                () -> assertEquals(TestDataValues.ftFlat, collect.get(Params.FT_FLAT)),
+                () -> assertEquals(TestDataValues.departCode, collect.get(Params.DEPART_CODE)),
+                () -> assertEquals(TestDataValues.aflt_name, collect.get(Params.PARTNERDEV_PARAM_NAME)),
+                () -> assertEquals(TestDataValues.ftBuilding, collect.get(Params.FT_BUILDING)),
+                () -> assertEquals(TestDataValues.rgRegionName, collect.get(Params.RG_REGION_NAME)),
+                () -> assertEquals(TestDataValues.isDkbo, collect.get(Params.IS_DKBO)),
+                () -> assertEquals("initial", response.getScreen().getStage())
+        );
+    }
+
+
+    @Test
+    @DisplayName("Получение экрана ошибки 'Некорректное или отсутствующее имя клиента' когда clientSearch не вернул фамилию")
+    @Wmocks({
+            @Wmock(
+                    enpointMapping = "/omni-information/api/v2/client/search",
+                    mockFile = "wiremock/client-search/default.json",
+                    pathToField = "data.clients.[?(@.base.guid==\"6F57A2C3507C4D6AA1A70E9C8C8CF919\")].base.surname",
+                    value = ""
+            ),
+            @Wmock(
+                    enpointMapping = "/omni-information-card/api/v3/client/product/cards",
+                    mockFile = "wiremock/product-cards/default.json",
+                    pathToField = "actualTimestamp",
+                    value = "1234"
+            )})
+    public void veteranInitCheckClientSearchValidationParamsIncorrectClientSurName(RootWiremockResponse rwr,
+                                                                                   @InitRequest OmniRequestItem init) throws IOException {
+        String gpbrequestId = rwr.getRequest().getHeaders().getGpbrequestId().getEqualTo();
+        init.getData().getScenario().setId(veteranScenarioId);
+        init.getData().getScenario().setCode(veteranScenarioCode);
+        ResponseItem response = initApi.initRequest(gpbrequestId, init);
+        List<ValuesItem> operationValues = response.getData().getOperation().getValues();
+
+        step("Проверка параметров client-search в operation");
+
+        Map<String, String> collect = response.getData().getOperation().getValues().stream().collect(Collectors.toMap(ValuesItem::getId, ValuesItem::getValue));
+        collect.get(Params.CELL_PHONE);
+
+        assertAll(
+                () -> assertEquals("Клиентские данные некорректны", collect.get("incorrectDataError")),
+                () -> assertEquals("Некорректное или отсутствующее имя клиента.", collect.get("incorrectDataMessage"))
+        );
+    }
+
+    @Test
+    @DisplayName("Получение экрана ошибки 'Некорректное или отсутствующее имя клиента' когда clientSearch не вернул имя клиента")
+    @Wmocks({
+            @Wmock(
+                    enpointMapping = "/omni-information/api/v2/client/search",
+                    mockFile = "wiremock/client-search/default.json",
+                    pathToField = "data.clients.[?(@.base.guid==\"6F57A2C3507C4D6AA1A70E9C8C8CF919\")].base.name",
+                    value = ""
+            ),
+            @Wmock(
+                    enpointMapping = "/omni-information-card/api/v3/client/product/cards",
+                    mockFile = "wiremock/product-cards/default.json",
+                    pathToField = "actualTimestamp",
+                    value = "1234"
+            )})
+    public void veteranInitCheckClientSearchValidationParamsIncorrectClientName(RootWiremockResponse rwr,
+                                                                                @InitRequest OmniRequestItem init) throws IOException {
+        String gpbrequestId = rwr.getRequest().getHeaders().getGpbrequestId().getEqualTo();
+        init.getData().getScenario().setId(veteranScenarioId);
+        init.getData().getScenario().setCode(veteranScenarioCode);
+        ResponseItem response = initApi.initRequest(gpbrequestId, init);
+        List<ValuesItem> operationValues = response.getData().getOperation().getValues();
+
+        step("Проверка параметров client-search в operation");
+
+        Map<String, String> collect = response.getData().getOperation().getValues().stream().collect(Collectors.toMap(ValuesItem::getId, ValuesItem::getValue));
+        collect.get(Params.CELL_PHONE);
+
+        assertAll(
+                () -> assertEquals("Клиентские данные некорректны", collect.get("incorrectDataError")),
+                () -> assertEquals("Некорректное или отсутствующее имя клиента.", collect.get("incorrectDataMessage"))
+        );
+    }
+
+    @Test
+    @DisplayName("Получение экрана ошибки 'Некорректное или отсутствующее имя клиента' когда clientSearch не вернул дату рождения")
+    @Wmocks({
+            @Wmock(
+                    enpointMapping = "/omni-information/api/v2/client/search",
+                    mockFile = "wiremock/client-search/default.json",
+                    pathToField = "data.clients.[?(@.base.guid==\"6F57A2C3507C4D6AA1A70E9C8C8CF919\")].base.birthdate",
+                    value = ""
+            ),
+            @Wmock(
+                    enpointMapping = "/omni-information-card/api/v3/client/product/cards",
+                    mockFile = "wiremock/product-cards/default.json",
+                    pathToField = "actualTimestamp",
+                    value = "1234"
+            )})
+    public void veteranInitCheckClientSearchValidationParamsIncorrectBirthDate(RootWiremockResponse rwr,
+                                                                                @InitRequest OmniRequestItem init) throws IOException {
+        String gpbrequestId = rwr.getRequest().getHeaders().getGpbrequestId().getEqualTo();
+        init.getData().getScenario().setId(veteranScenarioId);
+        init.getData().getScenario().setCode(veteranScenarioCode);
+        ResponseItem response = initApi.initRequest(gpbrequestId, init);
+        List<ValuesItem> operationValues = response.getData().getOperation().getValues();
+
+        step("Проверка параметров client-search в operation");
+
+        Map<String, String> collect = response.getData().getOperation().getValues().stream().collect(Collectors.toMap(ValuesItem::getId, ValuesItem::getValue));
+        collect.get(Params.CELL_PHONE);
+
+        assertAll(
+                () -> assertEquals("Ограничения на обслуживание", collect.get("incorrectDataError")),
+                () -> assertEquals("Минимальный возраст для подачи заявки на дебетовую карту - 14 лет.", collect.get("incorrectDataMessage"))
+        );
+    }
+
+}
+
+
+
+
+
+
+

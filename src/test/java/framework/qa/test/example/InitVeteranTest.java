@@ -1,6 +1,6 @@
 package framework.qa.test.example;
 
-import framework.qa.api.InitApiClient;
+import framework.qa.api.OmniApiClient;
 import framework.qa.jupiter.annotations.*;
 import framework.qa.jupiter.callbacks.WmockExtension;
 //import framework.qa.jupiter.parameters.InitApiResolver;
@@ -30,8 +30,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 })
 
 public class InitVeteranTest {
-    private final InitApiClient initApi = new InitApiClient();
-
+    private final OmniApiClient initApi = new OmniApiClient();
 
 
     @Wmocks({
@@ -47,12 +46,15 @@ public class InitVeteranTest {
                     pathToField = "actualTimestamp",
                     value = "1234"
             )})
+
     @Test
-    void exampleTest( RootWiremockResponse rwr,
+    void exampleTest(RootWiremockResponse rwr,
                      @InitRequest OmniRequestItem init
     ) throws IOException {
-        String gpbrequestId =  rwr.getRequest().getHeaders().getGpbrequestId().getEqualTo();;
+        String gpbrequestId = rwr.getRequest().getHeaders().getGpbrequestId().getEqualTo();
+        ;
         String myFieldName = "CELLPHONE";
+
         ResponseItem response = initApi.initRequest(gpbrequestId, init);
 
         List<ValuesItem> operationValues = response.getData().getOperation().getValues();
@@ -66,7 +68,6 @@ public class InitVeteranTest {
     }
 
 
-
     @Wmocks({
             @Wmock(
                     enpointMapping = "/omni-information/api/v2/client/search",
@@ -81,10 +82,11 @@ public class InitVeteranTest {
                     value = "1234"
             )})
     @Test
-    void exampleTest1( RootWiremockResponse rwr,
+    void exampleTest1(RootWiremockResponse rwr,
                       @InitRequest OmniRequestItem init
     ) throws IOException {
-        String gpbrequestId =  rwr.getRequest().getHeaders().getGpbrequestId().getEqualTo();;
+        String gpbrequestId = rwr.getRequest().getHeaders().getGpbrequestId().getEqualTo();
+        ;
         String myFieldName = "docSeries";
         ResponseItem response = initApi.initRequest(gpbrequestId, init);
 
@@ -96,7 +98,6 @@ public class InitVeteranTest {
     }
 
 
-
     @Wmocks({
             @Wmock(
                     enpointMapping = "/omni-information/api/v2/client/search",
@@ -111,10 +112,11 @@ public class InitVeteranTest {
                     value = "1234"
             )})
     @Test
-    void exampleTest2( RootWiremockResponse rwr,
-                       @InitRequest OmniRequestItem init
+    void exampleTest2(RootWiremockResponse rwr,
+                      @InitRequest OmniRequestItem init
     ) throws IOException {
-        String gpbrequestId =  rwr.getRequest().getHeaders().getGpbrequestId().getEqualTo();;
+        String gpbrequestId = rwr.getRequest().getHeaders().getGpbrequestId().getEqualTo();
+        ;
         String myFieldName = "##clientPhone";
         ResponseItem response = initApi.initRequest(gpbrequestId, init);
 

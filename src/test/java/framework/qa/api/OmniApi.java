@@ -17,4 +17,16 @@ public interface OmniApi {
             @Header("gpb-requestId") String gpbRequestId,
             @Header("gpb-guid") String gpbGuid,
             @Body OmniRequestItem body);
+
+
+
+    @POST("api/v1/metadata/check")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    Call<ResponseItem> checkRequest(
+            @Header("Authorization") String authorization,
+            @Header("gpb-requestId") String gpbRequestId,
+            @Header("gpb-guid") String gpbGuid,
+            @Body OmniRequestItem body);
+
+
 }
