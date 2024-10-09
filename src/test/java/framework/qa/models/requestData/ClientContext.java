@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @Data
 @Accessors(chain = true)
 public class ClientContext {
@@ -24,11 +23,18 @@ public class ClientContext {
 
     /**
      * Путь, по которому
-     * волеизъявление оформляется example -  "oneStepWill"
+     * волеизъявление оформляется example - "oneStepWill"
      */
     private String way;
 
     private List<OmniParam> params = new ArrayList<>();
+
+    public ClientContext(Employee employee) {
+        this.employee = employee;
+    }
+
+    public ClientContext() {
+    }
 
     public String getVersion() {
         return version;

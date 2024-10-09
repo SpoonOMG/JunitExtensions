@@ -12,6 +12,10 @@ public class Employee {
 
     private String position;
 
+    public Employee(EmployeeDepartment department) {
+        this.department = department;
+    }
+
     private EmployeeDepartment department;
 
     private String login;

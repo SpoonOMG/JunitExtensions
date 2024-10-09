@@ -19,6 +19,11 @@ public class EmployeeDepartment {
     public EmployeeDepartment() {
     }
 
+    public EmployeeDepartment(String code, String branchCode) {
+        this.code = code;
+        this.branchCode = branchCode;
+    }
+
     public String getFullName() {
         return this.fullName;
     }

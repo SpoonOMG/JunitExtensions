@@ -28,16 +28,6 @@ public class CheckRequestResolver implements ParameterResolver {
         Class<?> type = parameterContext.getParameter().getType();
         if (OmniRequestItem.class.equals(type)) {
             List<ScreenValueBack> operationValueBackList = new ArrayList<>();
-            operationValueBackList.add(new ScreenValueBack("cardCategoryCode", "7"));
-            operationValueBackList.add(new ScreenValueBack(Params.LOGIN, TestDataValues.login));
-            operationValueBackList.add(new ScreenValueBack(Params.USER_FULL_NAME, TestDataValues.userFullName));
-            operationValueBackList.add(new ScreenValueBack(Params.TITLE, TestDataValues.title));
-            operationValueBackList.add(new ScreenValueBack(Params.BRANCH_CODE, TestDataValues.branchCode));
-            operationValueBackList.add(new ScreenValueBack(Params.BRANCH_UNIT_CODE, TestDataValues.branchUnitCode));
-            operationValueBackList.add(new ScreenValueBack(Params.VIRTUAL_NUM, TestDataValues.virtualNum));
-            operationValueBackList.add(new ScreenValueBack(Params.BRANCH_CODE_5NT, TestDataValues.branchCode5nt));
-            operationValueBackList.add(new ScreenValueBack(Params.ADDRESS_IS_INCORRECT, TestDataValues.addressIsIncorrect));
-
             List<ScreenValueBack> verifyDataValueBackList = new ArrayList<>();
             verifyDataValueBackList.add(new ScreenValueBack(UiFieldsNames.UI_LOCATION, TestDataValues.location));
 
@@ -45,7 +35,7 @@ public class CheckRequestResolver implements ParameterResolver {
                     new OmniRequestMeta("DRTL", ChannelEnum.UFO.getName(),"OMNI",null),
                     new RequestData(new Scenario(ScenarioCodeEnum.sc_421e8df062b2939.getId(), ScenarioCodeEnum.sc_421e8df062b2939.getCode(), "OMNI"),
                             new Operation(UUID.randomUUID().toString(),operationValueBackList),
-                            new ClientContext(),
+                            new ClientContext(new Employee(new EmployeeDepartment(TestDataValues.branchCode,TestDataValues.branchUnitCode))),
                             new VerifyData(verifyDataValueBackList,"initial",null,new ScreenCommandFront("check","checkSmartCardParams",null,null,null))
             ));
         }
