@@ -8,6 +8,13 @@ public class RulesItem{
 	@JsonProperty("then")
 	private Then then;
 
+	public Set getSet() {
+		return set;
+	}
+
+	@JsonProperty("set")
+	private Set set;
+
 	@JsonProperty("if")
 	private JsonMemberIf jsonMemberIf;
 

@@ -5,7 +5,12 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GroupsItem {
+    public ServerFeature getServerFeature() {
+        return serverFeature;
+    }
 
+    @JsonProperty("serverFeature")
+    private ServerFeature serverFeature;
 
     @JsonProperty("id")
     private String id;

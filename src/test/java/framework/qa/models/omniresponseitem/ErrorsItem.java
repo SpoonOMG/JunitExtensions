@@ -7,6 +7,13 @@ public class ErrorsItem{
 	@JsonProperty("type")
 	private String type;
 
+	public String getSeverity() {
+		return severity;
+	}
+
+	@JsonProperty("severity")
+	private String severity;
+
 	@JsonProperty("message")
 	private String message;
 

@@ -6,9 +6,12 @@ import framework.qa.consts.Params;
 import framework.qa.consts.ScenarioCodeEnum;
 import framework.qa.consts.UiFieldsNames;
 import framework.qa.jupiter.annotations.CheckRequest;
+import framework.qa.jupiter.annotations.Wmock;
+import framework.qa.jupiter.annotations.Wmocks;
 import framework.qa.models.omniresponseitem.ResponseItem;
 import framework.qa.models.omniresponseitem.ValuesItem;
 import framework.qa.models.requestData.*;
+import framework.qa.models.wiremock.response.RootWiremockResponse;
 import framework.qa.test.BaseTest;
 import framework.qa.values.*;
 import io.restassured.http.ContentType;
@@ -32,17 +35,29 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CheckInitialVeteranTest extends BaseVeteranTest {
     private final OmniApiClient checkApi = new OmniApiClient();
 
-
-    @DisplayName("Получение успешного экрана при запросе на check initial c минимальным набором параметров")
     @Test
-    public void veteranCheckInitialShouldReturnSuccessScreenWithMinParams(@CheckRequest OmniRequestItem check) {
-        String gpbRequestId = UUID.randomUUID().toString();
+    @Wmocks
+    (@Wmock(
+            enpointMapping = "/omni-information/api/v2/client/search",
+            mockFile = "wiremock/client-search/default.json",
+            pathToField = "data.clients.[?(@.base.guid==\"6F57A2C3507C4D6AA1A70E9C8C8CF919\")].base.hid",
+            value = ""
+    ))
+    @DisplayName("Получение успешного экрана при запросе на check initial c минимальным набором параметров")
+    public void veteranCheckInitialShouldReturnSuccessScreenWithMinParams(
+            RootWiremockResponse rwr,
+            @CheckRequest OmniRequestItem check) {
+        String gpbrequestId = rwr.getRequest().getHeaders().getGpbrequestId().getEqualTo();
 
         step("Отправка запроса на check", () -> {
+            List<ScreenValueBack> operationValueBackList = new ArrayList<>();
+            operationValueBackList.add(new ScreenValueBack(Params.CARD_CATEGORY_CODE,"7"));
             check.getData().getScenario().setId(veteranScenarioId);
             check.getData().getScenario().setCode(veteranScenarioCode);
+            check.getData().getOperation().setValues(operationValueBackList);
+            check.getData().getVerifyData().setCommand(new ScreenCommandFront("check","checkSmartCardParams"));
 
-            ResponseItem response = checkApi.initRequest(gpbRequestId, check);
+            ResponseItem response = checkApi.checkRequest(gpbrequestId, check);
             Map<String, String> collect = response.getData().getOperation().getValues().stream().collect(Collectors.toMap(ValuesItem::getId, ValuesItem::getValue));
             collect.get(Params.CELL_PHONE);
 
@@ -51,7 +66,7 @@ public class CheckInitialVeteranTest extends BaseVeteranTest {
                     () -> assertEquals("5NT_BORROWER_EXT_OFFICE", response.getScreen().getLoad().getId()),
                     () -> assertEquals("final", response.getScreen().getStage()),
                     () -> assertEquals(true, response.getScreen().isSuccess()),
-                    () -> assertEquals("false", collect.get("isSecretWord")),
+                    () -> assertEquals("false", collect.get("##isSecretWord")),
                     () -> assertEquals(productOfferShortName, collect.get(Params.PRODUCT_OFFER_SHORT_NAME)),
                     () -> assertEquals(servicePackage, collect.get("##servicePackage")),
                     () -> assertEquals(TypeCreation, collect.get(Params.TYPE_CREATION)),
@@ -70,8 +85,5 @@ public class CheckInitialVeteranTest extends BaseVeteranTest {
                     () -> assertEquals(paymentSystemCode, collect.get(Params.PAYMENT_SYSTEM_CODE))
             );
         });
-
     }
-
-
 }

@@ -29,4 +29,13 @@ public interface OmniApi {
             @Body OmniRequestItem body);
 
 
+    @POST("api/v1/metadata/load")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    Call<ResponseItem> loadRequest(
+            @Header("Authorization") String authorization,
+            @Header("gpb-requestId") String gpbRequestId,
+            @Header("gpb-guid") String gpbGuid,
+            @Body OmniRequestItem body);
+
+
 }

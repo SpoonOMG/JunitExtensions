@@ -33,6 +33,10 @@ public class ClientContext {
         this.employee = employee;
     }
 
+    public ClientContext(String version) {
+        this.version = version;
+    }
+
     public ClientContext() {
     }
 

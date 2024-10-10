@@ -13,6 +13,28 @@ public class ElementsItem {
     @JsonProperty("markup")
     private String markup;
 
+    public String getHelp() {
+        return help;
+    }
+
+    public Boolean getBorder() {
+        return border;
+    }
+
+    @JsonProperty("border")
+    private Boolean border;
+
+
+    @JsonProperty("help")
+    private String help;
+
+    public String getIcon() {
+        return icon;
+    }
+
+    @JsonProperty("icon")
+    private String icon;
+
     @JsonProperty("component")
     private String component;
 

@@ -3,6 +3,12 @@ package framework.qa.models.omniresponseitem;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CommandsItem{
+	public Specific getSpecific() {
+		return specific;
+	}
+
+	@JsonProperty("specific")
+	private Specific specific;
 
 	@JsonProperty("id")
 	private String id;

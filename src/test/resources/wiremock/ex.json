@@ -1,9 +1,10 @@
 {
   "status": "success",
-  "actualTimestamp": 1728466191073,
+  "actualTimestamp": 1728540811492,
   "data": {
-    "arbitrary": {},
     "operation": {
+      "orderId": "676c03fe-47f3-41fe-a4c0-72e4ffa52aaf",
+      "order4client": "8e105790-c7b6-4614-8e09-20d65b3fcedd",
       "values": [
         {
           "id": "CELLPHONE",
@@ -14,40 +15,32 @@
           "value": "4509"
         },
         {
-          "id": "##clientPhone",
-          "value": "79645524477"
-        },
-        {
           "id": "latinClientName",
           "value": "IVAN KAZAKOV"
         },
         {
-          "id": "##areEmbossedCardsAvailable",
-          "value": "true"
+          "id": "employeeFullName",
+          "value": "Казаков Иван Васильевич"
         },
         {
-          "id": "countryISOCODE",
-          "value": "643"
+          "id": "TypeCreation",
+          "value": "0"
+        },
+        {
+          "id": "channel",
+          "value": "ufo"
         },
         {
           "id": "##sourceChannel",
           "value": "ufo"
         },
         {
-          "id": "##areInstantCardsAvailable",
-          "value": "true"
-        },
-        {
-          "id": "##full_name",
-          "value": "Казаков Иван Васильевич"
-        },
-        {
           "id": "EMAIL",
           "value": "ivan.kazak@mail.ru"
         },
         {
-          "id": "##signMode",
-          "value": "omniDigitalSign"
+          "id": "agreeOtpSign",
+          "value": "true"
         },
         {
           "id": "cardCategoryCode",
@@ -58,160 +51,72 @@
           "value": "261"
         },
         {
-          "id": "rgCity",
-          "value": "Москва"
+          "id": "controlInfo",
+          "value": "Рига"
         },
         {
-          "id": "##OTPChannel",
-          "value": "web"
-        },
-        {
-          "id": "##clientPhoneOTP",
-          "value": "79645524477"
-        },
-        {
-          "id": "rgFlat",
-          "value": "225"
+          "id": "##codewordPrint",
+          "value": "*****"
         },
         {
           "id": "isResident",
           "value": "1"
         },
         {
-          "id": "ftRegionName",
-          "value": "Москва"
-        },
-        {
           "id": "rgCountryCode",
           "value": "643"
         },
         {
-          "id": "rgHouse",
-          "value": "корп. 1"
-        },
-        {
-          "id": "##location",
-          "value": "0c5b2444-70a0-4932-980c-b4dc0d3f02b5"
-        },
-        {
           "id": "##isSecretWord",
-          "value": "true"
-        },
-        {
-          "id": "##dashboardBranchCode",
-          "value": "000"
-        },
-        {
-          "id": "##dashboardBranchUnitCode",
-          "value": "099/1024"
-        },
-        {
-          "id": "##orderOwner",
-          "value": "Ефимов Андрей Васильевич"
-        },
-        {
-          "id": "partnerdevParam.aflt_surname",
-          "value": "KAZAKOV"
-        },
-        {
-          "id": "##registration_address",
-          "value": "г Москва,  , корп. 1, кв 225"
+          "value": "false"
         },
         {
           "id": "userFullName",
           "value": "Михайлюк Андрей"
         },
         {
-          "id": "ftHouse",
-          "value": "д 35"
-        },
-        {
           "id": "branchCode",
           "value": "000"
-        },
-        {
-          "id": "##CELLPHONE",
-          "value": "+7 964 552-44-77"
-        },
-        {
-          "id": "##secondName",
-          "value": "Васильевич"
-        },
-        {
-          "id": "patronymic",
-          "value": "Васильевич"
-        },
-        {
-          "id": "ftStreet",
-          "value": ""
         },
         {
           "id": "##expiredPassport",
           "value": "false"
         },
         {
-          "id": "name",
-          "value": "Иван"
-        },
-        {
           "id": "docTypeCode",
           "value": "21"
         },
         {
-          "id": "##document",
-          "value": "45 09 987654, выдан 10.03.2015"
+          "id": "name",
+          "value": "Иван"
         },
         {
-          "id": "##birth_date",
-          "value": "17.10.1985"
+          "id": "##consent_all",
+          "value": "true"
         },
         {
-          "id": "##OTPAvailableChannels",
-          "value": "web|mb"
-        },
-        {
-          "id": "guid",
-          "value": "6F57A2C3507C4D6AA1A70E9C8C8CF919"
-        },
-        {
-          "id": "branchUnitCode",
-          "value": "099/1024"
-        },
-        {
-          "id": "rgStreet",
-          "value": ""
+          "id": "employeePosition",
+          "value": "Руководитель экспертизы тестирования"
         },
         {
           "id": "rgPostalCode",
           "value": "117041"
         },
         {
-          "id": "##fact_address",
-          "value": "г Москва,  , д 35, корп 1, кв 225"
-        },
-        {
           "id": "##embossing_client_name",
           "value": "IVAN KAZAKOV"
-        },
-        {
-          "id": "##isOTPAvailable",
-          "value": "true"
         },
         {
           "id": "docNum",
           "value": "987654"
         },
         {
-          "id": "##firstName",
-          "value": "Иван"
+          "id": "productOfferShortName",
+          "value": "МИР Advanced Instant Армия Ветеран"
         },
         {
-          "id": "##lastName",
-          "value": "Казаков"
-        },
-        {
-          "id": "CRSCountryCode",
-          "value": "643"
+          "id": "sourceChannel",
+          "value": "ufo"
         },
         {
           "id": "issuedBy",
@@ -222,14 +127,6 @@
           "value": "false"
         },
         {
-          "id": "ftCity",
-          "value": "Москва"
-        },
-        {
-          "id": "##email",
-          "value": "ivan.kazak@mail.ru"
-        },
-        {
           "id": "title",
           "value": "Руководитель экспертизы тестирования"
         },
@@ -238,40 +135,36 @@
           "value": "gpbu19309"
         },
         {
-          "id": "virtualNum",
-          "value": "DRTL10074435954"
-        },
-        {
           "id": "birthPlace",
           "value": "Москва"
+        },
+        {
+          "id": "paySystemCode",
+          "value": "3"
         },
         {
           "id": "rgRegionCode",
           "value": "77"
         },
         {
-          "id": "##phoneNumberSmsPush",
-          "value": "Отправьте клиенту SMS на номер +7 964 552 44 77 со ссылкой на web-страницу для подписания документов"
-        },
-        {
           "id": "surname",
           "value": "Казаков"
-        },
-        {
-          "id": "##saleChannelName",
-          "value": "Дашборд ФО"
         },
         {
           "id": "PDL",
           "value": "1"
         },
         {
-          "id": "issueDate",
-          "value": "2015-03-10"
+          "id": "order4client",
+          "value": "8e105790-c7b6-4614-8e09-20d65b3fcedd"
         },
         {
           "id": "ftPostalCode",
           "value": "117041"
+        },
+        {
+          "id": "issueDate",
+          "value": "2015-03-10"
         },
         {
           "id": "ftRegionCode",
@@ -286,894 +179,69 @@
           "value": "643"
         },
         {
-          "id": "branchCode5NT",
-          "value": "000"
+          "id": "##print_order4client",
+          "value": "8e105790-c7b6-4614-8e09-20d65b3fcedd"
         },
         {
           "id": "birthDate",
-          "value": "1985-10-17"
+          "value": "17.10.1985"
         },
         {
-          "id": "##scenarioId",
-          "value": "sc_421e8df062b2939"
+          "id": "IsUnembossed",
+          "value": "1"
+        },
+        {
+          "id": "##codeword",
+          "value": "Рига"
+        },
+        {
+          "id": "##isOTP",
+          "value": "true"
         },
         {
           "id": "sexCode",
           "value": "1"
         },
         {
-          "id": "ftFlat",
-          "value": "225"
-        },
-        {
           "id": "departCode",
           "value": "077-089"
         },
         {
-          "id": "partnerdevParam.aflt_name",
-          "value": "IVAN"
-        },
-        {
-          "id": "ftBuilding",
-          "value": "1"
-        },
-        {
-          "id": "rgRegionName",
-          "value": "Москва"
+          "id": "currencyCode",
+          "value": "810"
         },
         {
           "id": "isDkbo",
           "value": "true"
+        },
+        {
+          "id": "TypeSign",
+          "value": "0"
         }
       ]
-    }
-  },
-  "screen": {
-    "stage": "initial",
-    "success": true,
-    "load": {
-      "component": "OPERATION",
-      "id": "5NT_ARMY_PARAMS_DO",
-      "header": "Выберите параметры по карте",
-      "defCommandId": "checkLocation",
-      "cacheable": true,
-      "logInfo": "Начальная версия ",
-      "groups": [
-        {
-          "component": "NONE",
-          "alias": "stepInfo",
-          "visible": true,
-          "disabled": false,
-          "style": {
-            "width": "1"
+    },
+    "serverActions": [
+      {
+        "action": "signature",
+        "criticality": "high",
+        "startPoint": "after",
+        "parameters": [
+          {
+            "key": "textSms",
+            "type": "string",
+            "value": "Вы оформляете заявку на дебетовую карту"
           },
-          "elements": [
-            {
-              "component": "baseEntry",
-              "type": "default",
-              "id": "##chanelType",
-              "alias": "##chanelType",
-              "required": true,
-              "visible": false,
-              "placeholder": "Канал",
-              "value": "",
-              "errors": [
-                {
-                  "type": "required",
-                  "message": "Обязательное поле"
-                }
-              ],
-              "serverFeature": {
-                "dependencies": [
-                  {
-                    "property": "value",
-                    "rules": [
-                      {
-                        "if": {
-                          "type": "reference",
-                          "id": "#EMPTY#",
-                          "property": "meta/channel",
-                          "compare": "<>",
-                          "value": "null"
-                        },
-                        "then": {
-                          "externalPropertyValue": {
-                            "type": "reference",
-                            "id": "#EMPTY#",
-                            "property": "meta/channel"
-                          }
-                        }
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
-              "component": "baseEntry",
-              "type": "default",
-              "id": "##signModeFront",
-              "alias": "##signModeFront",
-              "required": true,
-              "visible": false,
-              "placeholder": "Целевая или старая ПЭП",
-              "value": "",
-              "errors": [
-                {
-                  "type": "required",
-                  "message": "Обязательное поле"
-                }
-              ],
-              "serverFeature": {
-                "dependencies": [
-                  {
-                    "property": "value",
-                    "rules": [
-                      {
-                        "if": {
-                          "type": "operation",
-                          "id": "##signMode",
-                          "property": "value",
-                          "compare": "<>",
-                          "value": "null"
-                        },
-                        "then": {
-                          "externalPropertyValue": {
-                            "type": "operation",
-                            "id": "##signMode",
-                            "property": "value"
-                          }
-                        }
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
-              "component": "static",
-              "type": "text|greyMouse",
-              "visible": true,
-              "value": "Шаг 1 из 3",
-              "dependencies": [
-                {
-                  "property": "value",
-                  "rules": [
-                    {
-                      "ands": [
-                        {
-                          "type": "element",
-                          "id": "TypeCreation",
-                          "property": "value",
-                          "compare": "=",
-                          "value": "0",
-                          "logInfo": "Для пластиковой ДК"
-                        }
-                      ],
-                      "if": {
-                        "type": "element",
-                        "id": "##chanelType",
-                        "property": "value",
-                        "compare": "=",
-                        "value": "ufo",
-                        "logInfo": "Для канала ufo"
-                      },
-                      "then": {
-                        "value": "Шаг 1 из 3"
-                      }
-                    },
-                    {
-                      "ands": [
-                        {
-                          "type": "element",
-                          "id": "TypeCreation",
-                          "property": "value",
-                          "compare": "=",
-                          "value": "1",
-                          "logInfo": "Для цифровой ДК"
-                        }
-                      ],
-                      "if": {
-                        "type": "element",
-                        "id": "##signModeFront",
-                        "property": "value",
-                        "compare": "=",
-                        "value": "omniDigitalSign",
-                        "logInfo": "Для офисов с целевой ПЭП и ufo"
-                      },
-                      "then": {
-                        "value": "Шаг 1 из 3"
-                      }
-                    },
-                    {
-                      "ands": [
-                        {
-                          "type": "element",
-                          "id": "TypeCreation",
-                          "property": "value",
-                          "compare": "=",
-                          "value": "1",
-                          "logInfo": "Для цифровой ДК"
-                        }
-                      ],
-                      "if": {
-                        "type": "element",
-                        "id": "##signModeFront",
-                        "property": "value",
-                        "compare": "<>",
-                        "value": "omniDigitalSign",
-                        "logInfo": "Для офисов без целевой ПЭП"
-                      },
-                      "then": {
-                        "value": "Шаг 1 из 2"
-                      }
-                    },
-                    {
-                      "ands": [
-                        {
-                          "type": "element",
-                          "id": "TypeCreation",
-                          "property": "value",
-                          "compare": "=",
-                          "value": "0",
-                          "logInfo": "Для каналов ufo-dsa|ufo-cc и пластиковой ДК"
-                        }
-                      ],
-                      "if": {
-                        "type": "element",
-                        "id": "##chanelType",
-                        "property": "value",
-                        "compare": "IN",
-                        "value": "ufo-dsa|ufo-cc"
-                      },
-                      "then": {
-                        "value": "Шаг 1 из 2"
-                      }
-                    },
-                    {
-                      "ands": [
-                        {
-                          "type": "element",
-                          "id": "TypeCreation",
-                          "property": "value",
-                          "compare": "=",
-                          "value": "1",
-                          "logInfo": "Для каналов ufo-dsa|ufo-cc и цифровой ДК"
-                        }
-                      ],
-                      "if": {
-                        "type": "element",
-                        "id": "##chanelType",
-                        "property": "value",
-                        "compare": "IN",
-                        "value": "ufo-dsa|ufo-cc"
-                      },
-                      "then": {
-                        "value": "Шаг 1 из 1"
-                      }
-                    }
-                  ]
-                }
-              ]
+          {
+            "key": "clientPhone",
+            "type": "string",
+            "source": {
+              "type": "operation",
+              "id": "##clientPhone",
+              "property": "value"
             }
-          ],
-          "excluded": false
-        },
-        {
-          "component": "NONE",
-          "alias": "imageData",
-          "visible": true,
-          "disabled": false,
-          "style": {
-            "width": "2"
-          },
-          "elements": [
-            {
-              "component": "image",
-              "alias": "image",
-              "visible": true,
-              "disabled": false,
-              "value": "Card:AdvancedMir",
-              "style": {
-                "width": "1/2"
-              }
-            }
-          ],
-          "excluded": false
-        },
-        {
-          "component": "NONE",
-          "alias": "cardParamInfo",
-          "visible": true,
-          "disabled": false,
-          "style": {
-            "width": "2"
-          },
-          "elements": [
-            {
-              "component": "baseValue",
-              "alias": "card_type",
-              "visible": true,
-              "disabled": false,
-              "label": "Тип карты",
-              "value": "Армия Ветеран"
-            },
-            {
-              "component": "baseValue",
-              "alias": "card_category",
-              "visible": true,
-              "disabled": false,
-              "label": "Категория карты",
-              "value": "МИР Advanced Instant"
-            }
-          ],
-          "excluded": false
-        },
-        {
-          "component": "NONE",
-          "alias": "TypeCreationDigital&Plastic",
-          "visible": true,
-          "disabled": false,
-          "style": {
-            "width": "1"
-          },
-          "elements": [
-            {
-              "component": "chipsEntry",
-              "type": "default",
-              "id": "TypeCreation",
-              "logInfo": "Тип носителя карты",
-              "required": true,
-              "label": "Тип носителя карты",
-              "value": "0",
-              "specific": {
-                "dictionaryEntries": [
-                  {
-                    "value": "0",
-                    "label": "Пластиковая",
-                    "icon": ""
-                  }
-                ]
-              },
-              "errors": [
-                {
-                  "type": "required",
-                  "message": "Требуется указать тип карты"
-                }
-              ]
-            }
-          ],
-          "excluded": false
-        },
-        {
-          "component": "NONE",
-          "alias": "choicePaymentSystem",
-          "visible": true,
-          "disabled": false,
-          "style": {
-            "width": "2"
-          },
-          "elements": [
-            {
-              "component": "chipsEntry",
-              "type": "default",
-              "id": "##paymentSystemCodePlastic",
-              "alias": "##paymentSystemCodePlastic",
-              "logInfo": "Выбор платежной системы для канала ufo",
-              "required": true,
-              "visible": true,
-              "label": "Выбор платежной системы",
-              "value": "3",
-              "specific": {
-                "dictionaryEntries": [
-                  {
-                    "value": "3",
-                    "label": "МИР",
-                    "icon": "LogoMirIcon"
-                  }
-                ]
-              },
-              "errors": [
-                {
-                  "type": "required",
-                  "message": "Требуется указать тип карты"
-                }
-              ]
-            }
-          ],
-          "excluded": false
-        },
-        {
-          "component": "NONE",
-          "alias": "choiceCity",
-          "visible": true,
-          "disabled": false,
-          "style": {
-            "width": "2"
-          },
-          "elements": [
-            {
-              "component": "officeEntry",
-              "type": "settlement",
-              "id": "##location",
-              "alias": "location",
-              "required": true,
-              "visible": true,
-              "disabled": true,
-              "label": "Выберите город",
-              "placeholder": "Выберите город",
-              "errors": [
-                {
-                  "type": "required",
-                  "message": "Обязательное поле"
-                },
-                {
-                  "type": "validator",
-                  "message": "Выберите значение из списка"
-                }
-              ],
-              "serverFeature": {
-                "dependencies": [
-                  {
-                    "property": "value",
-                    "rules": [
-                      {
-                        "ands": [],
-                        "if": {
-                          "type": "operation",
-                          "id": "##location",
-                          "property": "value",
-                          "compare": "ISNOTNULL",
-                          "logInfo": ""
-                        },
-                        "then": {
-                          "externalPropertyValue": {
-                            "type": "operation",
-                            "id": "##location",
-                            "property": "value"
-                          }
-                        }
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          ],
-          "excluded": false
-        },
-        {
-          "component": "NONE",
-          "alias": "choiceCardCategory",
-          "visible": true,
-          "disabled": false,
-          "style": {
-            "width": "2"
-          },
-          "elements": [
-            {
-              "component": "chipsEntry",
-              "type": "default",
-              "id": "##cardCategoryForMir",
-              "alias": "##cardCategoryForMir",
-              "logInfo": "Категория карты",
-              "required": true,
-              "visible": true,
-              "label": "Категория карты",
-              "value": "7",
-              "specific": {
-                "dictionaryEntries": [
-                  {
-                    "value": "7",
-                    "label": "Advanced"
-                  }
-                ]
-              },
-              "errors": [
-                {
-                  "type": "required",
-                  "message": "Требуется указать категорию карты"
-                }
-              ]
-            }
-          ],
-          "excluded": false
-        },
-        {
-          "component": "NONE",
-          "alias": "choiceCardParam",
-          "visible": true,
-          "disabled": false,
-          "style": {
-            "width": "2"
-          },
-          "elements": [
-            {
-              "component": "static",
-              "type": "heading3",
-              "alias": "header_location",
-              "value": "Параметры по карте"
-            },
-            {
-              "component": "radioEntry",
-              "type": "default",
-              "id": "IsUnembossed",
-              "alias": "IsUnembossed",
-              "logInfo": "Выбор типа карты",
-              "required": true,
-              "visible": true,
-              "disabled": false,
-              "value": "1",
-              "specific": {
-                "dictionaryEntries": [
-                  {
-                    "value": "1",
-                    "label": "Моментальная карта",
-                    "help": "Имя и фамилия на карте отсутствуют. Выдается сразу после оформления заявки"
-                  }
-                ]
-              }
-            }
-          ],
-          "excluded": false
-        },
-        {
-          "component": "NONE",
-          "alias": "choiceLoyaltyProgram",
-          "visible": true,
-          "disabled": false,
-          "style": {
-            "width": "1"
-          },
-          "elements": [
-            {
-              "component": "static",
-              "type": "heading3",
-              "alias": "header_location",
-              "value": "Выберите программу лояльности"
-            },
-            {
-              "component": "radioEntry",
-              "type": "default",
-              "id": "##cardsLoyaltyProgram",
-              "alias": "totalCreditQty",
-              "logInfo": "Выберите программу лояльности",
-              "required": true,
-              "visible": true,
-              "disabled": false,
-              "value": "101",
-              "specific": {
-                "dictionaryEntries": [
-                  {
-                    "value": "101",
-                    "label": "Понятный кешбэк в баллах",
-                    "help": "(при сумме покупок за отчетный период свыше 5 тыс. руб.) 1,5% баллами за покупки или 2% баллами за покупки с сервисом Газпромбанк Привилегии «Стандарт»"
-                  },
-                  {
-                    "value": "102",
-                    "label": "Умный кешбэк в баллах",
-                    "help": "(при сумме покупок за отчетный период свыше 5 тыс. руб.) 3% баллами за покупки в категориях «Одежда и обувь», «АЗС», «Такси и общественный транспорт», «Аптеки» и 0% за остальные покупки или 5% баллами за покупки в категориях «Одежда и обувь», «АЗС», «Такси и общественный транспорт», «Аптеки» и 1% за остальные покупки с сервисом Газпромбанк Привилегии «Стандарт»"
-                  },
-                  {
-                    "value": "1",
-                    "label": "Мили",
-                    "help": "до 10% милями за покупки на «Газпромбанк – Travel» и до 4% за остальные покупки"
-                  },
-                  {
-                    "value": "7",
-                    "label": "Аэрофлот-Бонус",
-                    "help": "до 2,5 миль за каждые 100 ₽ покупок"
-                  }
-                ]
-              }
-            }
-          ],
-          "excluded": false
-        },
-        {
-          "component": "NONE",
-          "alias": "BLOCK_AEROFLOT_PROPERTY",
-          "visible": true,
-          "disabled": false,
-          "style": {
-            "width": "1"
-          },
-          "elements": [
-            {
-              "component": "static",
-              "type": "heading3",
-              "alias": "header_su",
-              "visible": true,
-              "disabled": false,
-              "value": "Параметры карты Аэрофлот-Бонус"
-            },
-            {
-              "component": "baseEntry",
-              "type": "digit",
-              "id": "partnerdevParam.aflt_memberID",
-              "alias": "partnerdevParam.aflt_memberID",
-              "logInfo": "Номер бонусной карты",
-              "keyboard": "number",
-              "required": true,
-              "visible": true,
-              "placeholder": "Номер карты Аэрофлот-Бонус",
-              "minLength": "5",
-              "maxLength": "10",
-              "converter": {
-                "type": "mask",
-                "logInfo": "Ввод номера бонусной карты",
-                "specific": {}
-              },
-              "style": {
-                "width": "1"
-              },
-              "validator": {
-                "condition": "AND",
-                "visible": false,
-                "checks": [
-                  {
-                    "type": "regExp",
-                    "logInfo": "Контроль на цифры",
-                    "error": {
-                      "type": "validator",
-                      "message": "Только цифры"
-                    },
-                    "specific": {
-                      "pattern": "^[0-9]*$"
-                    }
-                  }
-                ]
-              },
-              "dependencies": [
-                {
-                  "property": "required",
-                  "rules": [
-                    {
-                      "ands": [],
-                      "if": {
-                        "type": "element",
-                        "id": "##cardsLoyaltyProgram",
-                        "property": "value",
-                        "compare": "=",
-                        "value": "7",
-                        "logInfo": "Разблокировка поля для бонусной программы Аэрофлота"
-                      },
-                      "then": {
-                        "value": "true"
-                      }
-                    },
-                    {
-                      "ands": [],
-                      "if": {
-                        "type": "element",
-                        "id": "##cardsLoyaltyProgram",
-                        "property": "value",
-                        "compare": "<>",
-                        "value": "7",
-                        "logInfo": "Скрытие поля для иных программ"
-                      },
-                      "then": {
-                        "value": "false"
-                      }
-                    }
-                  ]
-                }
-              ],
-              "errors": [
-                {
-                  "type": "minimum",
-                  "message": "Минимальная длина - 5 символов"
-                },
-                {
-                  "type": "required",
-                  "message": "Обязательное поле"
-                }
-              ]
-            },
-            {
-              "component": "baseEntry",
-              "type": "default",
-              "id": "partnerdevParam.aflt_surname",
-              "alias": "partnerdevParam.aflt_surname",
-              "required": true,
-              "visible": true,
-              "placeholder": "Фамилия на карте",
-              "maxLength": "30",
-              "style": {
-                "width": "2"
-              },
-              "validator": {
-                "condition": "AND",
-                "checks": [
-                  {
-                    "type": "regExp",
-                    "logInfo": "Контроль на большие буквы латинского алфавита, тире и апостроф",
-                    "error": {
-                      "type": "validator",
-                      "message": "Только заглавные буквы латинского алфавита, тире и апостроф"
-                    },
-                    "specific": {
-                      "pattern": "^[A-Z\\-\\']+$"
-                    }
-                  }
-                ]
-              },
-              "dependencies": [
-                {
-                  "property": "required",
-                  "rules": [
-                    {
-                      "ands": [],
-                      "if": {
-                        "type": "element",
-                        "id": "##cardsLoyaltyProgram",
-                        "property": "value",
-                        "compare": "=",
-                        "value": "7",
-                        "logInfo": "Разблокировка поля для бонусной программы Аэрофлота"
-                      },
-                      "then": {
-                        "value": "true"
-                      }
-                    },
-                    {
-                      "ands": [],
-                      "if": {
-                        "type": "element",
-                        "id": "##cardsLoyaltyProgram",
-                        "property": "value",
-                        "compare": "<>",
-                        "value": "7",
-                        "logInfo": "Скрытие поля для иных программ"
-                      },
-                      "then": {
-                        "value": "false"
-                      }
-                    }
-                  ]
-                }
-              ],
-              "errors": [
-                {
-                  "type": "required",
-                  "message": "Обязательное поле"
-                }
-              ]
-            },
-            {
-              "component": "baseEntry",
-              "type": "default",
-              "id": "partnerdevParam.aflt_name",
-              "alias": "partnerdevParam.aflt_name",
-              "required": true,
-              "visible": true,
-              "placeholder": "Имя на карте",
-              "maxLength": "25",
-              "style": {
-                "width": "2"
-              },
-              "validator": {
-                "condition": "AND",
-                "checks": [
-                  {
-                    "type": "regExp",
-                    "logInfo": "Контроль на большие буквы латинского алфавита и дефисы",
-                    "error": {
-                      "type": "validator",
-                      "message": "Только заглавные буквы латинского алфавита и дефисы"
-                    },
-                    "specific": {
-                      "pattern": "^[A-Z ]+(-[A-Z]+)*$"
-                    }
-                  }
-                ]
-              },
-              "dependencies": [
-                {
-                  "property": "required",
-                  "rules": [
-                    {
-                      "ands": [],
-                      "if": {
-                        "type": "element",
-                        "id": "##cardsLoyaltyProgram",
-                        "property": "value",
-                        "compare": "=",
-                        "value": "7",
-                        "logInfo": "Разблокировка поля для бонусной программы Аэрофлота"
-                      },
-                      "then": {
-                        "value": "true"
-                      }
-                    },
-                    {
-                      "ands": [],
-                      "if": {
-                        "type": "element",
-                        "id": "##cardsLoyaltyProgram",
-                        "property": "value",
-                        "compare": "<>",
-                        "value": "7",
-                        "logInfo": "Скрытие поля для иных программ"
-                      },
-                      "then": {
-                        "value": "false"
-                      }
-                    }
-                  ]
-                }
-              ],
-              "errors": [
-                {
-                  "type": "required",
-                  "message": "Обязательное поле"
-                }
-              ]
-            }
-          ],
-          "dependencies": [
-            {
-              "property": "visible",
-              "rules": [
-                {
-                  "if": {
-                    "type": "element",
-                    "id": "##cardsLoyaltyProgram",
-                    "property": "value",
-                    "compare": "=",
-                    "value": "7",
-                    "logInfo": "Для ПЛ АБ"
-                  },
-                  "then": {
-                    "value": "true"
-                  }
-                },
-                {
-                  "if": {
-                    "type": "element",
-                    "id": "##cardsLoyaltyProgram",
-                    "property": "value",
-                    "compare": "<>",
-                    "value": "7",
-                    "logInfo": "Для ПЛ <> АБ"
-                  },
-                  "then": {
-                    "value": "false"
-                  }
-                }
-              ]
-            }
-          ],
-          "excluded": false
-        },
-        {
-          "component": "COMMAND",
-          "logInfo": "Группа с командами",
-          "elements": [
-            {
-              "component": "command",
-              "type": "primary",
-              "id": "checkSmartCardParams",
-              "visible": true,
-              "disabled": false,
-              "label": "Далее"
-            }
-          ],
-          "excluded": false
-        }
-      ],
-      "commands": [
-        {
-          "type": "check",
-          "id": "checkSmartCardParams",
-          "logInfo": "Проверить введенные данные"
-        },
-        {
-          "type": "back",
-          "id": "comeBack"
-        }
-      ],
-      "serverFeature": {}
-    }
+          }
+        ]
+      }
+    ]
   }
 }

@@ -10,6 +10,7 @@ import framework.qa.jupiter.parameters.CheckRequestResolver;
 import framework.qa.jupiter.parameters.InitRequestResolver;
 //import framework.qa.jupiter.parameters.LoadRequestResolver;
 //import framework.qa.jupiter.parameters.WiremockResolver;
+import framework.qa.jupiter.parameters.LoadRequestResolver;
 import framework.qa.models.requestData.ScreenValueBack;
 import framework.qa.values.TestDataValues;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -24,7 +25,9 @@ import static framework.qa.values.TestDataValues.title;
         TestSaver.class,
         WmockExtension.class,
         InitRequestResolver.class,
-        CheckRequestResolver.class})
+        CheckRequestResolver.class,
+        LoadRequestResolver.class
+})
 public abstract class BaseTest {
     protected static final Config CFG = Config.getInstance();
     protected static final String guid = "6F57A2C3507C4D6AA1A70E9C8C8CF911";
