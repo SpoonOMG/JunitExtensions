@@ -1,9 +1,7 @@
-package framework.qa.test.veteran;
+package framework.qa.test.veteranscenario;
 
 import framework.qa.api.OmniApiClient;
-import framework.qa.consts.ChannelEnum;
 import framework.qa.consts.Params;
-import framework.qa.consts.ScenarioCodeEnum;
 import framework.qa.consts.UiFieldsNames;
 import framework.qa.jupiter.annotations.CheckRequest;
 import framework.qa.jupiter.annotations.Wmock;
@@ -12,10 +10,6 @@ import framework.qa.models.omniresponseitem.ResponseItem;
 import framework.qa.models.omniresponseitem.ValuesItem;
 import framework.qa.models.requestData.*;
 import framework.qa.models.wiremock.response.RootWiremockResponse;
-import framework.qa.test.BaseTest;
-import framework.qa.values.*;
-import io.restassured.http.ContentType;
-import io.restassured.response.Response;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -23,11 +17,9 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 import static io.qameta.allure.Allure.step;
-import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

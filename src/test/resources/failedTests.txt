@@ -1,1 +1,0 @@
---test framework.qa.test.common.CheckFinalPlannedClosureOfficesTest.checkFinalShouldReturnErrorWhenBranchUnitCodeNotInOfficeListAnswerUFO*

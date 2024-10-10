@@ -1,4 +1,4 @@
-package framework.qa.test.veteran;
+package framework.qa.test.veteranscenario;
 
 import framework.qa.api.OmniApiClient;
 import framework.qa.consts.ChannelEnum;
@@ -22,7 +22,6 @@ import java.util.*;
 
 
 import static io.qameta.allure.Allure.step;
-import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

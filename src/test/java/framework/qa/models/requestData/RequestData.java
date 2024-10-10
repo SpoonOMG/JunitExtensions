@@ -5,8 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
-@AllArgsConstructor
-@NoArgsConstructor
 @Data
 @Accessors(chain = true)
 public class RequestData {
@@ -24,6 +22,9 @@ public class RequestData {
         this.operation = operation;
         this.clientContext = clientContext;
         this.verifyData = verifyData;
+    }
+
+    public RequestData() {
     }
 
 

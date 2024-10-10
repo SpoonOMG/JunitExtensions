@@ -19,7 +19,6 @@ public interface OmniApi {
             @Body OmniRequestItem body);
 
 
-
     @POST("api/v1/metadata/check")
     @JsonInclude(JsonInclude.Include.NON_NULL)
     Call<ResponseItem> checkRequest(

@@ -7,6 +7,16 @@ public class Style{
 		return align;
 	}
 
+	public String getBackgroundColor() {
+		return backgroundColor;
+	}
+
+	@JsonProperty("angle")
+	private Angle angle;
+
+	@JsonProperty("backgroundColor")
+	private String backgroundColor;
+
 	@JsonProperty("align")
 	private String align;
 

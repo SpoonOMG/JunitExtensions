@@ -1,5 +1,7 @@
 package framework.qa.api;
 
+import com.ibm.mq.jms.MQQueueConnectionFactory;
+import com.ibm.msg.client.wmq.WMQConstants;
 import framework.qa.config.Config;
 import okhttp3.Interceptor;
 import okhttp3.JavaNetCookieJar;
@@ -8,6 +10,8 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Converter;
 import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
+
+import javax.jms.JMSException;
 
 public abstract class ApiClient {
 

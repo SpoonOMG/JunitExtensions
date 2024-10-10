@@ -1,4 +1,4 @@
-package framework.qa.test.veteran;
+package framework.qa.test.veteranscenario;
 
 import framework.qa.consts.ChannelEnum;
 import framework.qa.consts.Params;

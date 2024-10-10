@@ -1,4 +1,4 @@
-package framework.qa.test.veteran;
+package framework.qa.test.veteranscenario;
 
 import framework.qa.api.OmniApiClient;
 import framework.qa.consts.Params;
@@ -81,7 +81,6 @@ public class InitVeteranTest extends BaseVeteranTest {
         init.getData().getScenario().setId(veteranScenarioId);
         init.getData().getScenario().setCode(veteranScenarioCode);
         ResponseItem response = initApi.initRequest(gpbrequestId, init);
-        List<ValuesItem> operationValues = response.getData().getOperation().getValues();
 
         step("Проверка параметров client-search в operation");
 
@@ -231,7 +230,7 @@ public class InitVeteranTest extends BaseVeteranTest {
                     value = "1234"
             )})
     public void veteranInitCheckClientSearchValidationParamsIncorrectBirthDate(RootWiremockResponse rwr,
-                                                                                @InitRequest OmniRequestItem init) throws IOException {
+                                                                               @InitRequest OmniRequestItem init) throws IOException {
         String gpbrequestId = rwr.getRequest().getHeaders().getGpbrequestId().getEqualTo();
         init.getData().getScenario().setId(veteranScenarioId);
         init.getData().getScenario().setCode(veteranScenarioCode);

@@ -13,6 +13,13 @@ public class Screen{
 	@JsonProperty("success")
 	private boolean success;
 
+	public ScreenMessage getMessage() {
+		return message;
+	}
+
+	@JsonProperty("message")
+	private ScreenMessage message;
+
 	public String getStage(){
 		return stage;
 	}

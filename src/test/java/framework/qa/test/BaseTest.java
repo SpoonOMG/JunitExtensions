@@ -8,8 +8,6 @@ import framework.qa.jupiter.callbacks.TestSaver;
 import framework.qa.jupiter.callbacks.WmockExtension;
 import framework.qa.jupiter.parameters.CheckRequestResolver;
 import framework.qa.jupiter.parameters.InitRequestResolver;
-//import framework.qa.jupiter.parameters.LoadRequestResolver;
-//import framework.qa.jupiter.parameters.WiremockResolver;
 import framework.qa.jupiter.parameters.LoadRequestResolver;
 import framework.qa.models.requestData.ScreenValueBack;
 import framework.qa.values.TestDataValues;
@@ -19,7 +17,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static framework.qa.values.TestDataValues.*;
-import static framework.qa.values.TestDataValues.title;
 
 @ExtendWith({
         TestSaver.class,

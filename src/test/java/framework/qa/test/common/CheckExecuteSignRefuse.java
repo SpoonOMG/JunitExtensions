@@ -15,9 +15,7 @@ import framework.qa.models.requestData.ScreenCommandFront;
 import framework.qa.models.requestData.ScreenValueBack;
 import framework.qa.models.wiremock.response.RootWiremockResponse;
 import framework.qa.test.BaseTest;
-import framework.qa.test.veteran.BaseVeteranTest;
 import framework.qa.values.TestDataValues;
-import io.restassured.response.Response;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -35,7 +33,6 @@ import java.util.stream.Stream;
 import static framework.qa.values.TestDataValues.*;
 import static framework.qa.values.TestDataValues.title;
 import static io.qameta.allure.Allure.step;
-import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

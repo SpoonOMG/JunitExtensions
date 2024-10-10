@@ -75,6 +75,13 @@ public class ElementsItem {
     @JsonProperty("errors")
     private List<ErrorsItem> errors;
 
+    public Error getError() {
+        return error;
+    }
+
+    @JsonProperty("error")
+    private Error error;
+
     @JsonProperty("disabled")
     private boolean disabled;
 

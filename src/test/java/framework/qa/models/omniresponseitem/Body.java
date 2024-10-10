@@ -1,7 +1,7 @@
 package framework.qa.models.omniresponseitem;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import framework.qa.models.omniresponse.GroupsItem;
+import framework.qa.models.omniresponseitem.GroupsItem;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ public class Body {
 	private String component;
 
 	@JsonProperty("groups")
-	private List<framework.qa.models.omniresponse.GroupsItem> groups;
+	private List<framework.qa.models.omniresponseitem.GroupsItem> groups;
 
 	@JsonProperty("id")
 	private String id;
