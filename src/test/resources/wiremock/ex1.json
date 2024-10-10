@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "systemId": "DRTL",
+    "moduleId": null,
+    "channel": "web",
+    "sessionId": "OMNI",
+    "callbackUrl": null
+  },
+  "data": {
+    "scenario": {
+      "id": "sc_421e8df062b2939",
+      "categoryCode": null,
+      "categoryName": null,
+      "kindCode": null,
+      "kindName": null,
+      "typeCode": null,
+      "code": "261",
+      "name": null,
+      "active": null,
+      "systemProvider": null,
+      "systemInit": null,
+      "systemCheck": null,
+      "systemExecute": "OMNI"
+    },
+    "operation": {
+      "orderId": "6c84519f-51ea-4698-908f-ef95501875c3",
+      "order4client": null,
+      "acceptedTime": null,
+      "values": null
+    },
+    "clientContext": {
+      "version": "ufo_01",
+      "sessionContextId": null,
+      "clientDateTime": null,
+      "employee": null,
+      "way": null,
+      "params": []
+    },
+    "verifyData": {
+      "values": [],
+      "screenStage": null,
+      "screenId": null,
+      "command": null
+    }
+  }
+}
