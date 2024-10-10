@@ -1,0 +1,23 @@
+[
+  {
+    "action": "signature",
+    "criticality": "high",
+    "startPoint": "after",
+    "parameters": [
+      {
+        "key": "textSms",
+        "type": "string",
+        "value": "Вы оформляете заявку на дебетовую карту"
+      },
+      {
+        "key": "clientPhone",
+        "type": "string",
+        "source": {
+          "type": "operation",
+          "id": "##clientPhone",
+          "property": "value"
+        }
+      }
+    ]
+  }
+]

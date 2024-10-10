@@ -1,337 +1,1447 @@
 {
-  "stoplist": {
-    "entityStoplist": [],
-    "status": "success"
-  },
-  "addresses": [
-    {
-      "cityType": "г",
-      "hid": "258715022",
-      "city": "Омск",
-      "isForeign": false,
-      "postalCode": "644047",
-      "regionName": "Омская",
-      "houseNumber": "7",
-      "validationCode": "VALIDATED",
-      "type": "HOME",
-      "regionCode": "55",
-      "regionType": "обл",
-      "countryCode": "643",
-      "street": "Козицкого",
-      "flat": "48",
-      "qualityCode": "GOOD",
-      "kladrCode": "5500000100000510005",
-      "streetType": "п",
-      "fiasCode": "fb2941a9-fe89-4ca9-a0a1-5e7f22435f93",
-      "rawSource": "Россия, обл, Омская, г, Омск, п, Козицкого, д. 7, кв. 48",
-      "district": "Сибирский",
-      "actualDate": "2024-04-25",
-      "fullAddress": "Россия, обл, Омская, г, Омск, п, Козицкого, д. 7, кв. 48",
-      "okatoCode": "52401382000",
-      "countryName": "Россия",
-      "primary": false,
-      "kladrPostalCode": "644047"
+  "status": "success",
+  "actualTimestamp": 1728562157035,
+  "data": {
+    "operation": {
+      "orderId": "a023b1c6-3b0a-4366-b80d-e6f1678e117e",
+      "order4client": "ce908e83-9784-4d00-82e4-5f40a8d01bd7",
+      "values": [
+        {
+          "id": "CardNumber",
+          "value": "4041369648900142"
+        },
+        {
+          "id": "CELLPHONE",
+          "value": "+79645524477"
+        },
+        {
+          "id": "docSeries",
+          "value": "4509"
+        },
+        {
+          "id": "##isTransferAgreed",
+          "value": "false"
+        },
+        {
+          "id": "##dateExpiration",
+          "value": "0427"
+        },
+        {
+          "id": "##tessaMetaEcmBidExtId",
+          "value": "б/н"
+        },
+        {
+          "id": "latinClientName",
+          "value": "IVAN KAZAKOV"
+        },
+        {
+          "id": "kindGet",
+          "value": "1"
+        },
+        {
+          "id": "##cardScenario",
+          "value": "application"
+        },
+        {
+          "id": "##tessaDocStateCode",
+          "value": "9fb19e5f-a887-429c-9ca5-984b50356bc8"
+        },
+        {
+          "id": "countryISOCODE",
+          "value": "643"
+        },
+        {
+          "id": "channel",
+          "value": "ufo"
+        },
+        {
+          "id": "##sourceChannel",
+          "value": "ufo"
+        },
+        {
+          "id": "##tessaDocIsUpdate",
+          "value": "true"
+        },
+        {
+          "id": "##tessaMetaEcmBidProductName",
+          "value": "Дебетовая карта"
+        },
+        {
+          "id": "##tessaClientRoleName",
+          "value": "Основной"
+        },
+        {
+          "id": "cardCategoryCode",
+          "value": "7"
+        },
+        {
+          "id": "rgCity",
+          "value": "Москва"
+        },
+        {
+          "id": "subProgramCode",
+          "value": "261"
+        },
+        {
+          "id": "##isInstant",
+          "value": "false"
+        },
+        {
+          "id": "rgFlat",
+          "value": "225"
+        },
+        {
+          "id": "##codewordPrint",
+          "value": ""
+        },
+        {
+          "id": "isResident",
+          "value": "1"
+        },
+        {
+          "id": "ftRegionName",
+          "value": "Москва"
+        },
+        {
+          "id": "paymentSystemCode",
+          "value": "3"
+        },
+        {
+          "id": "rgHouse",
+          "value": "корп. 1"
+        },
+        {
+          "id": "rgCountryCode",
+          "value": "643"
+        },
+        {
+          "id": "goSavingsAccountUrl",
+          "value": "null/clients/6F57A2C3507C4D6AA1A70E9C8C8CF919/products/newProduct/choose#/web/products?porterMode=default&type=deposit&subType=account"
+        },
+        {
+          "id": "##tessaMetaEcmTypeDocName",
+          "value": "Заявление на выпуск банковской карты"
+        },
+        {
+          "id": "##isSecretWord",
+          "value": "false"
+        },
+        {
+          "id": "##cardPan",
+          "value": "4041********0142"
+        },
+        {
+          "id": "##tessaMetaEcmBatchTypeCode",
+          "value": "6f040910-eee4-44ac-bb7a-605ab9e72a7e"
+        },
+        {
+          "id": "##kind_get_enriched",
+          "value": ""
+        },
+        {
+          "id": "ftHouse",
+          "value": "д 35"
+        },
+        {
+          "id": "##isSalary",
+          "value": "false"
+        },
+        {
+          "id": "branchCode",
+          "value": "000"
+        },
+        {
+          "id": "##tessaClientRoleCode",
+          "value": "b4259485-ed69-4c69-8385-3f7db20c297b"
+        },
+        {
+          "id": "patronymic",
+          "value": "Васильевич"
+        },
+        {
+          "id": "ftStreet",
+          "value": ""
+        },
+        {
+          "id": "docTypeCode",
+          "value": "21"
+        },
+        {
+          "id": "name",
+          "value": "Иван"
+        },
+        {
+          "id": "##expiredPassport",
+          "value": "false"
+        },
+        {
+          "id": "guid",
+          "value": "6F57A2C3507C4D6AA1A70E9C8C8CF919"
+        },
+        {
+          "id": "rgStreet",
+          "value": ""
+        },
+        {
+          "id": "branchUnitCode",
+          "value": "099/1024"
+        },
+        {
+          "id": "rgPostalCode",
+          "value": "117041"
+        },
+        {
+          "id": "RealUser",
+          "value": "gpbu19309"
+        },
+        {
+          "id": "docNum",
+          "value": "987654"
+        },
+        {
+          "id": "##tessaMetaEcmBatchStateCode",
+          "value": "d311d211-c0e7-49af-a157-0acf29cfddd0"
+        },
+        {
+          "id": "##tessaMetaEcmBatchTypeName",
+          "value": "Карта"
+        },
+        {
+          "id": "Benf",
+          "value": "1"
+        },
+        {
+          "id": "CRSCountryCode",
+          "value": "643"
+        },
+        {
+          "id": "CRS",
+          "value": "1"
+        },
+        {
+          "id": "sourceChannel",
+          "value": "ufo"
+        },
+        {
+          "id": "##tessaDocIsError",
+          "value": "false"
+        },
+        {
+          "id": "issuedBy",
+          "value": "о-нием по р-ну Южное Бутово ОУФМС России по гор.Москве"
+        },
+        {
+          "id": "ftCity",
+          "value": "Москва"
+        },
+        {
+          "id": "##delivery.dsa",
+          "value": "false"
+        },
+        {
+          "id": "##goToCreditCardOrdersUrl",
+          "value": "null/clients/6F57A2C3507C4D6AA1A70E9C8C8CF919?current_tab_id=orders_tab"
+        },
+        {
+          "id": "login",
+          "value": "gpbu19309"
+        },
+        {
+          "id": "##tessaMetaEcmBidSystemInfoRawId",
+          "value": "#funcConcat(ReportTransporter,_,{actualdate})"
+        },
+        {
+          "id": "birthPlace",
+          "value": "Москва"
+        },
+        {
+          "id": "rgRegionCode",
+          "value": "77"
+        },
+        {
+          "id": "ConsentPersonalData",
+          "value": "1"
+        },
+        {
+          "id": "##isNewCard",
+          "value": "true"
+        },
+        {
+          "id": "surname",
+          "value": "Казаков"
+        },
+        {
+          "id": "order4client",
+          "value": "ce908e83-9784-4d00-82e4-5f40a8d01bd7"
+        },
+        {
+          "id": "##tessaMetaEcmTypeDocCode",
+          "value": "aabf40de-68e8-40d1-a84e-6e5f17b8ec73"
+        },
+        {
+          "id": "ftPostalCode",
+          "value": "117041"
+        },
+        {
+          "id": "issueDate",
+          "value": "2015-03-10"
+        },
+        {
+          "id": "##tessaMetaEcmBatchStateName",
+          "value": "Открыт"
+        },
+        {
+          "id": "ConsPersDataDate",
+          "value": "2024-10-10T12:09:17.017Z"
+        },
+        {
+          "id": "ftRegionCode",
+          "value": "77"
+        },
+        {
+          "id": "##tessaDocStateName",
+          "value": "Действует"
+        },
+        {
+          "id": "birthCountryCode",
+          "value": "643"
+        },
+        {
+          "id": "ftCountryCode",
+          "value": "643"
+        },
+        {
+          "id": "##validYears",
+          "value": "3"
+        },
+        {
+          "id": "branchCode5NT",
+          "value": "000"
+        },
+        {
+          "id": "##print_order4client",
+          "value": "ce908e83-9784-4d00-82e4-5f40a8d01bd7"
+        },
+        {
+          "id": "##cardCategory",
+          "value": "МИР Advanced Instant Армия Ветеран"
+        },
+        {
+          "id": "birthDate",
+          "value": "1985-10-17"
+        },
+        {
+          "id": "FATCA",
+          "value": "1"
+        },
+        {
+          "id": "IsUnembossed",
+          "value": "0"
+        },
+        {
+          "id": "##isOTP",
+          "value": "true"
+        },
+        {
+          "id": "sexCode",
+          "value": "1"
+        },
+        {
+          "id": "ftFlat",
+          "value": "225"
+        },
+        {
+          "id": "##applicationDate",
+          "value": "2024-10-10"
+        },
+        {
+          "id": "##tessaMetaEcmBatchIsUpdate",
+          "value": "true"
+        },
+        {
+          "id": "##departmentCode",
+          "value": "099/1024"
+        },
+        {
+          "id": "##isPackage",
+          "value": "false"
+        },
+        {
+          "id": "departCode",
+          "value": "077-089"
+        },
+        {
+          "id": "ftBuilding",
+          "value": "1"
+        },
+        {
+          "id": "rgRegionName",
+          "value": "Москва"
+        },
+        {
+          "id": "currencyCode",
+          "value": "810"
+        }
+      ]
     },
-    {
-      "cityType": "г",
-      "hid": "258715023",
-      "city": "Омск",
-      "isForeign": false,
-      "postalCode": "644047",
-      "regionName": "Омская",
-      "houseNumber": "7",
-      "validationCode": "VALIDATED",
-      "type": "POSTAL",
-      "regionCode": "55",
-      "regionType": "обл",
-      "countryCode": "643",
-      "street": "Козицкого",
-      "flat": "48",
-      "qualityCode": "GOOD",
-      "kladrCode": "5500000100000510005",
-      "streetType": "п",
-      "fiasCode": "fb2941a9-fe89-4ca9-a0a1-5e7f22435f93",
-      "rawSource": "Россия, обл, Омская, г, Омск, п, Козицкого, д. 7, кв. 48",
-      "district": "Сибирский",
-      "actualDate": "2024-04-25",
-      "fullAddress": "Россия, обл, Омская, г, Омск, п, Козицкого, д. 7, кв. 48",
-      "okatoCode": "52401382000",
-      "countryName": "Россия",
-      "primary": false,
-      "kladrPostalCode": "644047"
-    },
-    {
-      "cityType": "г",
-      "hid": "258715024",
-      "city": "Омск",
-      "isForeign": false,
-      "postalCode": "644047",
-      "regionName": "Омская",
-      "houseNumber": "7",
-      "validationCode": "VALIDATED",
-      "type": "CONSTANT_REGISTRATION",
-      "regionCode": "55",
-      "regionType": "обл",
-      "countryCode": "643",
-      "street": "Козицкого",
-      "flat": "48",
-      "qualityCode": "GOOD",
-      "registrationDate": "2019-11-13",
-      "kladrCode": "5500000100000510005",
-      "streetType": "п",
-      "fiasCode": "fb2941a9-fe89-4ca9-a0a1-5e7f22435f93",
-      "rawSource": "Россия, обл, Омская, г, Омск, п, Козицкого, д. 7, кв. 48",
-      "district": "Сибирский",
-      "actualDate": "2024-04-25",
-      "fullAddress": "Россия, обл, Омская, г, Омск, п, Козицкого, д. 7, кв. 48",
-      "okatoCode": "52401382000",
-      "countryName": "Россия",
-      "primary": true,
-      "kladrPostalCode": "644047"
-    }
-  ],
-  "sources": [
-    {
-      "systemInfo": {
-        "systemId": "IKAR",
-        "rawId": "8048678"
-      },
-      "hid": "130100170"
-    },
-    {
-      "systemInfo": {
-        "systemId": "DR29",
-        "rawId": "10017888265"
-      },
-      "hid": "373673397"
-    },
-    {
-      "systemInfo": {
-        "systemId": "FRNT",
-        "rawId": "27bceba1-fc19-45bd-9184-4cd8c34ab81f"
-      },
-      "hid": "589446443"
-    }
-  ],
-  "documents": [
-    {
-      "number": "436174",
-      "fullValue": "50 15436174",
-      "hid": "182349194",
-      "series": "50 15",
-      "departmentCode": "540-026",
-      "actualDate": "2024-04-25",
-      "state": {
-        "code": "ACTUAL"
-      },
-      "type": "PASSPORT_RU",
-      "issueDate": "2015-11-30",
-      "issueAuthority": "Отделением УФМС России по Новосибирской области в Куйбышевском районе",
-      "primary": true
-    },
-    {
-      "fullValue": "545206854879",
-      "state": {},
-      "type": "INN"
-    }
-  ],
-  "crs": {
-    "validationCodeINN": "NOT_VAL_INN_02",
-    "notUniqueTin": false,
-    "employeeFullName": "Loader5nt",
-    "approveDate": "2022-02-02",
-    "validationCode": "VALIDATED",
-    "tag": "UNKNOWN",
-    "countries": [
+    "serverActions": [
       {
-        "code": "643",
-        "reasonNoTin": "UNKNOWN"
+        "action": "draft-registration-digital-sign",
+        "criticality": "high",
+        "startPoint": "before",
+        "parameters": [
+          {
+            "key": "sendDraft.templateText",
+            "type": "string",
+            "value": "Уважаемый клиент! Для завершения процесса регистрации карты перейдите по ссылке \"{link}\"."
+          },
+          {
+            "key": "sendDraft.clientPhone",
+            "type": "string",
+            "source": {
+              "type": "operation",
+              "id": "##clientPhoneOTP",
+              "property": "value"
+            }
+          },
+          {
+            "key": "sendDraft.channelLink",
+            "type": "string",
+            "source": {
+              "type": "operation",
+              "id": "##OTPChannel",
+              "property": "value"
+            }
+          },
+          {
+            "key": "channelSettings.mobile.isShort",
+            "type": "boolean",
+            "value": "true"
+          },
+          {
+            "key": "channelSettings.web.isShort",
+            "type": "boolean",
+            "value": "true"
+          },
+          {
+            "key": "expiryDateTime",
+            "type": "string",
+            "value": "2024-10-10T16:09:17+03:00"
+          }
+        ]
       }
     ],
-    "status": "NON_REPORTABLE_PERSON"
+    "newService": {
+      "execute": "DBTCARDORDERDRTL"
+    }
   },
-  "phones": [
-    {
-      "hid": "167263454",
-      "rawSource": "+73812232479",
-      "cityCode": "3812",
-      "timezone": "UTC+6",
-      "author": "IKAR:8048678",
-      "isForeign": false,
-      "numberProfile": "STATIONARY",
-      "type": "WORK",
-      "number": "232479",
-      "countryCode": "7",
-      "actualDate": "2018-07-20",
-      "state": {
-        "code": "ACTUAL"
-      },
-      "primary": false,
-      "fullNumber": "73812232479"
-    },
-    {
-      "hid": "167263455",
-      "rawSource": "+79069920562",
-      "cityCode": "906",
-      "timezone": "UTC+6",
-      "author": "DR29:10017888265",
-      "isForeign": false,
-      "numberProfile": "MOBILE",
-      "type": "MOBILE",
-      "number": "9920562",
-      "countryCode": "7",
-      "actualDate": "2022-02-02",
-      "state": {
-        "code": "ACTUAL"
-      },
-      "primary": false,
-      "fullNumber": "79069920562"
-    },
-    {
-      "hid": "279013380",
-      "rawSource": "79069920562",
-      "cityCode": "906",
-      "timezone": "UTC+6",
-      "author": "FRNT:27bceba1-fc19-45bd-9184-4cd8c34ab81f",
-      "isForeign": false,
-      "numberProfile": "MOBILE",
-      "type": "MAIN",
-      "number": "9920562",
-      "countryCode": "7",
-      "actualDate": "2024-04-25",
-      "state": {
-        "code": "ACTUAL"
-      },
-      "primary": false,
-      "fullNumber": "79069920562"
-    },
-    {
-      "hid": "279013381",
-      "rawSource": "79069920562",
-      "cityCode": "906",
-      "timezone": "UTC+6",
-      "author": "DR29:10017888265",
-      "isForeign": false,
-      "numberProfile": "MOBILE",
-      "type": "PC",
-      "number": "9920562",
-      "countryCode": "7",
-      "actualDate": "2024-04-17",
-      "state": {
-        "code": "ACTUAL"
-      },
-      "primary": false,
-      "fullNumber": "79069920562"
-    }
-  ],
-  "mails": [
-    {
-      "hid": "69550778",
-      "actualDate": "2024-04-25",
-      "state": {},
-      "type": "HOME",
-      "value": "olga.georg29@mail.ru",
-      "primary": false
-    }
-  ],
-  "service": {},
-  "entityStoplist": [
-    {
-      "totalMatches": "1",
-      "internalNumber": "1",
-      "suspectChecks": [
+  "screen": {
+    "stage": "draft",
+    "success": true,
+    "load": {
+      "component": "NOTIFICATION",
+      "id": "DSA_CARD_APPLICATION_STATUS",
+      "cacheable": false,
+      "groups": [
         {
-          "inclusionReasonCode": "2.02.03",
-          "name": "Перечень 550\u2013П (код отказа 03)",
-          "categories": [
+          "component": "NONE",
+          "id": "DSA_CARD_APPLICATION_STATUS",
+          "elements": [
             {
-              "code": "UNKNOWN"
+              "component": "state",
+              "id": "statusid",
+              "icon": "AnimatedStatusWaiting",
+              "placeholder": "Пожалуйста, не закрывайте это окно и дождитесь результата обработки заявки",
+              "value": "Заявка находится на подписании",
+              "specific": {
+                "schedule": 10000
+              },
+              "errors": [
+                {
+                  "type": "server",
+                  "severity": "error",
+                  "message": "Не удалось получить статус. Нажмите на кнопку ниже"
+                }
+              ]
+            },
+            {
+              "component": "command",
+              "type": "baby",
+              "id": "upState",
+              "icon": "RefreshIcon",
+              "visible": true,
+              "disabled": false,
+              "label": "Узнать статус",
+              "dependencies": [
+                {
+                  "property": "visible",
+                  "rules": [
+                    {
+                      "ands": [],
+                      "if": {
+                        "type": "element",
+                        "id": "statusid",
+                        "property": "specific/state",
+                        "compare": "=",
+                        "value": "error"
+                      },
+                      "then": {
+                        "value": "true"
+                      }
+                    },
+                    {
+                      "ands": [],
+                      "if": {
+                        "type": "element",
+                        "id": "statusid",
+                        "property": "specific/state",
+                        "compare": "<>",
+                        "value": "error"
+                      },
+                      "then": {
+                        "value": "false"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "component": "static",
+              "type": "default",
+              "icon": "AttentionIcon",
+              "visible": true,
+              "disabled": false,
+              "markup": "bbcode",
+              "value": "Напомните Клиенту, что скоро ему на телефон поступит SMS со ссылкой, по которой необходимо перейти для подтверждения заявки на карту",
+              "dependencies": [
+                {
+                  "property": "visible",
+                  "rules": [
+                    {
+                      "ands": [],
+                      "if": {
+                        "type": "element",
+                        "id": "statusid",
+                        "property": "specific/state",
+                        "compare": "=",
+                        "value": "error"
+                      },
+                      "then": {
+                        "value": "false"
+                      }
+                    },
+                    {
+                      "ands": [],
+                      "if": {
+                        "type": "element",
+                        "id": "statusid",
+                        "property": "specific/state",
+                        "compare": "=",
+                        "value": "finished"
+                      },
+                      "then": {
+                        "value": "false"
+                      }
+                    },
+                    {
+                      "ands": [],
+                      "if": {
+                        "type": "element",
+                        "id": "statusid",
+                        "property": "specific/state",
+                        "compare": "=",
+                        "value": "reject"
+                      },
+                      "then": {
+                        "value": "false"
+                      }
+                    },
+                    {
+                      "set": {
+                        "value": "true"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "serverFeature": {
+                "dependencies": [
+                  {
+                    "property": "value",
+                    "rules": [
+                      {
+                        "ands": [
+                          {
+                            "type": "operation",
+                            "id": "##OTPChannel",
+                            "property": "value",
+                            "compare": "IN",
+                            "value": "mb|mobile",
+                            "logInfo": "mb|mobile"
+                          }
+                        ],
+                        "if": {
+                          "type": "operation",
+                          "id": "##signMode",
+                          "property": "value",
+                          "compare": "=",
+                          "value": "omniDigitalSign",
+                          "logInfo": "Для новой ПЭП"
+                        },
+                        "then": {
+                          "value": "Напомните клиенту, что для подтверждения заявки необходимо перейти по ссылке из Push-сообщения, либо самостоятельно перейдя в раздел «Еще – Подписание документов» в Мобильном приложении"
+                        }
+                      },
+                      {
+                        "ands": [
+                          {
+                            "type": "operation",
+                            "id": "##OTPChannel",
+                            "property": "value",
+                            "compare": "NOTIN",
+                            "value": "mb|mobile",
+                            "logInfo": "mb|mobile"
+                          }
+                        ],
+                        "if": {
+                          "type": "operation",
+                          "id": "##signMode",
+                          "property": "value",
+                          "compare": "=",
+                          "value": "omniDigitalSign",
+                          "logInfo": "Для новой ПЭП"
+                        },
+                        "then": {
+                          "value": "Напомните Клиенту, что скоро ему на телефон поступит SMS со ссылкой, по которой необходимо перейти для подтверждения заявки на карту"
+                        }
+                      },
+                      {
+                        "ands": [],
+                        "if": {
+                          "type": "operation",
+                          "id": "##signMode",
+                          "property": "value",
+                          "compare": "<>",
+                          "value": "omniDigitalSign",
+                          "logInfo": "Для старой ПЭП"
+                        },
+                        "then": {
+                          "value": "Напомните Клиенту, что скоро ему на телефон поступит SMS со ссылкой, по которой необходимо перейти для подтверждения заявки на карту"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
             }
           ],
-          "message": "Клиент обнаружен в Едином списке ДФМ"
+          "excluded": false
+        },
+        {
+          "component": "COMMAND",
+          "logInfo": "Группа с командами",
+          "visible": true,
+          "style": {
+            "align": "center"
+          },
+          "elements": [
+            {
+              "component": "command",
+              "type": "secondary",
+              "id": "changeSignType",
+              "visible": true,
+              "disabled": false,
+              "label": "Назад (изменить способ подписания)",
+              "dependencies": [
+                {
+                  "property": "visible",
+                  "rules": [
+                    {
+                      "ands": [],
+                      "if": {
+                        "type": "element",
+                        "id": "statusid",
+                        "property": "specific/state",
+                        "compare": "=",
+                        "value": "error"
+                      },
+                      "then": {
+                        "value": "false"
+                      }
+                    },
+                    {
+                      "ands": [],
+                      "if": {
+                        "type": "element",
+                        "id": "statusid",
+                        "property": "specific/state",
+                        "compare": "=",
+                        "value": "finished"
+                      },
+                      "then": {
+                        "value": "false"
+                      }
+                    },
+                    {
+                      "ands": [],
+                      "if": {
+                        "type": "element",
+                        "id": "statusid",
+                        "property": "specific/state",
+                        "compare": "=",
+                        "value": "reject"
+                      },
+                      "then": {
+                        "value": "false"
+                      }
+                    },
+                    {
+                      "set": {
+                        "value": "true"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "serverFeature": {
+                "dependencies": [
+                  {
+                    "property": "excluded",
+                    "rules": [
+                      {
+                        "if": {
+                          "type": "operation",
+                          "id": "##signMode",
+                          "property": "value",
+                          "compare": "<>",
+                          "value": "omniDigitalSign",
+                          "logInfo": "Для новой ПЭП"
+                        },
+                        "then": {
+                          "value": "true"
+                        }
+                      },
+                      {
+                        "if": {
+                          "type": "reference",
+                          "id": "#EMPTY#",
+                          "property": "meta/channel",
+                          "compare": "<>",
+                          "value": "ufo",
+                          "logInfo": "Отображаем компонент для канала ufo"
+                        },
+                        "then": {
+                          "value": "true"
+                        }
+                      },
+                      {
+                        "ands": [
+                          {
+                            "type": "operation",
+                            "id": "##depositProductCode",
+                            "property": "value",
+                            "compare": "ISNOTNULL",
+                            "logInfo": "Исключаем кнопку при оформления ДК + НС"
+                          }
+                        ],
+                        "if": {
+                          "type": "operation",
+                          "id": "##depositProductCode",
+                          "property": "value",
+                          "compare": "<>",
+                          "value": "Без_НС"
+                        },
+                        "then": {
+                          "value": "true"
+                        }
+                      },
+                      {
+                        "set": {
+                          "value": "false"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "component": "command",
+              "type": "secondary",
+              "id": "changeSignTypeCardAndSavingsAccount",
+              "visible": true,
+              "disabled": false,
+              "label": "Назад (изменить способ подписания)",
+              "dependencies": [
+                {
+                  "property": "visible",
+                  "rules": [
+                    {
+                      "ands": [],
+                      "if": {
+                        "type": "element",
+                        "id": "statusid",
+                        "property": "specific/state",
+                        "compare": "=",
+                        "value": "error"
+                      },
+                      "then": {
+                        "value": "false"
+                      }
+                    },
+                    {
+                      "ands": [],
+                      "if": {
+                        "type": "element",
+                        "id": "statusid",
+                        "property": "specific/state",
+                        "compare": "=",
+                        "value": "finished"
+                      },
+                      "then": {
+                        "value": "false"
+                      }
+                    },
+                    {
+                      "ands": [],
+                      "if": {
+                        "type": "element",
+                        "id": "statusid",
+                        "property": "specific/state",
+                        "compare": "=",
+                        "value": "reject"
+                      },
+                      "then": {
+                        "value": "false"
+                      }
+                    },
+                    {
+                      "set": {
+                        "value": "true"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "serverFeature": {
+                "dependencies": [
+                  {
+                    "property": "excluded",
+                    "rules": [
+                      {
+                        "if": {
+                          "type": "operation",
+                          "id": "##signMode",
+                          "property": "value",
+                          "compare": "<>",
+                          "value": "omniDigitalSign",
+                          "logInfo": "Для новой ПЭП"
+                        },
+                        "then": {
+                          "value": "true"
+                        }
+                      },
+                      {
+                        "if": {
+                          "type": "reference",
+                          "id": "#EMPTY#",
+                          "property": "meta/channel",
+                          "compare": "<>",
+                          "value": "ufo",
+                          "logInfo": "Отображаем компонент для канала ufo"
+                        },
+                        "then": {
+                          "value": "true"
+                        }
+                      },
+                      {
+                        "ands": [],
+                        "if": {
+                          "type": "operation",
+                          "id": "##depositProductCode",
+                          "property": "value",
+                          "compare": "=",
+                          "value": "Без_НС"
+                        },
+                        "then": {
+                          "value": "true"
+                        }
+                      },
+                      {
+                        "ands": [],
+                        "if": {
+                          "type": "operation",
+                          "id": "##depositProductCode",
+                          "property": "value",
+                          "compare": "ISNULL",
+                          "logInfo": "Исключаем кнопку при оформления ДК без НС"
+                        },
+                        "then": {
+                          "value": "true"
+                        }
+                      },
+                      {
+                        "set": {
+                          "value": "false"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "excluded": false
+        },
+        {
+          "component": "COMMAND",
+          "id": "##onFooterComandAlias",
+          "alias": "onFooterComandAlias",
+          "logInfo": "Оформить кредит и накопительный счет",
+          "style": {
+            "backgroundColor": "primary",
+            "angle": {
+              "type": "radius-bottom"
+            },
+            "align": "center",
+            "direction": "row"
+          },
+          "elements": [
+            {
+              "component": "command",
+              "type": "primary",
+              "id": "redirectToCredit",
+              "visible": true,
+              "disabled": false,
+              "label": "Оформить заявку на кредит наличными",
+              "style": {
+                "backgroundColor": "primary",
+                "width": "1",
+                "align": "center"
+              },
+              "serverFeature": {
+                "dependencies": [
+                  {
+                    "property": "excluded",
+                    "rules": [
+                      {
+                        "if": {
+                          "type": "reference",
+                          "id": "#EMPTY#",
+                          "property": "meta/channel",
+                          "compare": "<>",
+                          "value": "ufo",
+                          "logInfo": "Отображаем для канала ufo"
+                        },
+                        "then": {
+                          "value": "true"
+                        }
+                      },
+                      {
+                        "set": {
+                          "value": "false"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "dataCommand": {
+                  "redirect": {
+                    "scenarioId": "sc_d691714dddebe07",
+                    "type": "basic",
+                    "configSelected": "debit_cards_to_credit"
+                  }
+                }
+              }
+            },
+            {
+              "component": "command",
+              "type": "primary",
+              "id": "goToSavingsAccount",
+              "visible": true,
+              "disabled": false,
+              "label": "Оформить накопительный счет",
+              "serverFeature": {
+                "dependencies": [
+                  {
+                    "property": "excluded",
+                    "rules": [
+                      {
+                        "if": {
+                          "type": "reference",
+                          "id": "#EMPTY#",
+                          "property": "meta/channel",
+                          "compare": "=",
+                          "value": "ufo-cc",
+                          "logInfo": "Убираем НС для КЦ"
+                        },
+                        "then": {
+                          "value": "true"
+                        }
+                      },
+                      {
+                        "set": {
+                          "value": "false"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "dependencies": [
+            {
+              "property": "visible",
+              "rules": [
+                {
+                  "ands": [],
+                  "if": {
+                    "type": "element",
+                    "id": "statusid",
+                    "property": "specific/state",
+                    "compare": "=",
+                    "value": "finished"
+                  },
+                  "then": {
+                    "value": "true"
+                  }
+                },
+                {
+                  "set": {
+                    "value": "false"
+                  }
+                }
+              ]
+            }
+          ],
+          "excluded": false,
+          "serverFeature": {
+            "dependencies": [
+              {
+                "property": "excluded",
+                "rules": [
+                  {
+                    "if": {
+                      "type": "operation",
+                      "id": "##servicePackage",
+                      "property": "value",
+                      "compare": "<>",
+                      "value": "Универсальный",
+                      "logInfo": "Отображаем только для основных карт ПУ Универсальный"
+                    },
+                    "then": {
+                      "value": "true"
+                    }
+                  },
+                  {
+                    "set": {
+                      "value": "false"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "component": "COMMAND",
+          "logInfo": "Оформить кредитную карту",
+          "visible": true,
+          "style": {
+            "backgroundColor": "primary",
+            "width": "1",
+            "align": "center"
+          },
+          "elements": [
+            {
+              "component": "command",
+              "type": "primary",
+              "id": "redirectToCreditCards",
+              "visible": true,
+              "disabled": false,
+              "label": "Оформить заявку на кредитную карту",
+              "style": {
+                "width": "1",
+                "align": "center"
+              },
+              "serverFeature": {
+                "dependencies": [
+                  {
+                    "property": "excluded",
+                    "rules": [
+                      {
+                        "if": {
+                          "type": "operation",
+                          "id": "isDkbo",
+                          "property": "value",
+                          "compare": "<>",
+                          "value": "true",
+                          "logInfo": "ДКБО не подписан"
+                        },
+                        "then": {
+                          "value": "false"
+                        }
+                      },
+                      {
+                        "if": {
+                          "type": "operation",
+                          "id": "##isCreditBureauActualConsent",
+                          "property": "value",
+                          "compare": "<>",
+                          "value": "true",
+                          "logInfo": "Клиент не давал разрешение на БКИ"
+                        },
+                        "then": {
+                          "value": "false"
+                        }
+                      },
+                      {
+                        "if": {
+                          "type": "operation",
+                          "id": "##isCreditBureauConsentFresh",
+                          "property": "value",
+                          "compare": "<>",
+                          "value": "true",
+                          "logInfo": "Разрешение на БКИ старше 6 мес."
+                        },
+                        "then": {
+                          "value": "false"
+                        }
+                      },
+                      {
+                        "if": {
+                          "type": "operation",
+                          "id": "##isOswCreditCardAnswerSuccess",
+                          "property": "value",
+                          "compare": "<>",
+                          "value": "true",
+                          "logInfo": "Статус ответа one-step-will не success"
+                        },
+                        "then": {
+                          "value": "false"
+                        }
+                      },
+                      {
+                        "set": {
+                          "value": "true"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "dataCommand": {
+                  "redirect": {
+                    "scenarioId": "sc_ccb794517a3324d",
+                    "type": "basic",
+                    "configSelected": "debit_cards_to_credit_cards"
+                  }
+                }
+              }
+            },
+            {
+              "component": "command",
+              "type": "primary",
+              "id": "goToCreditCardOrders",
+              "visible": true,
+              "disabled": false,
+              "label": "Проверить заявку на кредитную карту",
+              "style": {
+                "width": "1",
+                "align": "center"
+              },
+              "serverFeature": {
+                "dependencies": [
+                  {
+                    "property": "excluded",
+                    "rules": [
+                      {
+                        "ands": [
+                          {
+                            "type": "operation",
+                            "id": "##isCreditBureauActualConsent",
+                            "property": "value",
+                            "compare": "=",
+                            "value": "true",
+                            "logInfo": "Клиент давал разрешение на БКИ"
+                          },
+                          {
+                            "type": "operation",
+                            "id": "##isCreditBureauConsentFresh",
+                            "property": "value",
+                            "compare": "=",
+                            "value": "true",
+                            "logInfo": "Разрешение на БКИ не старше 6 мес."
+                          },
+                          {
+                            "type": "operation",
+                            "id": "##isOswCreditCardAnswerSuccess",
+                            "property": "value",
+                            "compare": "=",
+                            "value": "true",
+                            "logInfo": "Статус ответа one-step-will success"
+                          }
+                        ],
+                        "if": {
+                          "type": "operation",
+                          "id": "isDkbo",
+                          "property": "value",
+                          "compare": "=",
+                          "value": "true",
+                          "logInfo": "ДКБО подписан"
+                        },
+                        "then": {
+                          "value": "false"
+                        }
+                      },
+                      {
+                        "set": {
+                          "value": "true"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "dependencies": [
+            {
+              "property": "visible",
+              "rules": [
+                {
+                  "ands": [],
+                  "if": {
+                    "type": "element",
+                    "id": "statusid",
+                    "property": "specific/state",
+                    "compare": "=",
+                    "value": "finished"
+                  },
+                  "then": {
+                    "value": "true"
+                  }
+                },
+                {
+                  "set": {
+                    "value": "false"
+                  }
+                }
+              ]
+            }
+          ],
+          "excluded": false,
+          "serverFeature": {
+            "dependencies": [
+              {
+                "property": "excluded",
+                "rules": [
+                  {
+                    "if": {
+                      "type": "reference",
+                      "id": "#EMPTY#",
+                      "property": "meta/channel",
+                      "compare": "<>",
+                      "value": "ufo",
+                      "logInfo": "Только для канала ufo"
+                    },
+                    "then": {
+                      "value": "true"
+                    }
+                  },
+                  {
+                    "if": {
+                      "type": "operation",
+                      "id": "##servicePackage",
+                      "property": "value",
+                      "compare": "NOTIN",
+                      "value": "Универсальный|Газпромбанк.Премиум",
+                      "logInfo": "Отображаем только для основных карт ПУ Универсальный и Газпромбанк.Премиум"
+                    },
+                    "then": {
+                      "value": "true"
+                    }
+                  },
+                  {
+                    "set": {
+                      "value": "false"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "component": "NONE",
+          "alias": "whereCreditCardOrderNotification",
+          "style": {
+            "backgroundColor": "primary",
+            "width": "1",
+            "align": "center"
+          },
+          "elements": [
+            {
+              "component": "static",
+              "type": "default",
+              "icon": "AttentionIcon",
+              "visible": true,
+              "disabled": false,
+              "markup": "bbcode",
+              "value": "Заявка на кредитную карту находится [br]в разделе «Заявки», подразделе «Черновики»",
+              "style": {
+                "width": "1",
+                "align": "center"
+              },
+              "serverFeature": {
+                "dependencies": [
+                  {
+                    "property": "excluded",
+                    "rules": [
+                      {
+                        "ands": [
+                          {
+                            "type": "operation",
+                            "id": "##isCreditBureauActualConsent",
+                            "property": "value",
+                            "compare": "=",
+                            "value": "true",
+                            "logInfo": "Клиент давал разрешение на БКИ"
+                          },
+                          {
+                            "type": "operation",
+                            "id": "##isCreditBureauConsentFresh",
+                            "property": "value",
+                            "compare": "=",
+                            "value": "true",
+                            "logInfo": "Разрешение на БКИ не старше 6 мес."
+                          },
+                          {
+                            "type": "operation",
+                            "id": "##isOswCreditCardAnswerSuccess",
+                            "property": "value",
+                            "compare": "=",
+                            "value": "true",
+                            "logInfo": "Статус ответа one-step-will success"
+                          }
+                        ],
+                        "if": {
+                          "type": "operation",
+                          "id": "isDkbo",
+                          "property": "value",
+                          "compare": "=",
+                          "value": "true",
+                          "logInfo": "ДКБО подписан"
+                        },
+                        "then": {
+                          "value": "false"
+                        }
+                      },
+                      {
+                        "set": {
+                          "value": "true"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "dependencies": [
+            {
+              "property": "visible",
+              "rules": [
+                {
+                  "ands": [],
+                  "if": {
+                    "type": "element",
+                    "id": "statusid",
+                    "property": "specific/state",
+                    "compare": "=",
+                    "value": "finished"
+                  },
+                  "then": {
+                    "value": "true"
+                  }
+                },
+                {
+                  "set": {
+                    "value": "false"
+                  }
+                }
+              ]
+            }
+          ],
+          "excluded": false,
+          "serverFeature": {
+            "dependencies": [
+              {
+                "property": "excluded",
+                "rules": [
+                  {
+                    "if": {
+                      "type": "operation",
+                      "id": "##servicePackage",
+                      "property": "value",
+                      "compare": "IN",
+                      "value": "Универсальный|Газпромбанк.Премиум",
+                      "logInfo": "Отображаем только для основных карт ПУ Универсальный и Газпромбанк.Премиум"
+                    },
+                    "then": {
+                      "value": "false"
+                    }
+                  },
+                  {
+                    "set": {
+                      "value": "true"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "commands": [
+        {
+          "type": "redirect",
+          "id": "redirectToCredit",
+          "logInfo": "Оформить заявку на кредит"
+        },
+        {
+          "type": "redirect",
+          "id": "redirectToCreditCards",
+          "logInfo": "Оформить заявку на кредитную карту"
+        },
+        {
+          "type": "link",
+          "id": "goToCreditCardOrders",
+          "logInfo": "Проверить заявку на кредитную карту",
+          "specific": {
+            "url": "null/clients/6F57A2C3507C4D6AA1A70E9C8C8CF919?current_tab_id=orders_tab"
+          }
+        },
+        {
+          "type": "pass",
+          "id": "changeSignType",
+          "logInfo": "Вернуться и изменить способ подписания"
+        },
+        {
+          "type": "pass",
+          "id": "changeSignTypeCardAndSavingsAccount",
+          "logInfo": "Вернуться и изменить способ подписания"
+        },
+        {
+          "type": "link",
+          "id": "goToSavingsAccount",
+          "logInfo": "Оформить накопительный счет",
+          "specific": {
+            "url": "null/clients/6F57A2C3507C4D6AA1A70E9C8C8CF919/products/newProduct/choose#/web/products?porterMode=default&type=deposit&subType=account"
+          }
         }
       ]
     }
-  ],
-  "detail": {
-    "biometrics": {
-      "isAgreement": false
-    },
-    "compliance": {
-      "changeDate": "2022-02-20",
-      "category": "1"
-    },
-    "lastFio": [],
-    "consents": [
-      {
-        "actualDate": "2024-04-25",
-        "type": "GOODS_SERVICES_ADVERTISING",
-        "consentValue": "COMMON_DENIED"
-      },
-      {
-        "endDate": "2024-10-25",
-        "actualDate": "2024-04-25",
-        "type": "CREDIT_BUREAU_REQUEST",
-        "startDate": "2024-04-25",
-        "consentValue": "COMMON_GRANTED"
-      },
-      {
-        "actualDate": "2024-04-25",
-        "type": "VOICE_BIOMETRICS",
-        "startDate": "2022-02-02",
-        "consentValue": "COMMON_DENIED"
-      },
-      {
-        "actualDate": "2024-04-25",
-        "type": "ESIA_ACTUALIZE_DATA",
-        "consentValue": "COMMON_UNKNOWN"
-      }
-    ],
-    "dignitaryFlag": false,
-    "isDkbo": true
-  },
-  "fatca": {
-    "employeeFullName": "Loader5nt",
-    "approveDate": "2022-02-02",
-    "status": "NON_US"
-  },
-  "base": {
-    "hid": "373673398",
-    "birthdate": "1970-10-29",
-    "gender": "FEMALE",
-    "birthSettlement": "гор. Куйбышев Новосибирской обл.",
-    "fullName": "Терентьева Ольга Георгиевна",
-    "bankruptcy": "false",
-    "birthPlace": "гор. Куйбышев Новосибирской обл.",
-    "patronymic": "Георгиевна",
-    "identityType": "3",
-    "surname": "Терентьева",
-    "citizenships": [
-      {
-        "countryName": "РОССИЯ"
-      }
-    ],
-    "actualDate": "2024-04-25",
-    "name": "Ольга",
-    "birthCountry": "РОССИЙСКАЯ ФЕДЕРАЦИЯ",
-    "guid": "00CD5BE45E4C4AC1A93368E7E7DFF29C",
-    "residents": [
-      {
-        "state": {
-          "terminalFlag": true
-        },
-        "type": "base"
-      },
-      {
-        "state": {},
-        "type": "tax"
-      }
-    ],
-    "categories": [
-      {
-        "type": "REGULAR"
-      }
-    ]
-  },
-  "status": "success"
+  }
 }
