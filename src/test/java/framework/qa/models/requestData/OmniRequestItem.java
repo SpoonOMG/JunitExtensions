@@ -6,8 +6,6 @@ package framework.qa.models.requestData;//
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import framework.qa.models.init.Data;
-import framework.qa.models.init.Meta;
 
 import java.io.Serializable;
 
