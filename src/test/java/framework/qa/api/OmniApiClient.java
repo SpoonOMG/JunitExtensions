@@ -31,6 +31,6 @@ public class OmniApiClient extends ApiClient{
     }
 
     public ResponseItem loadRequest(String gpbRequestId, OmniRequestItem body) throws IOException {
-        return omniApi.checkRequest(CFG.token(),gpbRequestId,guid,body).execute().body();
+        return omniApi.loadRequest(CFG.token(),gpbRequestId,guid,body).execute().body();
     }
 }

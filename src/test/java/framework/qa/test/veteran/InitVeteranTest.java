@@ -86,7 +86,6 @@ public class InitVeteranTest extends BaseVeteranTest {
         step("Проверка параметров client-search в operation");
 
         Map<String, String> collect = response.getData().getOperation().getValues().stream().collect(Collectors.toMap(ValuesItem::getId, ValuesItem::getValue));
-        collect.get(Params.CELL_PHONE);
 
         assertAll(
                 () -> assertEquals(TestDataValues.cellPhone, collect.get(Params.CELL_PHONE)),

@@ -21,7 +21,6 @@ import java.util.UUID;
 
 public class WmockExtension implements BeforeEachCallback, ParameterResolver, AfterEachCallback {
     protected static final Config CFG = Config.getInstance();
-//    protected String uuid;
     protected List<String> uuidList;
     public String gpbrequestId = UUID.randomUUID().toString();
     public static final ExtensionContext.Namespace NAMESPACE = ExtensionContext.Namespace.create(WmockExtension.class);
@@ -83,26 +82,46 @@ public class WmockExtension implements BeforeEachCallback, ParameterResolver, Af
 
     @Override
     public boolean supportsParameter(ParameterContext parameterContext, ExtensionContext extensionContext) throws ParameterResolutionException {
-       Class<?> type = parameterContext.getParameter().getType();
+        Class<?> type = parameterContext.getParameter().getType();
 
 
-        return type.isAssignableFrom(RootWiremockResponse.class)||type.isAssignableFrom(RootWiremockResponse[].class);
+        return type.isAssignableFrom(RootWiremockResponse.class) || type.isAssignableFrom(RootWiremockResponse[].class);
     }
 
     @Override
     public Object resolveParameter(ParameterContext parameterContext, ExtensionContext extensionContext) throws ParameterResolutionException {
         Class<?> type = parameterContext.getParameter().getType();
-        List<RootWiremockResponse> createdMocks = extensionContext.getStore(NAMESPACE).get(extensionContext.getUniqueId(),List.class);
+        List<RootWiremockResponse> createdMocks = extensionContext.getStore(NAMESPACE).get(extensionContext.getUniqueId(), List.class);
 
-        return type.isAssignableFrom(RootWiremockResponse.class)? createdMocks.get(0):createdMocks.toArray();
+        return type.isAssignableFrom(RootWiremockResponse.class) ? createdMocks.get(0) : createdMocks.toArray();
     }
 
     @Override
     public void afterEach(ExtensionContext extensionContext) throws Exception {
         WiremockApi wiremockApi = retrofit.create(WiremockApi.class);
         List<RootWiremockResponse> removeMocks = extensionContext.getStore(NAMESPACE).get(extensionContext.getUniqueId(), List.class);
-        for (RootWiremockResponse rwr:removeMocks) {
-            wiremockApi.deleteMock(rwr.getUuid()).execute();
-        }
+
+        AnnotationSupport.findAnnotation(extensionContext.getRequiredTestMethod(),
+                Wmocks.class).ifPresent(
+                mocks -> {
+                    for (RootWiremockResponse rwr : removeMocks) {
+                        try {
+                            wiremockApi.deleteMock(rwr.getUuid()).execute();
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+                });
+        AnnotationSupport.findAnnotation(extensionContext.getRequiredTestMethod(),
+                Wmock.class).ifPresent(
+                mocks -> {
+                    for (RootWiremockResponse rwr : removeMocks) {
+                        try {
+                            wiremockApi.deleteMock(rwr.getUuid()).execute();
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+                });
     }
 }

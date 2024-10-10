@@ -13,6 +13,13 @@ public class ElementsItem {
     @JsonProperty("markup")
     private String markup;
 
+    public String getDescription() {
+        return description;
+    }
+
+    @JsonProperty("description")
+    private String description;
+
     public String getHelp() {
         return help;
     }

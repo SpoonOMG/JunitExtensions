@@ -1,86 +1,107 @@
 package framework.qa.models.omniresponseitem;
 
 import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Specific{
+public class Specific {
 
-	public LoadEntries getLoadEntries() {
-		return loadEntries;
-	}
+    public LoadEntries getLoadEntries() {
+        return loadEntries;
+    }
 
-	public String getMaxFoundRecords() {
-		return maxFoundRecords;
-	}
-
-	@JsonProperty("maxFoundRecords")
-	private String maxFoundRecords;
+    public String getMaxFoundRecords() {
+        return maxFoundRecords;
+    }
 
 
-	@JsonProperty("loadEntries")
-	private LoadEntries loadEntries;
+    @JsonProperty("url")
+    private String url;
 
-	@JsonProperty("dictionaryEntries")
-	private List<DictionaryEntriesItem> dictionaryEntries;
+    @JsonProperty("maxFoundRecords")
+    private String maxFoundRecords;
 
-	@JsonProperty("pattern")
-	private String pattern;
+    public String getFileName() {
+        return fileName;
+    }
 
-	public String getScreenLoadId() {
-		return screenLoadId;
-	}
+    @JsonProperty("fileName")
+    private String fileName;
 
-	@JsonProperty("screenLoadId")
-	private String screenLoadId;
+    @JsonProperty("loadEntries")
+    private LoadEntries loadEntries;
+
+    @JsonProperty("dictionaryEntries")
+    private List<DictionaryEntriesItem> dictionaryEntries;
+
+    @JsonProperty("pattern")
+    private String pattern;
+
+    public String getScreenLoadId() {
+        return screenLoadId;
+    }
+
+    @JsonProperty("screenLoadId")
+    private String screenLoadId;
 
 
-	public Boolean getStrict() {
-		return strict;
-	}
+    public Boolean getStrict() {
+        return strict;
+    }
 
-	@JsonProperty("strict")
-	private Boolean strict;
+    @JsonProperty("strict")
+    private Boolean strict;
 
-	public Boolean getSearchable() {
-		return searchable;
-	}
+    public Boolean getSearchable() {
+        return searchable;
+    }
 
-	@JsonProperty("searchable")
-	private Boolean searchable;
+    @JsonProperty("searchable")
+    private Boolean searchable;
 
-	public int getSchedule() {
-		return schedule;
-	}
+    public List<String> getElementIds() {
+        return elementIds;
+    }
 
-	@JsonProperty("schedule")
-	private int schedule;
+    @JsonProperty("elementIds")
+    private List<String> elementIds;
 
-	public String getMaskValue() {
-		return maskValue;
-	}
+    public int getSchedule() {
+        return schedule;
+    }
 
-	@JsonProperty("maskValue")
-	private String maskValue;
+    @JsonProperty("schedule")
+    private int schedule;
 
-	public String getMaskSym() {
-		return maskSym;
-	}
+    public String getMaskValue() {
+        return maskValue;
+    }
 
-	@JsonProperty("displayMaskSym")
-	private String displayMaskSym;
+    @JsonProperty("maskValue")
+    private String maskValue;
 
-	public String getDisplayMaskSym() {
-		return displayMaskSym;
-	}
+    public String getMaskSym() {
+        return maskSym;
+    }
 
-	@JsonProperty("maskSym")
-	private String maskSym;
+    @JsonProperty("displayMaskSym")
+    private String displayMaskSym;
 
-	public List<DictionaryEntriesItem> getDictionaryEntries(){
-		return dictionaryEntries;
-	}
+    public String getDisplayMaskSym() {
+        return displayMaskSym;
+    }
 
-	public String getPattern(){
-		return pattern;
-	}
+    @JsonProperty("maskSym")
+    private String maskSym;
+
+	@JsonProperty("body")
+	private Body body;
+
+    public List<DictionaryEntriesItem> getDictionaryEntries() {
+        return dictionaryEntries;
+    }
+
+    public String getPattern() {
+        return pattern;
+    }
 }

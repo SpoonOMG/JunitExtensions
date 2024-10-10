@@ -1,1 +1,1 @@
---test framework.qa.test.veteran.LoadVeteranTest.veteranLoadShouldReturnSuccessScreenWithMinParams*
+--test framework.qa.test.common.CheckFinalPlannedClosureOfficesTest.checkFinalShouldReturnErrorWhenBranchUnitCodeNotInOfficeListAnswerUFO*

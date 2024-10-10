@@ -1,247 +1,130 @@
 {
-  "status": "success",
-  "actualTimestamp": 1728540811492,
+  "meta": {
+    "systemId": "DRTL",
+    "moduleId": null,
+    "channel": "ufo",
+    "sessionId": "OMNI",
+    "callbackUrl": null
+  },
   "data": {
+    "scenario": {
+      "id": "sc_57eb451bc6aa383",
+      "categoryCode": null,
+      "categoryName": null,
+      "kindCode": null,
+      "kindName": null,
+      "typeCode": null,
+      "code": "001",
+      "name": null,
+      "active": null,
+      "systemProvider": null,
+      "systemInit": null,
+      "systemCheck": null,
+      "systemExecute": "OMNI"
+    },
     "operation": {
-      "orderId": "676c03fe-47f3-41fe-a4c0-72e4ffa52aaf",
-      "order4client": "8e105790-c7b6-4614-8e09-20d65b3fcedd",
+      "orderId": "5ec161ce-60d6-4599-8191-50fc59399be0",
+      "order4client": "dd3ed08e-a298-4e36-8077-23d538e8d018",
+      "acceptedTime": null,
       "values": [
         {
-          "id": "CELLPHONE",
-          "value": "+79645524477"
-        },
-        {
-          "id": "docSeries",
-          "value": "4509"
-        },
-        {
-          "id": "latinClientName",
-          "value": "IVAN KAZAKOV"
-        },
-        {
-          "id": "employeeFullName",
-          "value": "Казаков Иван Васильевич"
-        },
-        {
-          "id": "TypeCreation",
-          "value": "0"
-        },
-        {
-          "id": "channel",
-          "value": "ufo"
-        },
-        {
-          "id": "##sourceChannel",
-          "value": "ufo"
-        },
-        {
-          "id": "EMAIL",
-          "value": "ivan.kazak@mail.ru"
-        },
-        {
-          "id": "agreeOtpSign",
-          "value": "true"
-        },
-        {
-          "id": "cardCategoryCode",
-          "value": "7"
-        },
-        {
-          "id": "subProgramCode",
-          "value": "261"
-        },
-        {
-          "id": "controlInfo",
-          "value": "Рига"
-        },
-        {
-          "id": "##codewordPrint",
-          "value": "*****"
-        },
-        {
-          "id": "isResident",
-          "value": "1"
-        },
-        {
-          "id": "rgCountryCode",
-          "value": "643"
-        },
-        {
-          "id": "##isSecretWord",
-          "value": "false"
-        },
-        {
-          "id": "userFullName",
-          "value": "Михайлюк Андрей"
+          "id": "login",
+          "value": "gpbu19309",
+          "displayValue": null,
+          "extendedValue": null
         },
         {
           "id": "branchCode",
-          "value": "000"
-        },
-        {
-          "id": "##expiredPassport",
-          "value": "false"
-        },
-        {
-          "id": "docTypeCode",
-          "value": "21"
-        },
-        {
-          "id": "name",
-          "value": "Иван"
-        },
-        {
-          "id": "##consent_all",
-          "value": "true"
-        },
-        {
-          "id": "employeePosition",
-          "value": "Руководитель экспертизы тестирования"
-        },
-        {
-          "id": "rgPostalCode",
-          "value": "117041"
-        },
-        {
-          "id": "##embossing_client_name",
-          "value": "IVAN KAZAKOV"
-        },
-        {
-          "id": "docNum",
-          "value": "987654"
-        },
-        {
-          "id": "productOfferShortName",
-          "value": "МИР Advanced Instant Армия Ветеран"
-        },
-        {
-          "id": "sourceChannel",
-          "value": "ufo"
-        },
-        {
-          "id": "issuedBy",
-          "value": "о-нием по р-ну Южное Бутово ОУФМС России по гор.Москве"
-        },
-        {
-          "id": "##delivery.dsa",
-          "value": "false"
-        },
-        {
-          "id": "title",
-          "value": "Руководитель экспертизы тестирования"
-        },
-        {
-          "id": "login",
-          "value": "gpbu19309"
-        },
-        {
-          "id": "birthPlace",
-          "value": "Москва"
-        },
-        {
-          "id": "paySystemCode",
-          "value": "3"
-        },
-        {
-          "id": "rgRegionCode",
-          "value": "77"
-        },
-        {
-          "id": "surname",
-          "value": "Казаков"
-        },
-        {
-          "id": "PDL",
-          "value": "1"
-        },
-        {
-          "id": "order4client",
-          "value": "8e105790-c7b6-4614-8e09-20d65b3fcedd"
-        },
-        {
-          "id": "ftPostalCode",
-          "value": "117041"
-        },
-        {
-          "id": "issueDate",
-          "value": "2015-03-10"
-        },
-        {
-          "id": "ftRegionCode",
-          "value": "77"
-        },
-        {
-          "id": "birthCountryCode",
-          "value": "643"
-        },
-        {
-          "id": "ftCountryCode",
-          "value": "643"
-        },
-        {
-          "id": "##print_order4client",
-          "value": "8e105790-c7b6-4614-8e09-20d65b3fcedd"
-        },
-        {
-          "id": "birthDate",
-          "value": "17.10.1985"
-        },
-        {
-          "id": "IsUnembossed",
-          "value": "1"
-        },
-        {
-          "id": "##codeword",
-          "value": "Рига"
-        },
-        {
-          "id": "##isOTP",
-          "value": "true"
-        },
-        {
-          "id": "sexCode",
-          "value": "1"
-        },
-        {
-          "id": "departCode",
-          "value": "077-089"
+          "value": "099",
+          "displayValue": null,
+          "extendedValue": null
         },
         {
           "id": "currencyCode",
-          "value": "810"
+          "value": "810",
+          "displayValue": null,
+          "extendedValue": null
         },
         {
-          "id": "isDkbo",
-          "value": "true"
+          "id": "subProgramCode",
+          "value": "261",
+          "displayValue": null,
+          "extendedValue": null
         },
         {
-          "id": "TypeSign",
-          "value": "0"
+          "id": "cardCategoryCode",
+          "value": "7",
+          "displayValue": null,
+          "extendedValue": null
+        },
+        {
+          "id": "latinClientName",
+          "value": "IVAN KAZAKOV",
+          "displayValue": null,
+          "extendedValue": null
+        },
+        {
+          "id": "##sourceChannel",
+          "value": "ufo",
+          "displayValue": null,
+          "extendedValue": null
         }
       ]
     },
-    "serverActions": [
-      {
-        "action": "signature",
-        "criticality": "high",
-        "startPoint": "after",
-        "parameters": [
-          {
-            "key": "textSms",
-            "type": "string",
-            "value": "Вы оформляете заявку на дебетовую карту"
-          },
-          {
-            "key": "clientPhone",
-            "type": "string",
-            "source": {
-              "type": "operation",
-              "id": "##clientPhone",
-              "property": "value"
-            }
-          }
-        ]
+    "clientContext": {
+      "version": null,
+      "sessionContextId": null,
+      "clientDateTime": null,
+      "employee": {
+        "fullName": null,
+        "position": null,
+        "department": {
+          "fullName": null,
+          "branchCode": "099/1024",
+          "address": null,
+          "code": "099"
+        },
+        "login": null
+      },
+      "way": null,
+      "params": []
+    },
+    "verifyData": {
+      "values": [
+        {
+          "id": "CardNumber",
+          "value": "4041369648900142",
+          "displayValue": null,
+          "extendedValue": null
+        },
+        {
+          "id": "##dateExpiration",
+          "value": "0427",
+          "displayValue": null,
+          "extendedValue": null
+        },
+        {
+          "id": "branchUnitCode",
+          "value": "099/1024",
+          "displayValue": null,
+          "extendedValue": null
+        },
+        {
+          "id": "##isOTP",
+          "value": "true",
+          "displayValue": null,
+          "extendedValue": null
+        }
+      ],
+      "screenStage": "final",
+      "screenId": null,
+      "command": {
+        "type": "check",
+        "id": "checkLocation",
+        "logInfo": null,
+        "techInfo": null,
+        "specific": null
       }
-    ]
+    }
   }
 }

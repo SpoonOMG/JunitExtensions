@@ -35,7 +35,7 @@ public class LoadRequestResolver implements ParameterResolver {
                     new RequestData(new Scenario(ScenarioCodeEnum.sc_421e8df062b2939.getId(), ScenarioCodeEnum.sc_421e8df062b2939.getCode(), "OMNI"),
                             new Operation(UUID.randomUUID().toString()),
                             new ClientContext(TestDataValues.version),
-                            new VerifyData(verifyDataValueBackList, "initial", null, new ScreenCommandFront("check", "checkSmartCardParams", null, null, null))
+                            new VerifyData(verifyDataValueBackList)
                     ));
         }
         throw new ParameterResolutionException("No random generator " + type);
