@@ -167,9 +167,8 @@ public class InitVeteranTest extends BaseVeteranTest {
         init.getData().getScenario().setId(veteranScenarioId);
         init.getData().getScenario().setCode(veteranScenarioCode);
         ResponseItem response = initApi.initRequest(gpbrequestId, init);
-        List<ValuesItem> operationValues = response.getData().getOperation().getValues();
 
-        step("Проверка параметров client-search в operation");
+        step("Проверка получения экрана ошибки");
 
         Map<String, String> collect = response.getData().getOperation().getValues().stream().collect(Collectors.toMap(ValuesItem::getId, ValuesItem::getValue));
         collect.get(Params.CELL_PHONE);
@@ -201,9 +200,8 @@ public class InitVeteranTest extends BaseVeteranTest {
         init.getData().getScenario().setId(veteranScenarioId);
         init.getData().getScenario().setCode(veteranScenarioCode);
         ResponseItem response = initApi.initRequest(gpbrequestId, init);
-        List<ValuesItem> operationValues = response.getData().getOperation().getValues();
 
-        step("Проверка параметров client-search в operation");
+        step("Проверка получения экрана ошибки");
 
         Map<String, String> collect = response.getData().getOperation().getValues().stream().collect(Collectors.toMap(ValuesItem::getId, ValuesItem::getValue));
         collect.get(Params.CELL_PHONE);
@@ -215,7 +213,7 @@ public class InitVeteranTest extends BaseVeteranTest {
     }
 
     @Test
-    @DisplayName("Получение экрана ошибки 'Некорректное или отсутствующее имя клиента' когда clientSearch не вернул дату рождения")
+    @DisplayName("Получение экрана ошибки 'Минимальный возраст для подачи заявки на дебетовую карту - 14 лет.' когда clientSearch не вернул дату рождения")
     @Wmocks({
             @Wmock(
                     enpointMapping = "/omni-information/api/v2/client/search",
@@ -235,9 +233,7 @@ public class InitVeteranTest extends BaseVeteranTest {
         init.getData().getScenario().setId(veteranScenarioId);
         init.getData().getScenario().setCode(veteranScenarioCode);
         ResponseItem response = initApi.initRequest(gpbrequestId, init);
-        List<ValuesItem> operationValues = response.getData().getOperation().getValues();
-
-        step("Проверка параметров client-search в operation");
+        step("Проверка получения экрана ошибки");
 
         Map<String, String> collect = response.getData().getOperation().getValues().stream().collect(Collectors.toMap(ValuesItem::getId, ValuesItem::getValue));
         collect.get(Params.CELL_PHONE);

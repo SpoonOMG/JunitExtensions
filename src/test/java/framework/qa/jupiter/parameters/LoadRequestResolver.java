@@ -15,7 +15,10 @@ import org.junit.jupiter.api.extension.ParameterResolver;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-
+/*
+ Расширение JunitExtension позволяет используя аннотацию InitRequest собирать джейсон запроса из модели OmniRequestItem
+ для запроса на load
+ */
 public class LoadRequestResolver implements ParameterResolver {
     @Override
     public boolean supportsParameter(ParameterContext parameterContext, ExtensionContext extensionContext) throws ParameterResolutionException {

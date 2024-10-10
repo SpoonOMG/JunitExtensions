@@ -10,6 +10,10 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashSet;
 import java.util.Set;
+/*
+ Расширение JunitExtension позволяет сохранять файл с упавшими тестами для разбора в ресурсах в filedTests.txt
+
+ */
 
 public class TestSaver implements AfterTestExecutionCallback, AfterAllCallback {
 

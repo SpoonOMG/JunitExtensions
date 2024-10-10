@@ -18,6 +18,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+/*
+ Расширение JunitExtension позволяет используя аннотацию Wmock/Wmocks
+  забирать json-файл потенциальной заглушки из ресурсов, конфигурировать его содержимое
+  и отправлять в wiremock _admin для конфигурирования маппинга.
+  Маппинг строится по gpbrequestId.
+
+  В результате проброса заглушки ParameterResolver позоляет забрать инстанс мока для того,
+  чтобы вытащить gpbRequestId и переиспользовать его в запросах на сервис.
+
+  Wiremock в ответе возвращает uuid заглушки. По полученному UUID заглушка стирается в afterEachCallBack
+ */
 
 public class WmockExtension implements BeforeEachCallback, ParameterResolver, AfterEachCallback {
     protected static final Config CFG = Config.getInstance();
@@ -51,8 +62,6 @@ public class WmockExtension implements BeforeEachCallback, ParameterResolver, Af
                         } catch (IOException e) {
                             throw new RuntimeException(e);
                         }
-//                        uuid = result.getUuid();
-//                        System.out.println("МОЙ ЮИД----->"+uuid);
                         created.add(result);
                     }
                     extensionContext.getStore(NAMESPACE).put(extensionContext.getUniqueId(), created);
@@ -71,7 +80,6 @@ public class WmockExtension implements BeforeEachCallback, ParameterResolver, Af
                             );
                             try {
                                 RootWiremockResponse result = wiremockApi.makeMock(wiremockRoot).execute().body();
-//                                uuid = result.getUuid();
                                 extensionContext.getStore(NAMESPACE).put(extensionContext.getUniqueId(), result);
                             } catch (IOException e) {
                                 throw new RuntimeException(e);
