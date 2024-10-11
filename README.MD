@@ -1,5 +1,5 @@
-![telegram-cloud-photo-size-2-5208496695602702373-x.jpg](..%2F..%2F..%2FLibrary%2FGroup%20Containers%2F6N38VWS5BX.ru.keepcoder.Telegram%2Fappstore%2Faccount-10880797782801398768%2Fpostbox%2Fmedia%2Ftelegram-cloud-photo-size-2-5208496695602702373-x.jpg)
 
+<code><img width="65%" title="ElbrusLogog" src="images/logo/2024-10-12 00.40.27.jpg"></code>
 ## **Технологии, использованные в ElbrusTestFramework**
 
 - [JUnit 5 (Extensions, Resolvers, etc)](https://junit.org/junit5/docs/current/user-guide/)
