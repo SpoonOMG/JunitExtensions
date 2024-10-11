@@ -1,6 +1,5 @@
 package framework.qa.test;
 
-import framework.qa.config.Config;
 import framework.qa.consts.ChannelEnum;
 import framework.qa.consts.Params;
 import framework.qa.consts.UiFieldsNames;
@@ -26,7 +25,6 @@ import static framework.qa.values.TestDataValues.*;
         LoadRequestResolver.class
 })
 public abstract class BaseTest {
-    protected static final Config CFG = Config.getInstance();
     protected static final String guid = "6F57A2C3507C4D6AA1A70E9C8C8CF911";
 
     protected List<ScreenValueBack> operationFinalMinParam() {

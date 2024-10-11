@@ -19,9 +19,7 @@ public class TestDataValues {
     public static String branchCode5nt = "000";
     public static String addressIsIncorrect = "true";
 
-
     //здесь хранятся заполяемые данные для operation check
-
     public static String cellPhone = "+79645524477";
     public static String cellPhoneWithSep = "+7 964 552-44-77";
     public static String docSeries = "4509";

@@ -13,15 +13,6 @@ import java.io.IOException;
 
 public class JsonAttChanger {
 
-    //todo убрать метод из класса  - не используется
-//    public String appli(String mockFile, String pathToField, String value) {
-//        DocumentContext ctx = JsonPath.parse(mockFile);
-//        ctx.set(pathToField, value, new Predicate[0]);
-//        FileContentReader.jsonBody = ctx.mockFile();
-//        return FileContentReader.jsonBody;
-//    }
-
-
     public String apply(String jsonString, String pathToField, String value) {
         String json = null;
         try {
