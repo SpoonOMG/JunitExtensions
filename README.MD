@@ -95,7 +95,7 @@
 ```java
         @Test
         @Tag("Task")
-        @DisplayName("Имя теста")
+        @DisplayName("GetScreenName")
         @Wmocks({
                 @Wmock(
                         enpointMapping = "/omni-information/api/v2/client/search",
