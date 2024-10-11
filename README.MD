@@ -91,31 +91,50 @@
   * TestSaver сохраняет методы и классы упавших тестов в ресурсы в файл "failedTests.txt" после каждого прогона.
 * Parameters под собой представляют parameterResolver заранее десириализованных запросов в соответствии с методами сервисов
 
-### **Напишем первый тест**
+### **Напишем тест RestApi с конфигурацией заглушки** 
+
+
+
 ```java
-        @Test
-        @Tag("Task")
-        @DisplayName("GetScreenName")
-        @Wmocks({
-                @Wmock(
-                        enpointMapping = "/omni-information/api/v2/client/search",
-                        mockFile = "wiremock/client-search/default.json",
-                        pathToField = "data.clients.[?(@.base.guid==\"6F57A2C3507C4D6AA1A70E9C8C8CF919\")].base.hid",
-                        value = ""
-                ),
-                @Wmock(
-                        enpointMapping = "/omni-information-card/api/v3/client/product/cards",
-                        mockFile = "wiremock/product-cards/default.json",
-                        pathToField = "actualTimestamp",
-                        value = "1234"
-                )})
-        public void exampleTest(
-                RootWiremockResponse rwr,
-                @InitRequest OmniRequestItem init
-        ) throws IOException {
-            String gpbrequestId = rwr.getRequest().getHeaders().getGpbrequestId().getEqualTo();
-            ResponseItem response = initApi.initRequest(gpbrequestId, init);
-            assertAll(
-                    () -> assertEquals("ScreenName", response.getScreen().getLoad().getId()),
-            );
-           }   
+                      @Test
+                      @Tag("Task")
+                      @DisplayName("GetScreenName")
+                      @Wmocks({
+                              @Wmock(
+                                      enpointMapping = "/omni-information/api/v2/client/search",
+                                      mockFile = "wiremock/client-search/default.json",
+                                      pathToField = "data.clients.[?(@.base.guid==\"6F57A2C3507C4D6AA1A70E9C8C8CF919\")].base.hid",
+                                      value = ""
+                              ),
+                              @Wmock(
+                                      enpointMapping = "/omni-information-card/api/v3/client/product/cards",
+                                      mockFile = "wiremock/product-cards/default.json",
+                                      pathToField = "actualTimestamp",
+                                      value = "1234"
+                              )})
+                      public void exampleTest(
+                              RootWiremockResponse rwr,
+                              @InitRequest OmniRequestItem init
+                      ) throws IOException {
+                          String gpbrequestId = rwr.getRequest().getHeaders().getGpbrequestId().getEqualTo();
+                          ResponseItem response = initApi.initRequest(gpbrequestId, init);
+                          assertAll(
+                                  () -> assertEquals("ScreenName", response.getScreen().getLoad().getId()),
+                          );
+                         }   
+  ```                  
+                    
+### **Напишем тест на MQ-клиент**
+
+```java
+    @DisplayName("Получение успешного экрана при запросе на init с проверкой заполнения параметров из client-search")
+    @Test
+    public void initMQTest(@InitRequest OmniRequestItem init) throws JMSException, JsonProcessingException {
+        String gpbRequestId = UUID.randomUUID().toString();
+        OmniMqClient mqClient = new OmniMqClient();
+        mqClient.sendMqMessage("IN.RQ.CARDACPTACTVISTDR11_01.00.00",init,gpbRequestId);
+        OmniRequestItem result = om.readValue(mqClient.readMqMessage("IN.RQ.CARDACPTACTVISTDR11_01.00.00","X_TransactionID",gpbRequestId),OmniRequestItem.class);
+     Assertions.assertEquals(ChannelEnum.UFO.getName(), result.getMeta().getChannel());
+    }
+}
+  ```  
