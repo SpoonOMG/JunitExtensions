@@ -1,0 +1,1 @@
+--test framework.qa.test.veteranscenario.CheckInitialVeteranTest.veteranCheckInitialShouldReturnSuccessScreenWithMinParams*

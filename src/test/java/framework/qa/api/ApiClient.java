@@ -3,6 +3,7 @@ package framework.qa.api;
 import com.ibm.mq.jms.MQQueueConnectionFactory;
 import com.ibm.msg.client.wmq.WMQConstants;
 import framework.qa.config.Config;
+import io.qameta.allure.okhttp3.AllureOkHttp3;
 import okhttp3.Interceptor;
 import okhttp3.JavaNetCookieJar;
 import okhttp3.OkHttpClient;
@@ -42,7 +43,7 @@ public abstract class ApiClient {
                 okHttpClientBuilder.addNetworkInterceptor(interceptor);
             }
         }
-        this.okHttpClient = okHttpClientBuilder.addNetworkInterceptor(new HttpLoggingInterceptor().setLevel(loggingLevel))
+        this.okHttpClient = okHttpClientBuilder.addNetworkInterceptor(new HttpLoggingInterceptor().setLevel(loggingLevel)).addInterceptor(new AllureOkHttp3())
                 .followRedirects(followRedirect)
                 .build();
 

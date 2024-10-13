@@ -119,7 +119,7 @@
                           String gpbrequestId = rwr.getRequest().getHeaders().getGpbrequestId().getEqualTo();
                           ResponseItem response = initApi.initRequest(gpbrequestId, init);
                           assertAll(
-                                  () -> assertEquals("ScreenName", response.getScreen().getLoad().getId()),
+                                  () -> assertEquals("ScreenName", response.getScreen().getLoad().getId())
                           );
                          }   
   ```                  
@@ -136,5 +136,5 @@
         OmniRequestItem result = om.readValue(mqClient.readMqMessage("IN.RQ.CARDACPTACTVISTDR11_01.00.00","X_TransactionID",gpbRequestId),OmniRequestItem.class);
      Assertions.assertEquals(ChannelEnum.UFO.getName(), result.getMeta().getChannel());
     }
-}
+
   ```  
