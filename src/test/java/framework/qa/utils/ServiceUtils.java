@@ -1,11 +1,9 @@
 package framework.qa.utils;
 
 import framework.qa.models.omniresponseitem.ValuesItem;
+import framework.qa.models.requestData.ScreenValueBack;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 
 public class ServiceUtils {
     public String gbpRequestId = UUID.randomUUID().toString();
@@ -22,5 +20,13 @@ public class ServiceUtils {
                 .filter(elem -> elem.getId().equals(code))
                 .findFirst();
     }
+
+    public static List<ScreenValueBack> replaceValueInOperation(List<ScreenValueBack> values, String id, String expectedValues) {
+        values.stream()
+                .filter(value-> Objects.equals(id,value.getId()))
+                .forEach(value->value.setValue(expectedValues));
+        return values;
+    }
+
 
 }

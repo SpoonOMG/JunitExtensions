@@ -95,6 +95,12 @@ public class TestDataValues {
     public static String isDkbo = "true";
     public static String CardNumber = "4041369648900142";
     public static String dateExpiration = "0427";
+    public static String consentPersonalData = "1";
+    public static String consentPersonalDataSharing = "1";
+    public static String consentChCheck = "1";
+    public static String consentAdvSubscription = "1";
+    public static String currencyCode = "RUR";
+    public static String kindGet = "2";
 
 
 }

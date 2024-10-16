@@ -1,1 +1,1 @@
---test framework.qa.test.veteranscenario.CheckInitialVeteranTest.veteranCheckInitialShouldReturnSuccessScreenWithMinParams*
+--test framework.qa.test.site.gapi_scenario.CheckSiteGapiTest.siteCheckRequestSubProgramCodeValidation*
